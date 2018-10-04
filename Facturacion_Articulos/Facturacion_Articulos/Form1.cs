@@ -16,5 +16,10 @@ namespace Facturacion_Articulos
         {
             InitializeComponent();
         }
+
+        private void alToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
