@@ -16,5 +16,20 @@ namespace Facturacion_Articulos
         {
             InitializeComponent();
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Registro eliminado con exito");
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al eliminar");
+                throw;
+            }
+            
+        }
     }
 }
