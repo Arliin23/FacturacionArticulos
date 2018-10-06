@@ -42,7 +42,7 @@
             this.TextNombreComercial = new System.Windows.Forms.TextBox();
             this.TextCedula = new System.Windows.Forms.TextBox();
             this.TextCuenta = new System.Windows.Forms.TextBox();
-            this.TextEstado = new System.Windows.Forms.TextBox();
+            this.Estadocbx = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -167,12 +167,17 @@
             this.TextCuenta.Size = new System.Drawing.Size(174, 26);
             this.TextCuenta.TabIndex = 15;
             // 
-            // TextEstado
+            // Estadocbx
             // 
-            this.TextEstado.Location = new System.Drawing.Point(280, 340);
-            this.TextEstado.Name = "TextEstado";
-            this.TextEstado.Size = new System.Drawing.Size(174, 26);
-            this.TextEstado.TabIndex = 16;
+            this.Estadocbx.FormattingEnabled = true;
+            this.Estadocbx.Items.AddRange(new object[] {
+            "Pago al contado",
+            "Pago anticipado",
+            "Pago aplazado"});
+            this.Estadocbx.Location = new System.Drawing.Point(280, 338);
+            this.Estadocbx.Name = "Estadocbx";
+            this.Estadocbx.Size = new System.Drawing.Size(174, 28);
+            this.Estadocbx.TabIndex = 16;
             // 
             // FrmClientes
             // 
@@ -180,7 +185,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(571, 531);
-            this.Controls.Add(this.TextEstado);
+            this.Controls.Add(this.Estadocbx);
             this.Controls.Add(this.TextCuenta);
             this.Controls.Add(this.TextCedula);
             this.Controls.Add(this.TextNombreComercial);
@@ -220,6 +225,6 @@
         private System.Windows.Forms.TextBox TextNombreComercial;
         private System.Windows.Forms.TextBox TextCedula;
         private System.Windows.Forms.TextBox TextCuenta;
-        private System.Windows.Forms.TextBox TextEstado;
+        private System.Windows.Forms.ComboBox Estadocbx;
     }
 }
