@@ -108,21 +108,21 @@
             // 
             this.créditoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("créditoToolStripMenuItem.Image")));
             this.créditoToolStripMenuItem.Name = "créditoToolStripMenuItem";
-            this.créditoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.créditoToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.créditoToolStripMenuItem.Text = "Crédito";
             // 
             // alContadoToolStripMenuItem
             // 
             this.alContadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("alContadoToolStripMenuItem.Image")));
             this.alContadoToolStripMenuItem.Name = "alContadoToolStripMenuItem";
-            this.alContadoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.alContadoToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.alContadoToolStripMenuItem.Text = "Al contado";
             // 
             // chequeToolStripMenuItem
             // 
             this.chequeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("chequeToolStripMenuItem.Image")));
             this.chequeToolStripMenuItem.Name = "chequeToolStripMenuItem";
-            this.chequeToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.chequeToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.chequeToolStripMenuItem.Text = "Cheque";
             // 
             // vendedoresToolStripMenuItem1
@@ -228,6 +228,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmMenuPrincipal";
             this.Text = "Facturación de articulos";
+            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);

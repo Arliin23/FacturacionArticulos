@@ -25,7 +25,7 @@ namespace Facturacion_Articulos
         {
             try
             {
-                con = new SqlConnection("Data Source=LAB-C07;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
                 con.Open();
                 string sql = "select * from Cliente";
 
@@ -45,7 +45,7 @@ namespace Facturacion_Articulos
         {
             try
             {
-                con = new SqlConnection("Data Source=LAB-C07;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
                 con.Open();
                 string sql = "select * from Condicion_Pago";
 
@@ -110,6 +110,11 @@ namespace Facturacion_Articulos
         {
             FrmCondicionPago frm = new FrmCondicionPago();
             frm.ShowDialog();
+        }
+
+        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

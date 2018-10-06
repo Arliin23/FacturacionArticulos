@@ -27,7 +27,7 @@ namespace Facturacion_Articulos
             InitializeComponent();
             try
             {
-                con = new SqlConnection("Data Source=LAB-C07;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
                 con.Open();
             }
             catch (Exception e)
@@ -126,6 +126,11 @@ namespace Facturacion_Articulos
         private void FrmCLientes_FormClosing(object sender, FormClosingEventArgs e)
         {
             con.Close();
+        }
+
+        private void FrmClientes_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
