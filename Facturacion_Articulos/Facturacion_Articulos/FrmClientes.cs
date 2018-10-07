@@ -84,12 +84,12 @@ namespace Facturacion_Articulos
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
-                    sql = $"insert into Cliente values ('{TextNombreComercial.Text}', '{TextCedula.Text}', '{TextCuenta.Text}', '{TextEstado.Text}')";
+                    sql = $"insert into Cliente values ('{TextNombreComercial.Text}', '{TextCedula.Text}', '{TextCuenta.Text}', '{Estadocbx.Text}')";
                 }
                 else
                 {
                     sql = $"update Cliente set Nombre_Comercial='{TextNombreComercial.Text}', " +
-                        $"Cedula = '{TextCedula.Text}', Cuenta_Contable = '{TextCuenta.Text}', Estado = '{TextEstado.Text}' " +
+                        $"Cedula = '{TextCedula.Text}', Cuenta_Contable = '{TextCuenta.Text}', Estado = '{Estadocbx.Text}' " +
                         $"where ID_Cliente = {TextID.Text}";
 
                 }
