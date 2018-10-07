@@ -128,6 +128,10 @@
             // cbxEstado
             // 
             this.cbxEstado.FormattingEnabled = true;
+            this.cbxEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Dormido",
+            "Baja"});
             this.cbxEstado.Location = new System.Drawing.Point(196, 294);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(176, 30);
@@ -178,6 +182,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FrmVendedor";
             this.Text = "FrmVendedor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVendedor_FormClosing);
             this.Load += new System.EventHandler(this.FrmVendedor_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.nUDPorciento)).EndInit();
             this.ResumeLayout(false);

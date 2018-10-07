@@ -77,7 +77,7 @@ namespace Facturacion_Articulos
         {
             try
             {
-                Modo = "C";
+               
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
@@ -131,6 +131,11 @@ namespace Facturacion_Articulos
         private void FrmCondicionPago_FormClosing(object sender, FormClosingEventArgs e)
         {
             con.Close();
+        }
+
+        private void FrmCondicionPago_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

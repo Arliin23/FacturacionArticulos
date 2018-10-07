@@ -198,6 +198,7 @@
             this.Name = "FrmCondicionPago";
             this.Text = "FrmCondicionPago";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCondicionPago_FormClosing);
+            this.Load += new System.EventHandler(this.FrmCondicionPago_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.nUDCantidadDias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

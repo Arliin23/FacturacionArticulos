@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDataVendedores));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvVendedores = new System.Windows.Forms.DataGridView();
             this.cmdCerrar = new System.Windows.Forms.Button();
             this.cmdEditar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVendedores)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,13 +45,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Vendedores";
             // 
-            // dataGridView1
+            // dgvVendedores
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(72, 102);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(489, 287);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvVendedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVendedores.Location = new System.Drawing.Point(72, 102);
+            this.dgvVendedores.Name = "dgvVendedores";
+            this.dgvVendedores.Size = new System.Drawing.Size(489, 287);
+            this.dgvVendedores.TabIndex = 1;
             // 
             // cmdCerrar
             // 
@@ -85,7 +85,7 @@
             this.ClientSize = new System.Drawing.Size(641, 478);
             this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.cmdCerrar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvVendedores);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.AliceBlue;
@@ -94,7 +94,7 @@
             this.Name = "FrmDataVendedores";
             this.Text = "FrmDataVendedores";
             this.Load += new System.EventHandler(this.FrmDataVendedores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVendedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,7 +103,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvVendedores;
         private System.Windows.Forms.Button cmdCerrar;
         private System.Windows.Forms.Button cmdEditar;
     }

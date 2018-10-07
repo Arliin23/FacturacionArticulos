@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDataCondicionPago));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCondicionP = new System.Windows.Forms.DataGridView();
             this.cmdEditar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCondicionP)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -46,13 +46,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Condiciones de Pago";
             // 
-            // dataGridView1
+            // dgvCondicionP
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(79, 93);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(477, 264);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvCondicionP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCondicionP.Location = new System.Drawing.Point(79, 93);
+            this.dgvCondicionP.Name = "dgvCondicionP";
+            this.dgvCondicionP.Size = new System.Drawing.Size(477, 264);
+            this.dgvCondicionP.TabIndex = 1;
             // 
             // cmdEditar
             // 
@@ -86,7 +86,7 @@
             this.ClientSize = new System.Drawing.Size(647, 452);
             this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCondicionP);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.AliceBlue;
@@ -94,7 +94,8 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FrmDataCondicionPago";
             this.Text = "FrmDataCondicionPago";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmDataCondicionPago_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCondicionP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,7 +104,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCondicionP;
         private System.Windows.Forms.Button cmdEditar;
         private System.Windows.Forms.Button btnCerrar;
     }

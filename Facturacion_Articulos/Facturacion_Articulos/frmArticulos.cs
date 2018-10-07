@@ -119,5 +119,10 @@ namespace Facturacion_Articulos
         {
 
         }
+
+        private void FrmArticulos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            con.Close();
+        }
     }
 }

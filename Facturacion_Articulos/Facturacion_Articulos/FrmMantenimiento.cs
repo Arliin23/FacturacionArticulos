@@ -20,24 +20,27 @@ namespace Facturacion_Articulos
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
             FrmMantenimiento frm = new FrmMantenimiento();
+
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmDataClientescs frm = new FrmDataClientescs();
+            FrmDataClientescs frm = new FrmDataClientescs();    
             frm.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             FrmDataCondicionPago frm = new FrmDataCondicionPago();
+            
             frm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             FrmDataArticulos frm = new FrmDataArticulos();
+           
             frm.ShowDialog();
         }
 
@@ -45,6 +48,11 @@ namespace Facturacion_Articulos
         {
             FrmDataVendedores frm = new FrmDataVendedores();
             frm.ShowDialog();
+        }
+
+        private void FrmMantenimiento_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

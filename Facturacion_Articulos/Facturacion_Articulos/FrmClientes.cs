@@ -80,7 +80,7 @@ namespace Facturacion_Articulos
         {
             try
             {
-                Modo = "C";
+               
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
