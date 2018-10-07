@@ -59,7 +59,7 @@ namespace Facturacion_Articulos
         {
             try
             {
-                string sql = "delete Cliente ";
+                string sql = "delete Clientes ";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
 
@@ -80,6 +80,7 @@ namespace Facturacion_Articulos
         {
             try
             {
+                Modo = "C";
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
@@ -89,7 +90,7 @@ namespace Facturacion_Articulos
                 {
                     sql = $"update Cliente set Nombre_Comercial='{TextNombreComercial.Text}', " +
                         $"Cedula = '{TextCedula.Text}', Cuenta_Contable = '{TextCuenta.Text}', Estado = '{Estadocbx.Text}' " +
-                        $"where ID_Cliente = '{TextID.Text}'";
+                        $"where ID_Cliente = {TextID.Text}";
 
                 }
                 SqlCommand cmd = new SqlCommand(sql, con);

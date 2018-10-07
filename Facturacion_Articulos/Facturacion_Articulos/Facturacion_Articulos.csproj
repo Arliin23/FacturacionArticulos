@@ -52,11 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmArticulos.cs">
+    <Compile Include="FrmArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmArticulos.Designer.cs">
-      <DependentUpon>frmArticulos.cs</DependentUpon>
+    <Compile Include="FrmArticulos.Designer.cs">
+      <DependentUpon>FrmArticulos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmClientes.cs">
       <SubType>Form</SubType>
@@ -70,19 +70,55 @@
     <Compile Include="FrmCondicionPago.Designer.cs">
       <DependentUpon>FrmCondicionPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVendedor.cs">
+    <Compile Include="FrmDataArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVendedor.Designer.cs">
-      <DependentUpon>frmVendedor.cs</DependentUpon>
+    <Compile Include="FrmDataArticulos.Designer.cs">
+      <DependentUpon>FrmDataArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDataClientescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataClientescs.Designer.cs">
+      <DependentUpon>FrmDataClientescs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDataCondicionPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataCondicionPago.Designer.cs">
+      <DependentUpon>FrmDataCondicionPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDataVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataVendedores.Designer.cs">
+      <DependentUpon>FrmDataVendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFacturacion.Designer.cs">
+      <DependentUpon>FrmFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimiento.Designer.cs">
+      <DependentUpon>FrmMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVendedor.Designer.cs">
+      <DependentUpon>FrmVendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmArticulos.resx">
-      <DependentUpon>frmArticulos.cs</DependentUpon>
+    <EmbeddedResource Include="FrmArticulos.resx">
+      <DependentUpon>FrmArticulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
@@ -90,8 +126,26 @@
     <EmbeddedResource Include="FrmCondicionPago.resx">
       <DependentUpon>FrmCondicionPago.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVendedor.resx">
-      <DependentUpon>frmVendedor.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDataArticulos.resx">
+      <DependentUpon>FrmDataArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataClientescs.resx">
+      <DependentUpon>FrmDataClientescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataCondicionPago.resx">
+      <DependentUpon>FrmDataCondicionPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataVendedores.resx">
+      <DependentUpon>FrmDataVendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFacturacion.resx">
+      <DependentUpon>FrmFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimiento.resx">
+      <DependentUpon>FrmMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVendedor.resx">
+      <DependentUpon>FrmVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

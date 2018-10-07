@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Facturacion_Articulos
 {
-    public partial class frmVendedor : Form
+    public partial class FrmVendedor : Form
     {
         public SqlConnection con;
         public string ID { get; set; }
@@ -20,8 +20,7 @@ namespace Facturacion_Articulos
         public string Estado { get; set; }
         public string Modo { get; set; }
 
-
-        public frmVendedor()
+        public FrmVendedor()
         {
             InitializeComponent();
             try
@@ -43,7 +42,7 @@ namespace Facturacion_Articulos
             {
                 TextID.Text = ID;
                 TextNombre.Text = Nombre;
-                nUDPorciento.Value =Porciento;
+                nUDPorciento.Value = Porciento;
                 cbxEstado.Text = Estado;
                 TextID.Enabled = Modo.Equals("C");
             }
@@ -53,7 +52,31 @@ namespace Facturacion_Articulos
             }
         }
 
-        //Boton Guardar
+
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            FrmVendedor frm = new FrmVendedor();
+            this.Close();
+        }
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sql = "delete vendedor ";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Registro eliminado con exito");
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al eliminar");
+                throw;
+            }
+
+        }
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
@@ -82,58 +105,12 @@ namespace Facturacion_Articulos
             {
                 MessageBox.Show("Error al guardar: " + ex.Message);
             }
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void FrmVendedor_Load_1(object sender, EventArgs e)
         {
 
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //Boton Eliminar
-        private void cmdEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string sql = "delete vendedor ";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Registro eliminado con exito");
-                this.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al eliminar");
-                throw;
-            }
-        }
-
-        //Boton Cerrar
-        private void cmdCerrar_Click(object sender, EventArgs e)
-        {
-            frmVendedor frm = new frmVendedor();
-            this.Close();
-        }
-
-        private void frmVendedor_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            con.Close();
         }
     }
-    }
+}

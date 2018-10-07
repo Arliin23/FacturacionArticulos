@@ -11,17 +11,18 @@ using System.Windows.Forms;
 
 namespace Facturacion_Articulos
 {
-    public partial class frmArticulos : Form
+    public partial class FrmArticulos : Form
     {
         public SqlConnection con;
         public string ID { get; set; }
         public string Descripcion { get; set; }
         public int CostoUnitario { get; set; }
-        public int PrecioUnitario{ get; set; }
+        public int PrecioUnitario { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
-        public frmArticulos()
+
+        public FrmArticulos()
         {
             InitializeComponent();
             try
@@ -34,6 +35,7 @@ namespace Facturacion_Articulos
 
                 MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void frmArticulos_Load(object sender, EventArgs e)
@@ -53,9 +55,11 @@ namespace Facturacion_Articulos
             }
         }
 
+
         //Boton Guardar
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
+
             try
             {
                 string sql = "";
@@ -84,6 +88,13 @@ namespace Facturacion_Articulos
 
         }
 
+        //Boton Cerrar
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            FrmArticulos frm = new FrmArticulos();
+            this.Close();
+        }
+
         //Boton Eliminar
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
@@ -101,18 +112,12 @@ namespace Facturacion_Articulos
                 MessageBox.Show("Error al eliminar");
                 throw;
             }
+
         }
 
-        //Boton Cerrar
-        private void cmdCerrar_Click(object sender, EventArgs e)
+        private void FrmArticulos_Load_1(object sender, EventArgs e)
         {
-            frmArticulos frm = new frmArticulos();
-            this.Close();
-        }
 
-        private void frmArticulos_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            con.Close();
         }
     }
 }

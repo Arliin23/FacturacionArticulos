@@ -76,7 +76,8 @@ namespace Facturacion_Articulos
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
             try
-            {    
+            {
+                Modo = "C";
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
@@ -85,8 +86,8 @@ namespace Facturacion_Articulos
                 else
                 {
                     sql = $"update Condicion_Pago set Descripcion='{rtxtDescripcion.Text}', " +
-                        $"Cantidad_dias = {nUDCantidadDias.Value}, estado = '{cbxEstado.Text}' " +
-                        $"where id_condicion = '{TextID.Text}'";
+                        $"Cantidad_dias = '{nUDCantidadDias.Value}', estado = '{cbxEstado.Text}' " +
+                        $"where id_condicion = {TextID.Text}";
                 }
 
                 SqlCommand cmd = new SqlCommand(sql, con);

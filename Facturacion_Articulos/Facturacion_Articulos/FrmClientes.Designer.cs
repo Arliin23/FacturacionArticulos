@@ -171,9 +171,9 @@
             // 
             this.Estadocbx.FormattingEnabled = true;
             this.Estadocbx.Items.AddRange(new object[] {
-            "Activo",
-            "Dormido",
-            "Baja"});
+            "Pago al contado",
+            "Pago anticipado",
+            "Pago aplazado"});
             this.Estadocbx.Location = new System.Drawing.Point(280, 338);
             this.Estadocbx.Name = "Estadocbx";
             this.Estadocbx.Size = new System.Drawing.Size(174, 28);
