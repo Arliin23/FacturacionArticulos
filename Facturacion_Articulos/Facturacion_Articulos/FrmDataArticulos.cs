@@ -90,5 +90,10 @@ namespace Facturacion_Articulos
             frm.Modo = "U";
             frm.ShowDialog();
         }
+
+        private void FrmDataArticulos_Activated(object sender, EventArgs e)
+        {
+            ejecutarConsultaArticulos();
+        }
     }
 }

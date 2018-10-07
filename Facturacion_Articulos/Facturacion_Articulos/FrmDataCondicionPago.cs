@@ -79,5 +79,10 @@ namespace Facturacion_Articulos
             frm.Modo = "U";
             frm.ShowDialog();
         }
+
+        private void FrmDataCondicionPago_Activated(object sender, EventArgs e)
+        {
+            ejecutarConsultaCondicionPago();
+        }
     }
 }

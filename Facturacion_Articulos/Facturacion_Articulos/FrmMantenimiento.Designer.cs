@@ -42,9 +42,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(116, 12);
+            this.button1.Location = new System.Drawing.Point(116, 35);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 155);
+            this.button1.Size = new System.Drawing.Size(136, 132);
             this.button1.TabIndex = 0;
             this.button1.Text = "Clientes";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -72,9 +72,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(330, 195);
+            this.button3.Location = new System.Drawing.Point(362, 202);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(199, 157);
+            this.button3.Size = new System.Drawing.Size(140, 150);
             this.button3.TabIndex = 2;
             this.button3.Text = "Condición de Pago";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -87,7 +87,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(330, 35);
+            this.button4.Location = new System.Drawing.Point(362, 35);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(140, 132);
             this.button4.TabIndex = 3;

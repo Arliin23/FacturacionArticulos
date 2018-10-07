@@ -68,7 +68,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.MenuText;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -119,6 +119,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmDataArticulos";
             this.Text = "FrmDataArticulos";
+            this.Activated += new System.EventHandler(this.FrmDataArticulos_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDataArticulos_FormClosing);
             this.Load += new System.EventHandler(this.FrmDataArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();

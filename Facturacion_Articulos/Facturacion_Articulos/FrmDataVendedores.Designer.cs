@@ -52,7 +52,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuText;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -103,6 +103,7 @@
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "FrmDataVendedores";
             this.Text = "FrmDataVendedores";
+            this.Activated += new System.EventHandler(this.FrmDataVendedores_Activated);
             this.Load += new System.EventHandler(this.FrmDataVendedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendedores)).EndInit();
             this.ResumeLayout(false);

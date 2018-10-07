@@ -83,5 +83,10 @@ namespace Facturacion_Articulos
             frm.Modo = "U";
             frm.ShowDialog();
         }
+
+        private void FrmDataClientescs_Activated(object sender, EventArgs e)
+        {
+            ejecutarConsultaCliente();
+        }
     }
 }
