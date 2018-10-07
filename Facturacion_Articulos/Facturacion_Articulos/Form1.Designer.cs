@@ -80,6 +80,7 @@
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
             this.artículosToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
             this.artículosToolStripMenuItem.Text = "Artículos";
+            this.artículosToolStripMenuItem.Click += new System.EventHandler(this.artículosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem1
             // 
@@ -103,6 +104,7 @@
             this.vendedoresToolStripMenuItem1.Name = "vendedoresToolStripMenuItem1";
             this.vendedoresToolStripMenuItem1.Size = new System.Drawing.Size(128, 24);
             this.vendedoresToolStripMenuItem1.Text = "Vendedores";
+            this.vendedoresToolStripMenuItem1.Click += new System.EventHandler(this.vendedoresToolStripMenuItem1_Click);
             // 
             // menuStrip2
             // 
@@ -131,12 +133,14 @@
             this.artículosToolStripMenuItem1.Name = "artículosToolStripMenuItem1";
             this.artículosToolStripMenuItem1.Size = new System.Drawing.Size(221, 24);
             this.artículosToolStripMenuItem1.Text = "Artículos";
+            this.artículosToolStripMenuItem1.Click += new System.EventHandler(this.artículosToolStripMenuItem1_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // condiciónDePagoToolStripMenuItem
             // 
@@ -150,6 +154,7 @@
             this.vendedoresToolStripMenuItem.Name = "vendedoresToolStripMenuItem";
             this.vendedoresToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
             this.vendedoresToolStripMenuItem.Text = "Vendedores";
+            this.vendedoresToolStripMenuItem.Click += new System.EventHandler(this.vendedoresToolStripMenuItem_Click);
             // 
             // dgvResultados
             // 

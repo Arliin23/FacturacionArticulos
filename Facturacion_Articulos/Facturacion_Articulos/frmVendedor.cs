@@ -2,27 +2,26 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Facturacion_Articulos
 {
-    public partial class FrmClientes : Form
+    public partial class frmVendedor : Form
     {
         public SqlConnection con;
         public string ID { get; set; }
-        public string Nombre_Comercial { get; set; }
-        public string Cedula { get; set; }
-        public string Cuenta_Contable { get; set; }
+        public string Nombre { get; set; }
+        public int Porciento { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
 
-        public FrmClientes()
+        public frmVendedor()
         {
             InitializeComponent();
             try
@@ -35,16 +34,17 @@ namespace Facturacion_Articulos
 
                 MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
-        private void FrmClientes_Load(object sender, EventArgs e)
+        private void frmVendedor_Load(object sender, EventArgs e)
         {
             try
             {
                 TextID.Text = ID;
-                TextNombreComercial.Text = Nombre_Comercial;
-                TextCedula.Text = Cedula;
-                TextCuenta.Text = Cuenta_Contable;
+                TextNombre.Text = Nombre;
+                nUDPorciento.Value =Porciento;
+                cbxEstado.Text = Estado;
                 TextID.Enabled = Modo.Equals("C");
             }
             catch (Exception)
@@ -53,29 +53,8 @@ namespace Facturacion_Articulos
             }
         }
 
+        //Boton Guardar
 
-        //Boton de Eliminar
-        private void buttonEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string sql = "delete Cliente ";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Registro eliminado con exito");
-                this.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al eliminar");
-                throw;
-            }
-            
-        }
-
-        //Recuerda modificar el SQL string
-        //Boton de GUardar
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
             try
@@ -83,15 +62,15 @@ namespace Facturacion_Articulos
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
-                    sql = $"insert into Cliente values ('{TextNombreComercial.Text}', '{TextCedula.Text}', '{TextCuenta.Text}', '{Estadocbx.Text}')";
+                    sql = $"insert into vendedor values ('{TextNombre.Text}', { nUDPorciento.Value}, '{cbxEstado.Text}')";
                 }
                 else
                 {
-                    sql = $"update Cliente set Nombre_Comercial='{TextNombreComercial.Text}', " +
-                        $"Cedula = '{TextCedula.Text}', Cuenta_Contable = '{TextCuenta.Text}', Estado = '{Estadocbx.Text}' " +
-                        $"where ID_Cliente = '{TextID.Text}'";
-
+                    sql = $"update vendedor set Nombre ='{TextNombre.Text}', " +
+                        $"Porciento_Comision = {nUDPorciento.Value}, estado = '{cbxEstado.Text}' " +
+                        $"where id_vendedor = '{TextID.Text}'";
                 }
+
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro guardado con exito");
@@ -105,14 +84,18 @@ namespace Facturacion_Articulos
             }
         }
 
-        //Boton de Cerrar
-        private void cmdCerrar_Click(object sender, EventArgs e)
+
+        private void label1_Click(object sender, EventArgs e)
         {
-            FrmClientes frm = new FrmClientes();
-            this.Close();
+
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
@@ -122,14 +105,35 @@ namespace Facturacion_Articulos
 
         }
 
-        private void FrmCLientes_FormClosing(object sender, FormClosingEventArgs e)
+        //Boton Eliminar
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sql = "delete vendedor ";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Registro eliminado con exito");
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al eliminar");
+                throw;
+            }
+        }
+
+        //Boton Cerrar
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            frmVendedor frm = new frmVendedor();
+            this.Close();
+        }
+
+        private void frmVendedor_FormClosing(object sender, FormClosingEventArgs e)
         {
             con.Close();
         }
-
-        private void FrmClientes_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
-}
+    }

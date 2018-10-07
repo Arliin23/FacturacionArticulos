@@ -21,6 +21,8 @@ namespace Facturacion_Articulos
         }
 
         //Recuerda modificar el SQL string
+
+            //Metodos Consultas
         private void ejecutarConsultaCliente()
         {
             try
@@ -61,6 +63,49 @@ namespace Facturacion_Articulos
             }
         }
 
+        private void ejecutarConsultaVendedor()
+        {
+            try
+            {
+                con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
+                con.Open();
+                string sql = "select * from vendedor";
+
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvResultados.DataSource = dt;
+                dgvResultados.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar consulta: " + ex.Message);
+            }
+
+        }
+
+        private void ejecutarConsultaArticulos()
+        {
+            try
+            {
+                con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
+                con.Open();
+                string sql = "select * from Articulo_Facturable";
+
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvResultados.DataSource = dt;
+                dgvResultados.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar consulta: " + ex.Message);
+            }
+
+
+        }
+
         private void dgvResultados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -86,8 +131,7 @@ namespace Facturacion_Articulos
 
         private void cmdEditar_Click(object sender, EventArgs e)
         {
-            FrmClientes frm = new FrmClientes();
-            frm.ShowDialog();
+           
         }
 
         private void cmdCerrar_Click(object sender, EventArgs e)
@@ -109,12 +153,46 @@ namespace Facturacion_Articulos
         private void condiciónDePagoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmCondicionPago frm = new FrmCondicionPago();
+            frm.Modo = "C";
             frm.ShowDialog();
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes frm = new FrmClientes();
+            frm.Modo = "C";
+            frm.ShowDialog();
+        }
+
+        private void vendedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVendedor frm = new frmVendedor();
+            frm.Modo = "C";
+            frm.ShowDialog();
+        }
+
+        private void vendedoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ejecutarConsultaVendedor();
+
+        }
+
+        private void artículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ejecutarConsultaArticulos();
+        }
+
+        private void artículosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmArticulos frm = new frmArticulos();
+            frm.Modo = "C";
+            frm.ShowDialog();
         }
     }
 }

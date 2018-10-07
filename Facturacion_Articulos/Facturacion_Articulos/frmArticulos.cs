@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Facturacion_Articulos
 {
-    public partial class FrmCondicionPago : Form
+    public partial class frmArticulos : Form
     {
-
-        private SqlConnection con;
+        public SqlConnection con;
         public string ID { get; set; }
         public string Descripcion { get; set; }
-        public int CantidadDias { get; set; }
+        public int CostoUnitario { get; set; }
+        public int PrecioUnitario{ get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
-        public FrmCondicionPago()
+        public frmArticulos()
         {
             InitializeComponent();
             try
@@ -32,61 +32,42 @@ namespace Facturacion_Articulos
             catch (Exception e)
             {
 
-                MessageBox.Show(e.Message,"Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void FrmCondicionPago_Load(object sender, EventArgs e)
+        private void frmArticulos_Load(object sender, EventArgs e)
         {
             try
             {
                 TextID.Text = ID;
                 rtxtDescripcion.Text = Descripcion;
-                nUDCantidadDias.Value = CantidadDias;
+                nUDCostoUnitario.Value = CostoUnitario;
+                nUDPrecioUnitario.Value = PrecioUnitario;
                 cbxEstado.Text = Estado;
                 TextID.Enabled = Modo.Equals("C");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error al asignar valores" + ex.Message);
+                MessageBox.Show("Error al asignar valores");
             }
         }
 
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        //Boton de Guardar
+        //Boton Guardar
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
             try
-            {    
+            {
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
-                    sql = $"insert into condicion_pago values ('{rtxtDescripcion.Text}', { nUDCantidadDias.Value}, '{cbxEstado.Text}')";
+                    sql = $"insert into Articulo_Facturable values ('{rtxtDescripcion.Text}', {nUDCostoUnitario.Value}, { nUDPrecioUnitario.Value} ,'{cbxEstado.Text}')";
                 }
                 else
                 {
-                    sql = $"update Condicion_Pago set Descripcion='{rtxtDescripcion.Text}', " +
-                        $"Cantidad_dias = {nUDCantidadDias.Value}, estado = '{cbxEstado.Text}' " +
-                        $"where id_condicion = '{TextID.Text}'";
+                    sql = $"update Articulo_Facturable set Descripcion ='{rtxtDescripcion.Text}', " +
+                        $"Costo_Unitario = {nUDCostoUnitario.Value}, Precio_Unitario = {nUDPrecioUnitario.Value}, estado = '{cbxEstado.Text}' " +
+                        $"where id_articulo = '{TextID.Text}'";
                 }
 
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -100,34 +81,36 @@ namespace Facturacion_Articulos
             {
                 MessageBox.Show("Error al guardar: " + ex.Message);
             }
+
         }
-        //Boton de Eliminar
+
+        //Boton Eliminar
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                string sql = "delete Condicion_Pago ";
-                sql += " where ID_Condicion = '" + TextID.Text + "'";
+                string sql = "delete Articulo_Facturable ";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Registro eliminado con exito");
                 this.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error al eliminar: " + ex.Message);
+                MessageBox.Show("Error al eliminar");
                 throw;
             }
         }
-        //Boton de Cerrar
+
+        //Boton Cerrar
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
-            FrmCondicionPago frm = new FrmCondicionPago();
+            frmArticulos frm = new frmArticulos();
             this.Close();
         }
 
-        private void FrmCondicionPago_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmArticulos_FormClosing(object sender, FormClosingEventArgs e)
         {
             con.Close();
         }
