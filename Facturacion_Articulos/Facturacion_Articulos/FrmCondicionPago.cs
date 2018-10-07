@@ -38,18 +38,7 @@ namespace Facturacion_Articulos
 
         private void FrmCondicionPago_Load(object sender, EventArgs e)
         {
-            try
-            {
-                TextID.Text = ID;
-                rtxtDescripcion.Text = Descripcion;
-                nUDCantidadDias.Text = CantidadDias;
-                cbxEstado.Text = Estado;
-                TextID.Enabled = Modo.Equals("C");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al asignar valores" + ex.Message);
-            }
+            
         }
 
 
@@ -107,8 +96,7 @@ namespace Facturacion_Articulos
         {
             try
             {
-                string sql = "delete Condicion_Pago ";
-                sql += " where ID_Condicion = '" + TextID.Text + "'";
+                string sql = $"delete Condicion_Pago where id_condicion = '{TextID.Text}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
 
@@ -135,7 +123,18 @@ namespace Facturacion_Articulos
 
         private void FrmCondicionPago_Load_1(object sender, EventArgs e)
         {
-
+            try
+            {
+                TextID.Text = ID;
+                rtxtDescripcion.Text = Descripcion;
+                nUDCantidadDias.Text = CantidadDias;
+                cbxEstado.Text = Estado;
+                TextID.Enabled = Modo.Equals("C");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al asignar valores" + ex.Message);
+            }
         }
     }
 }

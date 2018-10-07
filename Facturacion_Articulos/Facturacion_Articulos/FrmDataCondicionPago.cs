@@ -70,14 +70,22 @@ namespace Facturacion_Articulos
 
         private void dgvCondicionP_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.dgvCondicionP.SelectedRows[0];
-            FrmCondicionPago frm = new FrmCondicionPago();
-            frm.ID = row.Cells[0].Value.ToString();
-            frm.Descripcion = row.Cells[1].Value.ToString();
-            frm.CantidadDias = row.Cells[2].Value.ToString();
-            frm.Estado = row.Cells[3].Value.ToString();
-            frm.Modo = "U";
-            frm.ShowDialog();
+            try
+            {
+                DataGridViewRow row = this.dgvCondicionP.SelectedRows[0];
+                FrmCondicionPago frm = new FrmCondicionPago();
+                frm.ID = row.Cells[0].Value.ToString();
+                frm.Descripcion = row.Cells[1].Value.ToString();
+                frm.CantidadDias = row.Cells[2].Value.ToString();
+                frm.Estado = row.Cells[3].Value.ToString();
+                frm.Modo = "U";
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al editar registro" + ex.Message);
+            }
         }
 
         private void FrmDataCondicionPago_Activated(object sender, EventArgs e)

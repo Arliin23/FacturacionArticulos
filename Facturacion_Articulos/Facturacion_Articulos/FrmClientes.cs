@@ -39,18 +39,7 @@ namespace Facturacion_Articulos
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-            try
-            {
-                TextID.Text = ID;
-                TextNombreComercial.Text = Nombre_Comercial;
-                TextCedula.Text = Cedula;
-                TextCuenta.Text = Cuenta_Contable;
-                TextID.Enabled = Modo.Equals("C");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al asignar valores");
-            }
+            
         }
 
 
@@ -59,17 +48,17 @@ namespace Facturacion_Articulos
         {
             try
             {
-                string sql = "delete Clientes ";
+                string sql = $"delete Cliente where id_cliente = '{TextID.Text}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Registro eliminado con exito");
                 this.Close();
             }
-            catch (Exception)
+            catch (Exception exe)
             {
-                MessageBox.Show("Error al eliminar");
-                throw;
+                MessageBox.Show("Error al eliminar" + exe.Message);
+               
             }
             
         }
@@ -130,7 +119,18 @@ namespace Facturacion_Articulos
 
         private void FrmClientes_Load_1(object sender, EventArgs e)
         {
-
+            try
+            {
+                TextID.Text = ID;
+                TextNombreComercial.Text = Nombre_Comercial;
+                TextCedula.Text = Cedula;
+                TextCuenta.Text = Cuenta_Contable;
+                TextID.Enabled = Modo.Equals("C");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al asignar valores");
+            }
         }
     }
 }

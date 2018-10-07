@@ -38,18 +38,7 @@ namespace Facturacion_Articulos
 
         private void frmVendedor_Load(object sender, EventArgs e)
         {
-            try
-            {
-                TextID.Text = ID;
-                TextNombre.Text = Nombre;
-                nUDPorciento.Text = Porciento;
-                cbxEstado.Text = Estado;
-                TextID.Enabled = Modo.Equals("C");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al asignar valores");
-            }
+            
         }
 
 
@@ -63,7 +52,7 @@ namespace Facturacion_Articulos
         {
             try
             {
-                string sql = "delete vendedor ";
+                string sql = $"delete vendedor where id_vendedor = '{TextID.Text}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
 
@@ -110,7 +99,18 @@ namespace Facturacion_Articulos
 
         private void FrmVendedor_Load_1(object sender, EventArgs e)
         {
-
+            try
+            {
+                TextID.Text = ID;
+                TextNombre.Text = Nombre;
+                nUDPorciento.Text = Porciento;
+                cbxEstado.Text = Estado;
+                TextID.Enabled = Modo.Equals("C");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al asignar valores");
+            }
         }
 
         private void FrmVendedor_FormClosing(object sender, FormClosingEventArgs e)

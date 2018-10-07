@@ -69,14 +69,22 @@ namespace Facturacion_Articulos
 
         private void dgvVendedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.dgvVendedores.SelectedRows[0];
-            FrmVendedor frm = new FrmVendedor();
-            frm.ID = row.Cells[0].Value.ToString();
-            frm.Nombre = row.Cells[1].Value.ToString();
-            frm.Porciento = row.Cells[2].Value.ToString();
-            frm.Estado = row.Cells[3].Value.ToString();
-            frm.Modo = "U";
-            frm.ShowDialog();
+            try
+            {
+                DataGridViewRow row = this.dgvVendedores.SelectedRows[0];
+                FrmVendedor frm = new FrmVendedor();
+                frm.ID = row.Cells[0].Value.ToString();
+                frm.Nombre = row.Cells[1].Value.ToString();
+                frm.Porciento = row.Cells[2].Value.ToString();
+                frm.Estado = row.Cells[3].Value.ToString();
+                frm.Modo = "U";
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al editar registro" + ex.Message);
+            }
         }
 
         private void FrmDataVendedores_Activated(object sender, EventArgs e)

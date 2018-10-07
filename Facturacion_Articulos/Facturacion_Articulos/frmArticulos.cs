@@ -40,19 +40,7 @@ namespace Facturacion_Articulos
 
         private void frmArticulos_Load(object sender, EventArgs e)
         {
-            try
-            {
-                TextID.Text = ID;
-                rtxtDescripcion.Text = Descripcion;
-                nUDCostoUnitario.Text = CostoUnitario;
-                nUDPrecioUnitario.Text = PrecioUnitario;
-                cbxEstado.Text = Estado;
-                TextID.Enabled = Modo.Equals("C");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al asignar valores");
-            }
+            
         }
 
 
@@ -100,7 +88,7 @@ namespace Facturacion_Articulos
         {
             try
             {
-                string sql = "delete Articulo_Facturable ";
+                string sql = $"delete Articulo_Facturable where id_articulo = '{TextID.Text}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
 
@@ -114,10 +102,22 @@ namespace Facturacion_Articulos
             }
 
         }
-
+        //Este es el form load
         private void FrmArticulos_Load_1(object sender, EventArgs e)
         {
-
+            try
+            {
+                TextID.Text = ID;
+                rtxtDescripcion.Text = Descripcion;
+                nUDCostoUnitario.Text = CostoUnitario;
+                nUDPrecioUnitario.Text = PrecioUnitario;
+                cbxEstado.Text = Estado;
+                TextID.Enabled = Modo.Equals("C");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al asignar valores");
+            }
         }
 
         private void FrmArticulos_FormClosing(object sender, FormClosingEventArgs e)

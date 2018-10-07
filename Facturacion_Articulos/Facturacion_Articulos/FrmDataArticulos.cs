@@ -83,16 +83,24 @@ namespace Facturacion_Articulos
 
         private void dgvArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-            DataGridViewRow row = this.dgvArticulos.SelectedRows[0];
-            FrmArticulos frm = new FrmArticulos();
-            frm.ID = row.Cells[0].Value.ToString();
-            frm.Descripcion = row.Cells[1].Value.ToString();
-            frm.CostoUnitario = row.Cells[2].Value.ToString();
-            frm.PrecioUnitario = row.Cells[3].Value.ToString();
-            frm.Estado = row.Cells[4].Value.ToString();
-            frm.Modo = "U";
-            frm.ShowDialog();
+
+            try
+            {
+                DataGridViewRow row = this.dgvArticulos.SelectedRows[0];
+                FrmArticulos frm = new FrmArticulos();
+                frm.ID = row.Cells[0].Value.ToString();
+                frm.Descripcion = row.Cells[1].Value.ToString();
+                frm.CostoUnitario = row.Cells[2].Value.ToString();
+                frm.PrecioUnitario = row.Cells[3].Value.ToString();
+                frm.Estado = row.Cells[4].Value.ToString();
+                frm.Modo = "U";
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al editar Registro" + ex.Message);
+            }
         }
 
         private void FrmDataArticulos_Activated(object sender, EventArgs e)
