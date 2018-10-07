@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace Facturacion_Articulos
 {
+    //20170122 Arianna Linette Diaz
+    //20170173 Estefania Peralta
+    //20170370 Erick Pimentel
+
     public partial class frmMenuPrincipal : Form
     {
 
