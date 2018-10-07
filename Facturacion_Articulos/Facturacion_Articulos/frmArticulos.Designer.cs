@@ -158,6 +158,11 @@
             // nUDCostoUnitario
             // 
             this.nUDCostoUnitario.Location = new System.Drawing.Point(217, 260);
+            this.nUDCostoUnitario.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.nUDCostoUnitario.Name = "nUDCostoUnitario";
             this.nUDCostoUnitario.Size = new System.Drawing.Size(179, 31);
             this.nUDCostoUnitario.TabIndex = 14;
@@ -165,6 +170,11 @@
             // nUDPrecioUnitario
             // 
             this.nUDPrecioUnitario.Location = new System.Drawing.Point(217, 311);
+            this.nUDPrecioUnitario.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.nUDPrecioUnitario.Name = "nUDPrecioUnitario";
             this.nUDPrecioUnitario.Size = new System.Drawing.Size(179, 31);
             this.nUDPrecioUnitario.TabIndex = 15;

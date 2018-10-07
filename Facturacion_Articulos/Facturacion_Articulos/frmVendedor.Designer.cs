@@ -154,6 +154,11 @@
             // nUDPorciento
             // 
             this.nUDPorciento.Location = new System.Drawing.Point(197, 244);
+            this.nUDPorciento.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.nUDPorciento.Name = "nUDPorciento";
             this.nUDPorciento.Size = new System.Drawing.Size(175, 31);
             this.nUDPorciento.TabIndex = 14;
