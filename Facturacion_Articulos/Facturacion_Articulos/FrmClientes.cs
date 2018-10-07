@@ -59,7 +59,7 @@ namespace Facturacion_Articulos
         {
             try
             {
-                string sql = "delete Clientes ";
+                string sql = "delete Cliente ";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
 

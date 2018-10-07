@@ -34,9 +34,6 @@
             this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.condiciónDePagoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.créditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alContadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chequeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.mantenimientoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,36 +91,11 @@
             // 
             // condiciónDePagoToolStripMenuItem1
             // 
-            this.condiciónDePagoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.créditoToolStripMenuItem,
-            this.alContadoToolStripMenuItem,
-            this.chequeToolStripMenuItem});
             this.condiciónDePagoToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("condiciónDePagoToolStripMenuItem1.Image")));
             this.condiciónDePagoToolStripMenuItem1.Name = "condiciónDePagoToolStripMenuItem1";
             this.condiciónDePagoToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.condiciónDePagoToolStripMenuItem1.Text = "Condición de Pago";
             this.condiciónDePagoToolStripMenuItem1.Click += new System.EventHandler(this.alToolStripMenuItem_Click);
-            // 
-            // créditoToolStripMenuItem
-            // 
-            this.créditoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("créditoToolStripMenuItem.Image")));
-            this.créditoToolStripMenuItem.Name = "créditoToolStripMenuItem";
-            this.créditoToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.créditoToolStripMenuItem.Text = "Crédito";
-            // 
-            // alContadoToolStripMenuItem
-            // 
-            this.alContadoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("alContadoToolStripMenuItem.Image")));
-            this.alContadoToolStripMenuItem.Name = "alContadoToolStripMenuItem";
-            this.alContadoToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.alContadoToolStripMenuItem.Text = "Al contado";
-            // 
-            // chequeToolStripMenuItem
-            // 
-            this.chequeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("chequeToolStripMenuItem.Image")));
-            this.chequeToolStripMenuItem.Name = "chequeToolStripMenuItem";
-            this.chequeToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.chequeToolStripMenuItem.Text = "Cheque";
             // 
             // vendedoresToolStripMenuItem1
             // 
@@ -245,9 +217,6 @@
         private System.Windows.Forms.ToolStripMenuItem artículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem condiciónDePagoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem créditoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alContadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chequeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vendedoresToolStripMenuItem1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem1;
