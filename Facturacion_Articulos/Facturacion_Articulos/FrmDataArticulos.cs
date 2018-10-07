@@ -59,6 +59,8 @@ namespace Facturacion_Articulos
         {
             this.Close();
         }
+        
+        //Boton Agregar
 
         private void cmdEditar_Click(object sender, EventArgs e)
         {
@@ -76,6 +78,8 @@ namespace Facturacion_Articulos
         {
             con.Close();
         }
+
+        //Doble Click en las celdas
 
         private void dgvArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

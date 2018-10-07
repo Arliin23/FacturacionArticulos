@@ -87,7 +87,7 @@ namespace Facturacion_Articulos
                 {
                     sql = $"update Condicion_Pago set Descripcion='{rtxtDescripcion.Text}', " +
                         $"Cantidad_dias = '{nUDCantidadDias.Text}', estado = '{cbxEstado.Text}' " +
-                        $"where id_condicion = {TextID.Text}";
+                        $"where id_condicion = '{TextID.Text}'";
                 }
 
                 SqlCommand cmd = new SqlCommand(sql, con);

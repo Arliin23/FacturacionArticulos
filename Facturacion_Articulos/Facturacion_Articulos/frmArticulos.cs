@@ -61,7 +61,7 @@ namespace Facturacion_Articulos
         {
 
             try
-            {
+            { 
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
