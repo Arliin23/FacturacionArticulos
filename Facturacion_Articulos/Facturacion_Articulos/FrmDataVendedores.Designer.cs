@@ -61,6 +61,7 @@
             this.dgvVendedores.Name = "dgvVendedores";
             this.dgvVendedores.Size = new System.Drawing.Size(489, 287);
             this.dgvVendedores.TabIndex = 1;
+            this.dgvVendedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVendedores_CellDoubleClick);
             // 
             // cmdCerrar
             // 

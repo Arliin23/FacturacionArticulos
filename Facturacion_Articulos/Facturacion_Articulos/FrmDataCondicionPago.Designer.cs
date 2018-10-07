@@ -62,6 +62,7 @@
             this.dgvCondicionP.Name = "dgvCondicionP";
             this.dgvCondicionP.Size = new System.Drawing.Size(477, 264);
             this.dgvCondicionP.TabIndex = 1;
+            this.dgvCondicionP.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCondicionP_CellDoubleClick);
             // 
             // cmdEditar
             // 

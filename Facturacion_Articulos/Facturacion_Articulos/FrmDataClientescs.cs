@@ -70,5 +70,18 @@ namespace Facturacion_Articulos
         {
             ejecutarConsultaCliente();
         }
+
+        private void dgvCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dgvCliente.SelectedRows[0];
+            FrmClientes frm = new FrmClientes();
+            frm.ID = row.Cells[0].Value.ToString();
+            frm.Nombre_Comercial = row.Cells[1].Value.ToString();
+            frm.Cedula = row.Cells[2].Value.ToString();
+            frm.Cuenta_Contable = row.Cells[3].Value.ToString();
+            frm.Estado = row.Cells[4].Value.ToString();
+            frm.Modo = "U";
+            frm.ShowDialog();
+        }
     }
 }

@@ -40,11 +40,9 @@
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TextID = new System.Windows.Forms.TextBox();
-            this.nUDCostoUnitario = new System.Windows.Forms.NumericUpDown();
-            this.nUDPrecioUnitario = new System.Windows.Forms.NumericUpDown();
             this.rtxtDescripcion = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDCostoUnitario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDPrecioUnitario)).BeginInit();
+            this.nUDCostoUnitario = new System.Windows.Forms.TextBox();
+            this.nUDPrecioUnitario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -152,32 +150,9 @@
             // 
             this.TextID.Location = new System.Drawing.Point(217, 101);
             this.TextID.Name = "TextID";
+            this.TextID.ReadOnly = true;
             this.TextID.Size = new System.Drawing.Size(179, 31);
             this.TextID.TabIndex = 13;
-            // 
-            // nUDCostoUnitario
-            // 
-            this.nUDCostoUnitario.Location = new System.Drawing.Point(217, 260);
-            this.nUDCostoUnitario.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.nUDCostoUnitario.Name = "nUDCostoUnitario";
-            this.nUDCostoUnitario.Size = new System.Drawing.Size(179, 31);
-            this.nUDCostoUnitario.TabIndex = 14;
-            // 
-            // nUDPrecioUnitario
-            // 
-            this.nUDPrecioUnitario.Location = new System.Drawing.Point(217, 311);
-            this.nUDPrecioUnitario.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.nUDPrecioUnitario.Name = "nUDPrecioUnitario";
-            this.nUDPrecioUnitario.Size = new System.Drawing.Size(179, 31);
-            this.nUDPrecioUnitario.TabIndex = 15;
             // 
             // rtxtDescripcion
             // 
@@ -187,15 +162,29 @@
             this.rtxtDescripcion.TabIndex = 16;
             this.rtxtDescripcion.Text = "";
             // 
+            // nUDCostoUnitario
+            // 
+            this.nUDCostoUnitario.Location = new System.Drawing.Point(217, 263);
+            this.nUDCostoUnitario.Name = "nUDCostoUnitario";
+            this.nUDCostoUnitario.Size = new System.Drawing.Size(179, 31);
+            this.nUDCostoUnitario.TabIndex = 17;
+            // 
+            // nUDPrecioUnitario
+            // 
+            this.nUDPrecioUnitario.Location = new System.Drawing.Point(217, 314);
+            this.nUDPrecioUnitario.Name = "nUDPrecioUnitario";
+            this.nUDPrecioUnitario.Size = new System.Drawing.Size(179, 31);
+            this.nUDPrecioUnitario.TabIndex = 18;
+            // 
             // FrmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(535, 493);
-            this.Controls.Add(this.rtxtDescripcion);
             this.Controls.Add(this.nUDPrecioUnitario);
             this.Controls.Add(this.nUDCostoUnitario);
+            this.Controls.Add(this.rtxtDescripcion);
             this.Controls.Add(this.TextID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbxEstado);
@@ -215,8 +204,6 @@
             this.Text = "FrmArticulos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmArticulos_FormClosing);
             this.Load += new System.EventHandler(this.FrmArticulos_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.nUDCostoUnitario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDPrecioUnitario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,8 +222,8 @@
         private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TextID;
-        private System.Windows.Forms.NumericUpDown nUDCostoUnitario;
-        private System.Windows.Forms.NumericUpDown nUDPrecioUnitario;
         private System.Windows.Forms.RichTextBox rtxtDescripcion;
+        private System.Windows.Forms.TextBox nUDCostoUnitario;
+        private System.Windows.Forms.TextBox nUDPrecioUnitario;
     }
 }

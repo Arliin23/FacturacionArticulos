@@ -16,7 +16,7 @@ namespace Facturacion_Articulos
         public SqlConnection con;
         public string ID { get; set; }
         public string Nombre { get; set; }
-        public int Porciento { get; set; }
+        public string Porciento { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
@@ -42,7 +42,7 @@ namespace Facturacion_Articulos
             {
                 TextID.Text = ID;
                 TextNombre.Text = Nombre;
-                nUDPorciento.Value = Porciento;
+                nUDPorciento.Text = Porciento;
                 cbxEstado.Text = Estado;
                 TextID.Enabled = Modo.Equals("C");
             }
@@ -85,12 +85,12 @@ namespace Facturacion_Articulos
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
-                    sql = $"insert into vendedor values ('{TextNombre.Text}', { nUDPorciento.Value}, '{cbxEstado.Text}')";
+                    sql = $"insert into vendedor values ('{TextNombre.Text}', '{ nUDPorciento.Text}', '{cbxEstado.Text}')";
                 }
                 else
                 {
                     sql = $"update vendedor set Nombre ='{TextNombre.Text}', " +
-                        $"Porciento_Comision = {nUDPorciento.Value}, estado = '{cbxEstado.Text}' " +
+                        $"Porciento_Comision = '{nUDPorciento.Text}', estado = '{cbxEstado.Text}' " +
                         $"where id_vendedor = '{TextID.Text}'";
                 }
 

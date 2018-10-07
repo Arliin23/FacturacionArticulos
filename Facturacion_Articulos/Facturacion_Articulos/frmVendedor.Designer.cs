@@ -40,8 +40,7 @@
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.TextID = new System.Windows.Forms.TextBox();
             this.TextNombre = new System.Windows.Forms.TextBox();
-            this.nUDPorciento = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDPorciento)).BeginInit();
+            this.nUDPorciento = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -141,6 +140,7 @@
             // 
             this.TextID.Location = new System.Drawing.Point(197, 113);
             this.TextID.Name = "TextID";
+            this.TextID.ReadOnly = true;
             this.TextID.Size = new System.Drawing.Size(176, 31);
             this.TextID.TabIndex = 12;
             // 
@@ -153,14 +153,9 @@
             // 
             // nUDPorciento
             // 
-            this.nUDPorciento.Location = new System.Drawing.Point(197, 244);
-            this.nUDPorciento.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
+            this.nUDPorciento.Location = new System.Drawing.Point(196, 240);
             this.nUDPorciento.Name = "nUDPorciento";
-            this.nUDPorciento.Size = new System.Drawing.Size(175, 31);
+            this.nUDPorciento.Size = new System.Drawing.Size(176, 31);
             this.nUDPorciento.TabIndex = 14;
             // 
             // FrmVendedor
@@ -189,7 +184,6 @@
             this.Text = "FrmVendedor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVendedor_FormClosing);
             this.Load += new System.EventHandler(this.FrmVendedor_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.nUDPorciento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,6 +202,6 @@
         private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.TextBox TextID;
         private System.Windows.Forms.TextBox TextNombre;
-        private System.Windows.Forms.NumericUpDown nUDPorciento;
+        private System.Windows.Forms.TextBox nUDPorciento;
     }
 }

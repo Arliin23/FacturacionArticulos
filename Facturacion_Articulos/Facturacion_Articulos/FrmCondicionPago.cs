@@ -17,7 +17,7 @@ namespace Facturacion_Articulos
         private SqlConnection con;
         public string ID { get; set; }
         public string Descripcion { get; set; }
-        public int CantidadDias { get; set; }
+        public string CantidadDias { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
@@ -42,7 +42,7 @@ namespace Facturacion_Articulos
             {
                 TextID.Text = ID;
                 rtxtDescripcion.Text = Descripcion;
-                nUDCantidadDias.Value = CantidadDias;
+                nUDCantidadDias.Text = CantidadDias;
                 cbxEstado.Text = Estado;
                 TextID.Enabled = Modo.Equals("C");
             }
@@ -81,12 +81,12 @@ namespace Facturacion_Articulos
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
-                    sql = $"insert into condicion_pago values ('{rtxtDescripcion.Text}', { nUDCantidadDias.Value}, '{cbxEstado.Text}')";
+                    sql = $"insert into condicion_pago values ('{rtxtDescripcion.Text}', '{nUDCantidadDias.Text}', '{cbxEstado.Text}')";
                 }
                 else
                 {
                     sql = $"update Condicion_Pago set Descripcion='{rtxtDescripcion.Text}', " +
-                        $"Cantidad_dias = '{nUDCantidadDias.Value}', estado = '{cbxEstado.Text}' " +
+                        $"Cantidad_dias = '{nUDCantidadDias.Text}', estado = '{cbxEstado.Text}' " +
                         $"where id_condicion = {TextID.Text}";
                 }
 

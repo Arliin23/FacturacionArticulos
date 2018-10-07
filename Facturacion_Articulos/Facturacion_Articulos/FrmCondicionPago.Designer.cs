@@ -35,13 +35,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.rtxtDescripcion = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.nUDCantidadDias = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.cmdCerrar = new System.Windows.Forms.Button();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDCantidadDias)).BeginInit();
+            this.nUDCantidadDias = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -109,14 +108,6 @@
             this.label4.Text = "Cantidad de Dias";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // nUDCantidadDias
-            // 
-            this.nUDCantidadDias.Location = new System.Drawing.Point(285, 298);
-            this.nUDCantidadDias.Name = "nUDCantidadDias";
-            this.nUDCantidadDias.Size = new System.Drawing.Size(174, 20);
-            this.nUDCantidadDias.TabIndex = 17;
-            this.nUDCantidadDias.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -176,18 +167,25 @@
             this.cbxEstado.Size = new System.Drawing.Size(174, 21);
             this.cbxEstado.TabIndex = 23;
             // 
+            // nUDCantidadDias
+            // 
+            this.nUDCantidadDias.Location = new System.Drawing.Point(285, 297);
+            this.nUDCantidadDias.Name = "nUDCantidadDias";
+            this.nUDCantidadDias.Size = new System.Drawing.Size(174, 20);
+            this.nUDCantidadDias.TabIndex = 24;
+            // 
             // FrmCondicionPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(571, 531);
+            this.Controls.Add(this.nUDCantidadDias);
             this.Controls.Add(this.cbxEstado);
             this.Controls.Add(this.cmdCerrar);
             this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.nUDCantidadDias);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.rtxtDescripcion);
             this.Controls.Add(this.label3);
@@ -199,7 +197,6 @@
             this.Text = "FrmCondicionPago";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCondicionPago_FormClosing);
             this.Load += new System.EventHandler(this.FrmCondicionPago_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.nUDCantidadDias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,11 +210,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox rtxtDescripcion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown nUDCantidadDias;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button cmdGuardar;
         private System.Windows.Forms.Button cmdEliminar;
         private System.Windows.Forms.Button cmdCerrar;
         private System.Windows.Forms.ComboBox cbxEstado;
+        private System.Windows.Forms.TextBox nUDCantidadDias;
     }
 }

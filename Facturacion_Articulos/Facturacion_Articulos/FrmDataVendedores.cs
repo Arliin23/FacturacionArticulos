@@ -16,7 +16,7 @@ namespace Facturacion_Articulos
         public SqlConnection con;
         public string ID { get; set; }
         public string Nombre { get; set; }
-        public int Porciento { get; set; }
+        public string Porciento { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
@@ -65,6 +65,18 @@ namespace Facturacion_Articulos
         private void FrmDataVendedores_Load(object sender, EventArgs e)
         {
             ejecutarConsultaVendedores();
+        }
+
+        private void dgvVendedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dgvVendedores.SelectedRows[0];
+            FrmVendedor frm = new FrmVendedor();
+            frm.ID = row.Cells[0].Value.ToString();
+            frm.Nombre = row.Cells[1].Value.ToString();
+            frm.Porciento = row.Cells[2].Value.ToString();
+            frm.Estado = row.Cells[3].Value.ToString();
+            frm.Modo = "U";
+            frm.ShowDialog();
         }
     }
 }

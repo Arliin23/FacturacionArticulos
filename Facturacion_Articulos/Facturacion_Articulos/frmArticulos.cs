@@ -16,8 +16,8 @@ namespace Facturacion_Articulos
         public SqlConnection con;
         public string ID { get; set; }
         public string Descripcion { get; set; }
-        public int CostoUnitario { get; set; }
-        public int PrecioUnitario { get; set; }
+        public string CostoUnitario { get; set; }
+        public string PrecioUnitario { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
@@ -44,8 +44,8 @@ namespace Facturacion_Articulos
             {
                 TextID.Text = ID;
                 rtxtDescripcion.Text = Descripcion;
-                nUDCostoUnitario.Value = CostoUnitario;
-                nUDPrecioUnitario.Value = PrecioUnitario;
+                nUDCostoUnitario.Text = CostoUnitario;
+                nUDPrecioUnitario.Text = PrecioUnitario;
                 cbxEstado.Text = Estado;
                 TextID.Enabled = Modo.Equals("C");
             }
@@ -65,12 +65,12 @@ namespace Facturacion_Articulos
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
-                    sql = $"insert into Articulo_Facturable values ('{rtxtDescripcion.Text}', {nUDCostoUnitario.Value}, { nUDPrecioUnitario.Value} ,'{cbxEstado.Text}')";
+                    sql = $"insert into Articulo_Facturable values ('{rtxtDescripcion.Text}', '{nUDCostoUnitario.Text}', '{nUDPrecioUnitario.Text}' ,'{cbxEstado.Text}')";
                 }
                 else
                 {
                     sql = $"update Articulo_Facturable set Descripcion ='{rtxtDescripcion.Text}', " +
-                        $"Costo_Unitario = {nUDCostoUnitario.Value}, Precio_Unitario = {nUDPrecioUnitario.Value}, estado = '{cbxEstado.Text}' " +
+                        $"Costo_Unitario = '{nUDCostoUnitario.Text}', Precio_Unitario = '{nUDPrecioUnitario.Text}', estado = '{cbxEstado.Text}' " +
                         $"where id_articulo = '{TextID.Text}'";
                 }
 

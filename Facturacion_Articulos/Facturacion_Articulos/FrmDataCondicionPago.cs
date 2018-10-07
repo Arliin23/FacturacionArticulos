@@ -16,7 +16,7 @@ namespace Facturacion_Articulos
         private SqlConnection con;
         public string ID { get; set; }
         public string Descripcion { get; set; }
-        public int CantidadDias { get; set; }
+        public string CantidadDias { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
@@ -66,6 +66,18 @@ namespace Facturacion_Articulos
         private void FrmDataCondicionPago_Load(object sender, EventArgs e)
         {
             ejecutarConsultaCondicionPago();
+        }
+
+        private void dgvCondicionP_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.dgvCondicionP.SelectedRows[0];
+            FrmCondicionPago frm = new FrmCondicionPago();
+            frm.ID = row.Cells[0].Value.ToString();
+            frm.Descripcion = row.Cells[1].Value.ToString();
+            frm.CantidadDias = row.Cells[2].Value.ToString();
+            frm.Estado = row.Cells[3].Value.ToString();
+            frm.Modo = "U";
+            frm.ShowDialog();
         }
     }
 }
