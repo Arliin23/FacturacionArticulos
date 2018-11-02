@@ -72,9 +72,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(362, 202);
+            this.button3.Location = new System.Drawing.Point(362, 174);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 150);
+            this.button3.Size = new System.Drawing.Size(140, 178);
             this.button3.TabIndex = 2;
             this.button3.Text = "Condición de Pago";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
