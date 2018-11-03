@@ -52,7 +52,7 @@
             this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdGuardar.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.Image")));
             this.cmdGuardar.Location = new System.Drawing.Point(314, 644);
-            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(76, 101);
             this.cmdGuardar.TabIndex = 20;
@@ -64,7 +64,7 @@
             this.cmdCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCerrar.Image = ((System.Drawing.Image)(resources.GetObject("cmdCerrar.Image")));
             this.cmdCerrar.Location = new System.Drawing.Point(490, 644);
-            this.cmdCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdCerrar.Name = "cmdCerrar";
             this.cmdCerrar.Size = new System.Drawing.Size(76, 101);
             this.cmdCerrar.TabIndex = 19;
@@ -76,7 +76,7 @@
             this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdEliminar.Image = ((System.Drawing.Image)(resources.GetObject("cmdEliminar.Image")));
             this.cmdEliminar.Location = new System.Drawing.Point(399, 644);
-            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(82, 101);
             this.cmdEliminar.TabIndex = 18;
@@ -112,6 +112,7 @@
             this.TextNombreUsuario.Name = "TextNombreUsuario";
             this.TextNombreUsuario.Size = new System.Drawing.Size(174, 26);
             this.TextNombreUsuario.TabIndex = 38;
+            this.TextNombreUsuario.TextChanged += new System.EventHandler(this.TextNombreUsuario_TextChanged);
             // 
             // TextID
             // 
@@ -242,7 +243,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmUsuarios";
             this.Text = "FrmUsuarios";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmUsuarios_FormClosing);

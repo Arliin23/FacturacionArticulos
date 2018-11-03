@@ -21,11 +21,12 @@ namespace Facturacion_Articulos
         {
             FrmFacturacion frm = new FrmFacturacion();
             frm.ShowDialog();
+         
         }
 
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();            
         }
     }
 }

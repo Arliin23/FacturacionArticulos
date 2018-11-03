@@ -48,6 +48,8 @@ namespace Facturacion_Articulos
         {
             try
             {
+
+
                 string sql = $"delete Cliente where id_cliente = '{TextID.Text}'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
@@ -69,23 +71,32 @@ namespace Facturacion_Articulos
         {
             try
             {
-               
-                string sql = "";
-                if (Modo.Equals("C"))
+                if (!validarCedula(TextCedula.Text))
                 {
-                    sql = $"insert into Cliente values ('{TextNombreComercial.Text}', '{TextCedula.Text}', '{TextCuenta.Text}', '{Estadocbx.Text}')";
+                    MessageBox.Show("Cedula no valida");
                 }
                 else
                 {
-                    sql = $"update Cliente set Nombre_Comercial='{TextNombreComercial.Text}', " +
-                        $"Cedula = '{TextCedula.Text}', Cuenta_Contable = '{TextCuenta.Text}', Estado = '{Estadocbx.Text}' " +
-                        $"where ID_Cliente = '{TextID.Text}'";
+
+                    string sql = "";
+                    if (Modo.Equals("C"))
+                    {
+                        sql = $"insert into Cliente values ('{TextNombreComercial.Text}', '{TextCedula.Text}', '{TextCuenta.Text}', '{Estadocbx.Text}')";
+                    }
+                    else
+                    {
+                        sql = $"update Cliente set Nombre_Comercial='{TextNombreComercial.Text}', " +
+                            $"Cedula = '{TextCedula.Text}', Cuenta_Contable = '{TextCuenta.Text}', Estado = '{Estadocbx.Text}' " +
+                            $"where ID_Cliente = '{TextID.Text}'";
+
+                    }
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro guardado con exito");
+                    this.Close();
 
                 }
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado con exito");
-                this.Close();
+
 
 
             }
@@ -100,6 +111,34 @@ namespace Facturacion_Articulos
         {
             FrmClientes frm = new FrmClientes();
             this.Close();
+        }
+
+        public static bool validarCedula(String Cedula)
+        {
+            if (long.Parse(Cedula) <= 0)
+                return false;
+
+            int vnTotal = 0;
+            string vcCedula = Cedula.Replace("-", "");
+            int pLongCed = vcCedula.Trim().Length;
+            int[] digitoMult = new int[11] { 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1 };
+            if (pLongCed < 11 || pLongCed > 11)
+                return false;
+
+            for (int vDig = 1; vDig <= pLongCed; vDig++)
+            {
+                int vCalculo = Int32.Parse(vcCedula.Substring(vDig - 1, 1)) * digitoMult[vDig - 1];
+                if (vCalculo < 10)
+                    vnTotal += vCalculo;
+                else
+                    vnTotal += Int32.Parse(vCalculo.ToString().Substring(0, 1)) + Int32.Parse(vCalculo.ToString().Substring(1, 1));
+            }
+            if (vnTotal % 10 == 0)
+                return true;
+            else
+                return false;
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)

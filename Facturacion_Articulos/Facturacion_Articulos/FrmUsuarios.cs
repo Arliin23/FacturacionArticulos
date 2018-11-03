@@ -125,6 +125,11 @@ namespace Facturacion_Articulos
                 MessageBox.Show("Error al asignar valores");
             }
         }
+
+        private void TextNombreUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
