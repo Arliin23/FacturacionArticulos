@@ -97,6 +97,12 @@
     <Compile Include="FrmDataCondicionPago.Designer.cs">
       <DependentUpon>FrmDataCondicionPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDataUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataUsuario.Designer.cs">
+      <DependentUpon>FrmDataUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDataVendedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +168,9 @@
     <EmbeddedResource Include="FrmDataCondicionPago.resx">
       <DependentUpon>FrmDataCondicionPago.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataUsuario.resx">
+      <DependentUpon>FrmDataUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDataVendedores.resx">
       <DependentUpon>FrmDataVendedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVendedor.resx">
       <DependentUpon>FrmVendedor.cs</DependentUpon>

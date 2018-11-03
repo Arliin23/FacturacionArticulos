@@ -60,7 +60,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(105, 133);
+            this.label2.Location = new System.Drawing.Point(82, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 20);
             this.label2.TabIndex = 8;
@@ -69,7 +69,7 @@
             // TextID
             // 
             this.TextID.Enabled = false;
-            this.TextID.Location = new System.Drawing.Point(285, 133);
+            this.TextID.Location = new System.Drawing.Point(262, 115);
             this.TextID.Name = "TextID";
             this.TextID.ReadOnly = true;
             this.TextID.Size = new System.Drawing.Size(174, 20);
@@ -81,7 +81,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(105, 206);
+            this.label3.Location = new System.Drawing.Point(82, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 14;
@@ -90,7 +90,7 @@
             // 
             // rtxtDescripcion
             // 
-            this.rtxtDescripcion.Location = new System.Drawing.Point(285, 178);
+            this.rtxtDescripcion.Location = new System.Drawing.Point(262, 160);
             this.rtxtDescripcion.Name = "rtxtDescripcion";
             this.rtxtDescripcion.Size = new System.Drawing.Size(174, 93);
             this.rtxtDescripcion.TabIndex = 15;
@@ -101,7 +101,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(105, 298);
+            this.label4.Location = new System.Drawing.Point(82, 280);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 20);
             this.label4.TabIndex = 16;
@@ -113,7 +113,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(105, 339);
+            this.label5.Location = new System.Drawing.Point(82, 321);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 20);
             this.label5.TabIndex = 18;
@@ -124,7 +124,7 @@
             this.cmdGuardar.FlatAppearance.BorderSize = 0;
             this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdGuardar.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.Image")));
-            this.cmdGuardar.Location = new System.Drawing.Point(198, 428);
+            this.cmdGuardar.Location = new System.Drawing.Point(167, 365);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(51, 66);
             this.cmdGuardar.TabIndex = 20;
@@ -136,7 +136,7 @@
             this.cmdEliminar.FlatAppearance.BorderSize = 0;
             this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdEliminar.Image = ((System.Drawing.Image)(resources.GetObject("cmdEliminar.Image")));
-            this.cmdEliminar.Location = new System.Drawing.Point(255, 428);
+            this.cmdEliminar.Location = new System.Drawing.Point(224, 365);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(55, 66);
             this.cmdEliminar.TabIndex = 21;
@@ -148,7 +148,7 @@
             this.cmdCerrar.FlatAppearance.BorderSize = 0;
             this.cmdCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCerrar.Image = ((System.Drawing.Image)(resources.GetObject("cmdCerrar.Image")));
-            this.cmdCerrar.Location = new System.Drawing.Point(316, 428);
+            this.cmdCerrar.Location = new System.Drawing.Point(285, 365);
             this.cmdCerrar.Name = "cmdCerrar";
             this.cmdCerrar.Size = new System.Drawing.Size(51, 66);
             this.cmdCerrar.TabIndex = 22;
@@ -157,19 +157,20 @@
             // 
             // cbxEstado
             // 
+            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
             "Pago al contado",
             "Pago anticipado",
             "Pago aplazado"});
-            this.cbxEstado.Location = new System.Drawing.Point(285, 341);
+            this.cbxEstado.Location = new System.Drawing.Point(262, 323);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(174, 21);
             this.cbxEstado.TabIndex = 23;
             // 
             // nUDCantidadDias
             // 
-            this.nUDCantidadDias.Location = new System.Drawing.Point(285, 297);
+            this.nUDCantidadDias.Location = new System.Drawing.Point(262, 279);
             this.nUDCantidadDias.Name = "nUDCantidadDias";
             this.nUDCantidadDias.Size = new System.Drawing.Size(174, 20);
             this.nUDCantidadDias.TabIndex = 24;
@@ -179,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(571, 531);
+            this.ClientSize = new System.Drawing.Size(503, 443);
             this.Controls.Add(this.nUDCantidadDias);
             this.Controls.Add(this.cbxEstado);
             this.Controls.Add(this.cmdCerrar);

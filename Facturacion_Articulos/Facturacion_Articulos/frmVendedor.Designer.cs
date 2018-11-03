@@ -46,36 +46,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(192, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 22);
+            this.label1.Size = new System.Drawing.Size(110, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Vendedor";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(76, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 22);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(76, 243);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 22);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Comisión";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(76, 302);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 22);
+            this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Estado";
             // 
@@ -118,14 +122,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(76, 122);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 22);
+            this.label5.Size = new System.Drawing.Size(25, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "ID";
             // 
             // cbxEstado
             // 
+            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
             "Activo",
@@ -133,7 +139,7 @@
             "Baja"});
             this.cbxEstado.Location = new System.Drawing.Point(196, 294);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(176, 30);
+            this.cbxEstado.Size = new System.Drawing.Size(174, 30);
             this.cbxEstado.TabIndex = 11;
             // 
             // TextID
@@ -141,21 +147,21 @@
             this.TextID.Location = new System.Drawing.Point(197, 113);
             this.TextID.Name = "TextID";
             this.TextID.ReadOnly = true;
-            this.TextID.Size = new System.Drawing.Size(176, 31);
+            this.TextID.Size = new System.Drawing.Size(174, 31);
             this.TextID.TabIndex = 12;
             // 
             // TextNombre
             // 
             this.TextNombre.Location = new System.Drawing.Point(196, 177);
             this.TextNombre.Name = "TextNombre";
-            this.TextNombre.Size = new System.Drawing.Size(177, 31);
+            this.TextNombre.Size = new System.Drawing.Size(174, 31);
             this.TextNombre.TabIndex = 13;
             // 
             // nUDPorciento
             // 
             this.nUDPorciento.Location = new System.Drawing.Point(196, 240);
             this.nUDPorciento.Name = "nUDPorciento";
-            this.nUDPorciento.Size = new System.Drawing.Size(176, 31);
+            this.nUDPorciento.Size = new System.Drawing.Size(174, 31);
             this.nUDPorciento.TabIndex = 14;
             // 
             // FrmVendedor

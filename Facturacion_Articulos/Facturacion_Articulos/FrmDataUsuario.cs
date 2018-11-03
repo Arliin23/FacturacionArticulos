@@ -2,26 +2,27 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Facturacion_Articulos
 {
-    public partial class FrmDataClientescs : Form
+    public partial class FrmDataUsuario : Form
     {
+
         public SqlConnection con;
         public string ID { get; set; }
-        public string Nombre_Usuario { get; set; }
+        public string Nombre_Usuario{ get; set; }
         public string Clave { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
 
-        public FrmDataClientescs()
+        public FrmDataUsuario()
         {
             InitializeComponent();
         }
@@ -33,12 +34,12 @@ namespace Facturacion_Articulos
             {
                 con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
                 con.Open();
-                string sql = "select * from Cliente";
+                string sql = "select * from Usuario";
                 SqlDataAdapter da = new SqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                dgvCliente.DataSource = dt;
-                dgvCliente.Refresh();
+                dgvUsuarios.DataSource = dt;
+                dgvUsuarios.Refresh();
 
 
 
@@ -51,37 +52,39 @@ namespace Facturacion_Articulos
 
         }
 
+        private void FrmDataUsuario_Load(object sender, EventArgs e)
+        {
+            ejecutarConsultaCliente();
+        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-
             this.Close();
         }
 
         private void cmdEditar_Click(object sender, EventArgs e)
         {
-            FrmClientes frm = new FrmClientes();
+            FrmUsuarios frm = new FrmUsuarios();
             frm.Modo = "C";
             frm.ShowDialog();
         }
 
-        private void FrmDataClientescs_Load(object sender, EventArgs e)
+        private void FrmDataUsuario_Activated(object sender, EventArgs e)
         {
             ejecutarConsultaCliente();
         }
 
-        private void dgvCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                DataGridViewRow row = this.dgvCliente.SelectedRows[0];
-                FrmClientes frm = new FrmClientes();
+                DataGridViewRow row = this.dgvUsuarios.SelectedRows[0];
+                FrmUsuarios frm = new FrmUsuarios();
                 frm.Modo = "U";
                 frm.ID = row.Cells[0].Value.ToString();
-                frm.Nombre_Comercial = row.Cells[1].Value.ToString();
-                frm.Cedula = row.Cells[2].Value.ToString();
-                frm.Cuenta_Contable = row.Cells[3].Value.ToString();
-                frm.Estado = row.Cells[4].Value.ToString();
+                frm.Nombre_Usuario = row.Cells[1].Value.ToString();
+                frm.Clave = row.Cells[2].Value.ToString();
+                frm.Estado = row.Cells[3].Value.ToString();
                 frm.ShowDialog();
             }
             catch (Exception exec)
@@ -89,13 +92,6 @@ namespace Facturacion_Articulos
 
                 MessageBox.Show("Error al editar registro" + exec.Message);
             }
-
-           
-        }
-
-        private void FrmDataClientescs_Activated(object sender, EventArgs e)
-        {
-            ejecutarConsultaCliente();
         }
     }
 }

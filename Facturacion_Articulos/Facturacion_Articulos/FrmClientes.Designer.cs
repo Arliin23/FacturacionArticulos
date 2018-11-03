@@ -169,6 +169,7 @@
             // 
             // Estadocbx
             // 
+            this.Estadocbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Estadocbx.FormattingEnabled = true;
             this.Estadocbx.Items.AddRange(new object[] {
             "Activo",
