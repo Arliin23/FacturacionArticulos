@@ -74,7 +74,7 @@
           <Property Name="Porciento_Comision" Type="int" Nullable="false" />
           <Property Name="Estado" Type="varchar" MaxLength="60" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Articulo___ID_Ar__48CFD27E">
+        <Association Name="FK__Articulo___ID_Ar__49C3F6B7">
           <End Role="Articulo_Facturable" Type="Self.Articulo_Facturable" Multiplicity="1" />
           <End Role="Articulo_Factura" Type="Self.Articulo_Factura" Multiplicity="*" />
           <ReferentialConstraint>
@@ -86,7 +86,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Articulo___ID_Fa__49C3F6B7">
+        <Association Name="FK__Articulo___ID_Fa__4AB81AF0">
           <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
           <End Role="Articulo_Factura" Type="Self.Articulo_Factura" Multiplicity="*" />
           <ReferentialConstraint>
@@ -130,11 +130,11 @@
           <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vendedor" EntityType="Self.Vendedor" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Articulo___ID_Ar__48CFD27E" Association="Self.FK__Articulo___ID_Ar__48CFD27E">
+          <AssociationSet Name="FK__Articulo___ID_Ar__49C3F6B7" Association="Self.FK__Articulo___ID_Ar__49C3F6B7">
             <End Role="Articulo_Facturable" EntitySet="Articulo_Facturable" />
             <End Role="Articulo_Factura" EntitySet="Articulo_Factura" />
           </AssociationSet>
-          <AssociationSet Name="FK__Articulo___ID_Fa__49C3F6B7" Association="Self.FK__Articulo___ID_Fa__49C3F6B7">
+          <AssociationSet Name="FK__Articulo___ID_Fa__4AB81AF0" Association="Self.FK__Articulo___ID_Fa__4AB81AF0">
             <End Role="Factura" EntitySet="Factura" />
             <End Role="Articulo_Factura" EntitySet="Articulo_Factura" />
           </AssociationSet>
