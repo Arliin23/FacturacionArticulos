@@ -56,14 +56,15 @@ namespace Facturacion_Articulos
                     if (txtUsuario.Text == "Admin")
                     {
                         frmMenuPrincipal frm = new frmMenuPrincipal();
-                        frm.Show();
-
+                        frm.ShowDialog();
+                        this.Close();
                     }
                     else
                     {
 
                         FrmPrincipal frm = new FrmPrincipal();
-                        frm.Show();
+                        frm.ShowDialog();
+                        this.Close();
 
                     }
 

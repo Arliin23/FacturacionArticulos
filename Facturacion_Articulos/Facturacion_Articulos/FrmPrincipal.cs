@@ -27,8 +27,7 @@ namespace Facturacion_Articulos
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmMenuPrincipal frm1 = new frmMenuPrincipal();
-            frm1.Show();
+            
         }
     }
 }
