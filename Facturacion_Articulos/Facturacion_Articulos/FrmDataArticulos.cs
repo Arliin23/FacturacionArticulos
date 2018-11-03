@@ -58,6 +58,7 @@ namespace Facturacion_Articulos
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+           
         }
         
         //Boton Agregar

@@ -53,6 +53,7 @@ namespace Facturacion_Articulos
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         private void cmdEditar_Click(object sender, EventArgs e)

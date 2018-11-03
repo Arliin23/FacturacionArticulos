@@ -20,13 +20,15 @@ namespace Facturacion_Articulos
         private void cmdFactura_Click(object sender, EventArgs e)
         {
             FrmFacturacion frm = new FrmFacturacion();
-            frm.ShowDialog();
+            frm.Show();
          
         }
 
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();            
+            this.Close();
+            frmMenuPrincipal frm1 = new frmMenuPrincipal();
+            frm1.Show();
         }
     }
 }
