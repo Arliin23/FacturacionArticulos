@@ -76,18 +76,20 @@
             // 
             this.txtClave.Location = new System.Drawing.Point(184, 166);
             this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(174, 27);
             this.txtClave.TabIndex = 4;
             // 
             // cmdLogin
             // 
             this.cmdLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLogin.Location = new System.Drawing.Point(184, 233);
+            this.cmdLogin.Location = new System.Drawing.Point(193, 232);
             this.cmdLogin.Name = "cmdLogin";
             this.cmdLogin.Size = new System.Drawing.Size(84, 30);
             this.cmdLogin.TabIndex = 5;
             this.cmdLogin.Text = "Iniciar";
             this.cmdLogin.UseVisualStyleBackColor = true;
+            this.cmdLogin.Click += new System.EventHandler(this.cmdLogin_Click);
             // 
             // cmdCerrar
             // 
@@ -117,7 +119,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.ForeColor = System.Drawing.Color.AliceBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmLogin";
             this.Text = "FrmLogin";
             this.ResumeLayout(false);

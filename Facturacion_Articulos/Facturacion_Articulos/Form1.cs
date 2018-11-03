@@ -42,7 +42,7 @@ namespace Facturacion_Articulos
 
         private void btnFacturacion_Click(object sender, EventArgs e)
         {
-            FrmFacturacion frm = new FrmFacturacion();
+            FrmPrincipal frm = new FrmPrincipal();
             frm.ShowDialog();
         }
 
