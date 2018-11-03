@@ -41,8 +41,8 @@
             this.TextID = new System.Windows.Forms.TextBox();
             this.TextNombreComercial = new System.Windows.Forms.TextBox();
             this.TextCedula = new System.Windows.Forms.TextBox();
-            this.TextCuenta = new System.Windows.Forms.TextBox();
             this.Estadocbx = new System.Windows.Forms.ComboBox();
+            this.cbxCuentaContable = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -160,13 +160,6 @@
             this.TextCedula.Size = new System.Drawing.Size(174, 26);
             this.TextCedula.TabIndex = 14;
             // 
-            // TextCuenta
-            // 
-            this.TextCuenta.Location = new System.Drawing.Point(248, 265);
-            this.TextCuenta.Name = "TextCuenta";
-            this.TextCuenta.Size = new System.Drawing.Size(174, 26);
-            this.TextCuenta.TabIndex = 15;
-            // 
             // Estadocbx
             // 
             this.Estadocbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -180,14 +173,26 @@
             this.Estadocbx.Size = new System.Drawing.Size(174, 28);
             this.Estadocbx.TabIndex = 16;
             // 
+            // cbxCuentaContable
+            // 
+            this.cbxCuentaContable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCuentaContable.FormattingEnabled = true;
+            this.cbxCuentaContable.Items.AddRange(new object[] {
+            "Debito",
+            "Credito"});
+            this.cbxCuentaContable.Location = new System.Drawing.Point(248, 263);
+            this.cbxCuentaContable.Name = "cbxCuentaContable";
+            this.cbxCuentaContable.Size = new System.Drawing.Size(174, 28);
+            this.cbxCuentaContable.TabIndex = 17;
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(503, 443);
+            this.Controls.Add(this.cbxCuentaContable);
             this.Controls.Add(this.Estadocbx);
-            this.Controls.Add(this.TextCuenta);
             this.Controls.Add(this.TextCedula);
             this.Controls.Add(this.TextNombreComercial);
             this.Controls.Add(this.TextID);
@@ -225,7 +230,7 @@
         private System.Windows.Forms.TextBox TextID;
         private System.Windows.Forms.TextBox TextNombreComercial;
         private System.Windows.Forms.TextBox TextCedula;
-        private System.Windows.Forms.TextBox TextCuenta;
         private System.Windows.Forms.ComboBox Estadocbx;
+        private System.Windows.Forms.ComboBox cbxCuentaContable;
     }
 }

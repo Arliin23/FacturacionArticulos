@@ -81,12 +81,12 @@ namespace Facturacion_Articulos
                     string sql = "";
                     if (Modo.Equals("C"))
                     {
-                        sql = $"insert into Cliente values ('{TextNombreComercial.Text}', '{TextCedula.Text}', '{TextCuenta.Text}', '{Estadocbx.Text}')";
+                        sql = $"insert into Cliente values ('{TextNombreComercial.Text}', '{TextCedula.Text}', '{cbxCuentaContable.Text}', '{Estadocbx.Text}')";
                     }
                     else
                     {
                         sql = $"update Cliente set Nombre_Comercial='{TextNombreComercial.Text}', " +
-                            $"Cedula = '{TextCedula.Text}', Cuenta_Contable = '{TextCuenta.Text}', Estado = '{Estadocbx.Text}' " +
+                            $"Cedula = '{TextCedula.Text}', Cuenta_Contable = '{cbxCuentaContable.Text}', Estado = '{Estadocbx.Text}' " +
                             $"where ID_Cliente = '{TextID.Text}'";
 
                     }
@@ -163,7 +163,15 @@ namespace Facturacion_Articulos
                 TextID.Text = ID;
                 TextNombreComercial.Text = Nombre_Comercial;
                 TextCedula.Text = Cedula;
-                TextCuenta.Text = Cuenta_Contable;
+                
+                if (Cuenta_Contable == null)
+                {
+                    cbxCuentaContable.SelectedIndex = 0;
+                }
+                else
+                {
+                    cbxCuentaContable.SelectedItem = Cuenta_Contable;
+                }
                 if (Estado == null)
                 {
                     Estadocbx.SelectedIndex = 0;
@@ -181,6 +189,11 @@ namespace Facturacion_Articulos
             {
                 MessageBox.Show("Error al asignar valores");
             }
+        }
+
+        private void TextCuenta_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
