@@ -134,6 +134,9 @@
             // 
             this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.FormattingEnabled = true;
+            this.cbxEstado.Items.AddRange(new object[] {
+            "Disponible",
+            "No Disponible"});
             this.cbxEstado.Location = new System.Drawing.Point(217, 364);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(179, 30);
