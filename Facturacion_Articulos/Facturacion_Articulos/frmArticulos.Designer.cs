@@ -163,6 +163,7 @@
             // rtxtDescripcion
             // 
             this.rtxtDescripcion.Location = new System.Drawing.Point(217, 149);
+            this.rtxtDescripcion.MaxLength = 400;
             this.rtxtDescripcion.Name = "rtxtDescripcion";
             this.rtxtDescripcion.Size = new System.Drawing.Size(179, 96);
             this.rtxtDescripcion.TabIndex = 16;
@@ -171,6 +172,7 @@
             // nUDCostoUnitario
             // 
             this.nUDCostoUnitario.Location = new System.Drawing.Point(217, 263);
+            this.nUDCostoUnitario.MaxLength = 4;
             this.nUDCostoUnitario.Name = "nUDCostoUnitario";
             this.nUDCostoUnitario.Size = new System.Drawing.Size(179, 31);
             this.nUDCostoUnitario.TabIndex = 17;
@@ -178,6 +180,7 @@
             // nUDPrecioUnitario
             // 
             this.nUDPrecioUnitario.Location = new System.Drawing.Point(217, 314);
+            this.nUDPrecioUnitario.MaxLength = 4;
             this.nUDPrecioUnitario.Name = "nUDPrecioUnitario";
             this.nUDPrecioUnitario.Size = new System.Drawing.Size(179, 31);
             this.nUDPrecioUnitario.TabIndex = 18;

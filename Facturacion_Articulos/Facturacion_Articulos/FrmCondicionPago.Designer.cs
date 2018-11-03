@@ -91,6 +91,7 @@
             // rtxtDescripcion
             // 
             this.rtxtDescripcion.Location = new System.Drawing.Point(262, 160);
+            this.rtxtDescripcion.MaxLength = 400;
             this.rtxtDescripcion.Name = "rtxtDescripcion";
             this.rtxtDescripcion.Size = new System.Drawing.Size(174, 93);
             this.rtxtDescripcion.TabIndex = 15;
@@ -171,6 +172,7 @@
             // nUDCantidadDias
             // 
             this.nUDCantidadDias.Location = new System.Drawing.Point(262, 279);
+            this.nUDCantidadDias.MaxLength = 3;
             this.nUDCantidadDias.Name = "nUDCantidadDias";
             this.nUDCantidadDias.Size = new System.Drawing.Size(174, 20);
             this.nUDCantidadDias.TabIndex = 24;

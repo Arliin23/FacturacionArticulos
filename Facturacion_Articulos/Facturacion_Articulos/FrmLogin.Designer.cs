@@ -68,6 +68,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(184, 91);
+            this.txtUsuario.MaxLength = 8;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(174, 27);
             this.txtUsuario.TabIndex = 3;
@@ -75,6 +76,7 @@
             // txtClave
             // 
             this.txtClave.Location = new System.Drawing.Point(184, 166);
+            this.txtClave.MaxLength = 12;
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(174, 27);

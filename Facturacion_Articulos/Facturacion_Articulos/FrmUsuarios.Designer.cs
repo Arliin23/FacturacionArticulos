@@ -100,6 +100,7 @@
             // 
             this.TextClave.Location = new System.Drawing.Point(237, 205);
             this.TextClave.Margin = new System.Windows.Forms.Padding(4);
+            this.TextClave.MaxLength = 12;
             this.TextClave.Name = "TextClave";
             this.TextClave.PasswordChar = '*';
             this.TextClave.Size = new System.Drawing.Size(174, 26);
@@ -109,6 +110,7 @@
             // 
             this.TextNombreUsuario.Location = new System.Drawing.Point(237, 157);
             this.TextNombreUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.TextNombreUsuario.MaxLength = 8;
             this.TextNombreUsuario.Name = "TextNombreUsuario";
             this.TextNombreUsuario.Size = new System.Drawing.Size(174, 26);
             this.TextNombreUsuario.TabIndex = 38;

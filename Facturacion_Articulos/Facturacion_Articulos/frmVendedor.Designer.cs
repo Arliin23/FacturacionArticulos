@@ -153,6 +153,7 @@
             // TextNombre
             // 
             this.TextNombre.Location = new System.Drawing.Point(196, 177);
+            this.TextNombre.MaxLength = 12;
             this.TextNombre.Name = "TextNombre";
             this.TextNombre.Size = new System.Drawing.Size(174, 31);
             this.TextNombre.TabIndex = 13;
@@ -160,8 +161,9 @@
             // nUDPorciento
             // 
             this.nUDPorciento.Location = new System.Drawing.Point(196, 240);
+            this.nUDPorciento.MaxLength = 3;
             this.nUDPorciento.Name = "nUDPorciento";
-            this.nUDPorciento.Size = new System.Drawing.Size(174, 31);
+            this.nUDPorciento.Size = new System.Drawing.Size(175, 31);
             this.nUDPorciento.TabIndex = 14;
             // 
             // FrmVendedor

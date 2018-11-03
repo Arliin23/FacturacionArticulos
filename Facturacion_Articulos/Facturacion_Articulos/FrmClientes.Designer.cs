@@ -149,6 +149,7 @@
             // TextNombreComercial
             // 
             this.TextNombreComercial.Location = new System.Drawing.Point(248, 168);
+            this.TextNombreComercial.MaxLength = 12;
             this.TextNombreComercial.Name = "TextNombreComercial";
             this.TextNombreComercial.Size = new System.Drawing.Size(174, 26);
             this.TextNombreComercial.TabIndex = 13;
@@ -156,6 +157,7 @@
             // TextCedula
             // 
             this.TextCedula.Location = new System.Drawing.Point(248, 216);
+            this.TextCedula.MaxLength = 11;
             this.TextCedula.Name = "TextCedula";
             this.TextCedula.Size = new System.Drawing.Size(174, 26);
             this.TextCedula.TabIndex = 14;
