@@ -42,14 +42,14 @@ namespace Facturacion_Articulos
 
         private void btnFacturacion_Click(object sender, EventArgs e)
         {
-            this.Close();
+           
             FrmPrincipal frm = new FrmPrincipal();
             frm.Show();
         }
 
         private void btnMantenimiento_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
             FrmMantenimiento frm = new FrmMantenimiento();
             frm.Show();
         }

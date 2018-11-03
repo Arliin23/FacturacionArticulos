@@ -20,8 +20,7 @@ namespace Facturacion_Articulos
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmMenuPrincipal frm1 = new frmMenuPrincipal();
-            frm1.Show();
+           
 
         }
 
@@ -59,8 +58,7 @@ namespace Facturacion_Articulos
         }
 
         private void button5_Click(object sender, EventArgs e)
-        {
-            
+        {    
             FrmDataUsuario frm = new FrmDataUsuario();
             frm.Show();
         }
