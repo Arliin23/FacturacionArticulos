@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.25F);
-            this.label1.Location = new System.Drawing.Point(217, 54);
+            this.label1.Location = new System.Drawing.Point(197, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 24);
             this.label1.TabIndex = 1;
@@ -60,7 +60,7 @@
             this.cmdEliminar.FlatAppearance.BorderSize = 0;
             this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdEliminar.Image = ((System.Drawing.Image)(resources.GetObject("cmdEliminar.Image")));
-            this.cmdEliminar.Location = new System.Drawing.Point(253, 427);
+            this.cmdEliminar.Location = new System.Drawing.Point(221, 365);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(55, 66);
             this.cmdEliminar.TabIndex = 2;
@@ -72,7 +72,7 @@
             this.cmdCerrar.FlatAppearance.BorderSize = 0;
             this.cmdCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCerrar.Image = ((System.Drawing.Image)(resources.GetObject("cmdCerrar.Image")));
-            this.cmdCerrar.Location = new System.Drawing.Point(314, 427);
+            this.cmdCerrar.Location = new System.Drawing.Point(282, 365);
             this.cmdCerrar.Name = "cmdCerrar";
             this.cmdCerrar.Size = new System.Drawing.Size(51, 66);
             this.cmdCerrar.TabIndex = 3;
@@ -84,7 +84,7 @@
             this.cmdGuardar.FlatAppearance.BorderSize = 0;
             this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdGuardar.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.Image")));
-            this.cmdGuardar.Location = new System.Drawing.Point(196, 427);
+            this.cmdGuardar.Location = new System.Drawing.Point(164, 365);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(51, 66);
             this.cmdGuardar.TabIndex = 6;
@@ -94,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(90, 150);
+            this.label2.Location = new System.Drawing.Point(58, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 20);
             this.label2.TabIndex = 7;
@@ -103,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(90, 199);
+            this.label3.Location = new System.Drawing.Point(58, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 20);
             this.label3.TabIndex = 8;
@@ -113,7 +113,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(90, 247);
+            this.label4.Location = new System.Drawing.Point(58, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 20);
             this.label4.TabIndex = 9;
@@ -122,7 +122,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(90, 296);
+            this.label5.Location = new System.Drawing.Point(58, 271);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(137, 20);
             this.label5.TabIndex = 10;
@@ -131,7 +131,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(90, 346);
+            this.label6.Location = new System.Drawing.Point(58, 321);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 20);
             this.label6.TabIndex = 11;
@@ -139,7 +139,7 @@
             // 
             // TextID
             // 
-            this.TextID.Location = new System.Drawing.Point(280, 144);
+            this.TextID.Location = new System.Drawing.Point(248, 119);
             this.TextID.Name = "TextID";
             this.TextID.ReadOnly = true;
             this.TextID.Size = new System.Drawing.Size(174, 26);
@@ -148,21 +148,21 @@
             // 
             // TextNombreComercial
             // 
-            this.TextNombreComercial.Location = new System.Drawing.Point(280, 193);
+            this.TextNombreComercial.Location = new System.Drawing.Point(248, 168);
             this.TextNombreComercial.Name = "TextNombreComercial";
             this.TextNombreComercial.Size = new System.Drawing.Size(174, 26);
             this.TextNombreComercial.TabIndex = 13;
             // 
             // TextCedula
             // 
-            this.TextCedula.Location = new System.Drawing.Point(280, 241);
+            this.TextCedula.Location = new System.Drawing.Point(248, 216);
             this.TextCedula.Name = "TextCedula";
             this.TextCedula.Size = new System.Drawing.Size(174, 26);
             this.TextCedula.TabIndex = 14;
             // 
             // TextCuenta
             // 
-            this.TextCuenta.Location = new System.Drawing.Point(280, 290);
+            this.TextCuenta.Location = new System.Drawing.Point(248, 265);
             this.TextCuenta.Name = "TextCuenta";
             this.TextCuenta.Size = new System.Drawing.Size(174, 26);
             this.TextCuenta.TabIndex = 15;
@@ -175,7 +175,7 @@
             "Activo",
             "Dormido",
             "Baja"});
-            this.Estadocbx.Location = new System.Drawing.Point(280, 338);
+            this.Estadocbx.Location = new System.Drawing.Point(248, 313);
             this.Estadocbx.Name = "Estadocbx";
             this.Estadocbx.Size = new System.Drawing.Size(174, 28);
             this.Estadocbx.TabIndex = 16;
@@ -185,7 +185,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(571, 531);
+            this.ClientSize = new System.Drawing.Size(503, 443);
             this.Controls.Add(this.Estadocbx);
             this.Controls.Add(this.TextCuenta);
             this.Controls.Add(this.TextCedula);

@@ -105,6 +105,8 @@ namespace Facturacion_Articulos
         //Este es el form load
         private void FrmArticulos_Load_1(object sender, EventArgs e)
         {
+            llenarListaEstados();
+
             try
             {
                 TextID.Text = ID;
@@ -118,6 +120,15 @@ namespace Facturacion_Articulos
             {
                 MessageBox.Show("Error al asignar valores");
             }
+        }
+
+        //Llenar Lista Estados
+
+        private void llenarListaEstados()
+        {
+            cbxEstado.Items.Add("Disponible");
+            cbxEstado.Items.Add("No Disponible");
+            cbxEstado.SelectedIndex = 0;
         }
 
         private void FrmArticulos_FormClosing(object sender, FormClosingEventArgs e)

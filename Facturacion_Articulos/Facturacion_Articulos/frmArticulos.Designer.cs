@@ -134,9 +134,6 @@
             // 
             this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.FormattingEnabled = true;
-            this.cbxEstado.Items.AddRange(new object[] {
-            "Disponible",
-            "No Disponible"});
             this.cbxEstado.Location = new System.Drawing.Point(217, 364);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(179, 30);
@@ -187,7 +184,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(535, 493);
+            this.ClientSize = new System.Drawing.Size(503, 493);
             this.Controls.Add(this.nUDPrecioUnitario);
             this.Controls.Add(this.nUDCostoUnitario);
             this.Controls.Add(this.rtxtDescripcion);
