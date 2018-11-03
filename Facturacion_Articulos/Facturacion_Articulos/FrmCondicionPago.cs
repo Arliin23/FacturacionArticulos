@@ -128,7 +128,17 @@ namespace Facturacion_Articulos
                 TextID.Text = ID;
                 rtxtDescripcion.Text = Descripcion;
                 nUDCantidadDias.Text = CantidadDias;
-                cbxEstado.Text = Estado;
+
+                if (Estado == null)
+                {
+                    cbxEstado.SelectedIndex = 0;
+
+                }
+                else
+                {
+
+                    cbxEstado.SelectedItem = Estado;
+                }
                 TextID.Enabled = Modo.Equals("C");
             }
             catch (Exception ex)

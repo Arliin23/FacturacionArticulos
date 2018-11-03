@@ -104,7 +104,16 @@ namespace Facturacion_Articulos
                 TextID.Text = ID;
                 TextNombre.Text = Nombre;
                 nUDPorciento.Text = Porciento;
-                cbxEstado.Text = Estado;
+                if (Estado == null)
+                {
+                    cbxEstado.SelectedIndex = 0;
+
+                }
+                else
+                {
+
+                    cbxEstado.SelectedItem = Estado;
+                }
                 TextID.Enabled = Modo.Equals("C");
             }
             catch (Exception)

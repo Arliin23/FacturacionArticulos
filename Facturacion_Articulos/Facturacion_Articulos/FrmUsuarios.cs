@@ -108,7 +108,16 @@ namespace Facturacion_Articulos
                 TextID.Text = ID;
                 TextNombreUsuario.Text = Nombre_Usuario;
                 TextClave.Text = Clave;
-                Estadocbx.Text = Estado;
+                if (Estado == null)
+                {
+                    Estadocbx.SelectedIndex = 0;
+
+                }
+                else
+                {
+
+                    Estadocbx.SelectedItem = Estado;
+                }
                 TextID.Enabled = Modo.Equals("C");
             }
             catch (Exception)

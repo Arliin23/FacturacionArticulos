@@ -125,7 +125,17 @@ namespace Facturacion_Articulos
                 TextNombreComercial.Text = Nombre_Comercial;
                 TextCedula.Text = Cedula;
                 TextCuenta.Text = Cuenta_Contable;
-                Estadocbx.Text = Estado;
+                if (Estado == null)
+                {
+                    Estadocbx.SelectedIndex = 0;
+
+                }
+                else
+                {
+
+                    Estadocbx.SelectedItem = Estado;
+                }
+
                 TextID.Enabled = Modo.Equals("C");
             }
             catch (Exception)
