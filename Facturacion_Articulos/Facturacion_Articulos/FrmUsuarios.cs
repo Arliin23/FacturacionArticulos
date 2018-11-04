@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace Facturacion_Articulos
 {
@@ -64,6 +65,8 @@ namespace Facturacion_Articulos
         {
             try
             {
+                string claveEncriptadaMD5 = getMD5Hash(TextClave.Text);
+
                 if (string.IsNullOrEmpty(TextNombreUsuario.Text) || string.IsNullOrEmpty(TextClave.Text))
                 {
                     MessageBox.Show("Campos Vacios");
@@ -73,12 +76,12 @@ namespace Facturacion_Articulos
                     string sql = "";
                     if (Modo.Equals("C"))
                     {
-                        sql = $"insert into Usuario values ('{TextNombreUsuario.Text}', '{TextClave.Text}', '{Estadocbx.Text}')";
+                        sql = $"insert into Usuario values ('{TextNombreUsuario.Text}', '{claveEncriptadaMD5}', '{Estadocbx.Text}')";
                     }
                     else
                     {
                         sql = $"update Usuario set Nombre_Usuario='{TextNombreUsuario.Text}', " +
-                            $"Clave = '{TextClave.Text}', Estado = '{Estadocbx.Text}' " +
+                            $"Clave = '{claveEncriptadaMD5}', Estado = '{Estadocbx.Text}' " +
                             $"where Id_Usuario = '{TextID.Text}'";
 
                     }
@@ -99,10 +102,30 @@ namespace Facturacion_Articulos
             }
         }
 
+        //Boton Cerrar
+
         private void cmdClose_Click(object sender, EventArgs e)
         {
             FrmUsuarios frm = new FrmUsuarios();
             this.Close();
+        }
+
+        //Metodo para encriptar Clave
+
+        public string getMD5Hash(string input)
+        {
+            // step 1, calculate MD5 hash from input
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hash = md5.ComputeHash(inputBytes);
+
+            // step 2, convert byte array to hex string
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("X2"));
+            }
+            return sb.ToString();
         }
 
         private void FrmUsuarios_FormClosing(object sender, FormClosingEventArgs e)

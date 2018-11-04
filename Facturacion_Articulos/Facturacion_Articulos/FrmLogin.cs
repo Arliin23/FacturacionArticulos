@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,9 +32,10 @@ namespace Facturacion_Articulos
 
             try
             {
+                string claveEncriptadaMD5 = getMD5Hash(txtClave.Text);
                 Usuario usuario = (from u in db.Usuario
                                    where u.Nombre_Usuario.Equals(txtUsuario.Text) &&
-         u.Clave.Equals(txtClave.Text)
+         u.Clave.Equals(claveEncriptadaMD5)
                                    select u).FirstOrDefault();
 
                 if (usuario == null)
@@ -82,6 +84,25 @@ namespace Facturacion_Articulos
           
 
             }
+
+        //Metodo para encriptar Clave
+
+        public string getMD5Hash(string input)
+        {
+            // step 1, calculate MD5 hash from input
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            byte[] hash = md5.ComputeHash(inputBytes);
+
+            // step 2, convert byte array to hex string
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
+
 
         //Validaciones
 
