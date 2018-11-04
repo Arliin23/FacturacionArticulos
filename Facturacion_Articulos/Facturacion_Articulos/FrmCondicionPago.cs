@@ -146,5 +146,51 @@ namespace Facturacion_Articulos
                 MessageBox.Show("Error al asignar valores" + ex.Message);
             }
         }
+
+        //Validaciones
+
+        private void nUDCantidadDias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void rtxtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
     }
 }

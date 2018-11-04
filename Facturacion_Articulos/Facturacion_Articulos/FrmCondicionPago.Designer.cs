@@ -96,6 +96,7 @@
             this.rtxtDescripcion.Size = new System.Drawing.Size(174, 93);
             this.rtxtDescripcion.TabIndex = 15;
             this.rtxtDescripcion.Text = "";
+            this.rtxtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtxtDescripcion_KeyPress);
             // 
             // label4
             // 
@@ -176,6 +177,7 @@
             this.nUDCantidadDias.Name = "nUDCantidadDias";
             this.nUDCantidadDias.Size = new System.Drawing.Size(174, 20);
             this.nUDCantidadDias.TabIndex = 24;
+            this.nUDCantidadDias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nUDCantidadDias_KeyPress);
             // 
             // FrmCondicionPago
             // 

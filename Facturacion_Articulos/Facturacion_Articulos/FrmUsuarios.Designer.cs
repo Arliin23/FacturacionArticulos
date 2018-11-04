@@ -115,6 +115,7 @@
             this.TextNombreUsuario.Size = new System.Drawing.Size(174, 26);
             this.TextNombreUsuario.TabIndex = 38;
             this.TextNombreUsuario.TextChanged += new System.EventHandler(this.TextNombreUsuario_TextChanged);
+            this.TextNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextNombreUsuario_KeyPress);
             // 
             // TextID
             // 

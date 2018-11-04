@@ -153,6 +153,7 @@
             this.TextNombreComercial.Name = "TextNombreComercial";
             this.TextNombreComercial.Size = new System.Drawing.Size(174, 26);
             this.TextNombreComercial.TabIndex = 13;
+            this.TextNombreComercial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextNombreComercial_KeyPress);
             // 
             // TextCedula
             // 
@@ -161,6 +162,7 @@
             this.TextCedula.Name = "TextCedula";
             this.TextCedula.Size = new System.Drawing.Size(174, 26);
             this.TextCedula.TabIndex = 14;
+            this.TextCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextCedula_KeyPress);
             // 
             // Estadocbx
             // 

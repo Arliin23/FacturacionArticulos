@@ -130,6 +130,29 @@ namespace Facturacion_Articulos
         {
 
         }
+
+        //Validaciones
+
+        private void TextNombreUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else {
+                e.Handled = false;
+
+            }
+        }
     }
     }
 

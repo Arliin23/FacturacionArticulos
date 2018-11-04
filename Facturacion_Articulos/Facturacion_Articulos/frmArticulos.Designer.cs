@@ -168,6 +168,7 @@
             this.rtxtDescripcion.Size = new System.Drawing.Size(179, 96);
             this.rtxtDescripcion.TabIndex = 16;
             this.rtxtDescripcion.Text = "";
+            this.rtxtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtxtDescripcion_KeyPress);
             // 
             // nUDCostoUnitario
             // 
@@ -176,6 +177,7 @@
             this.nUDCostoUnitario.Name = "nUDCostoUnitario";
             this.nUDCostoUnitario.Size = new System.Drawing.Size(179, 31);
             this.nUDCostoUnitario.TabIndex = 17;
+            this.nUDCostoUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nUDCostoUnitario_KeyPress);
             // 
             // nUDPrecioUnitario
             // 
@@ -184,6 +186,7 @@
             this.nUDPrecioUnitario.Name = "nUDPrecioUnitario";
             this.nUDPrecioUnitario.Size = new System.Drawing.Size(179, 31);
             this.nUDPrecioUnitario.TabIndex = 18;
+            this.nUDPrecioUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nUDPrecioUnitario_KeyPress);
             // 
             // FrmArticulos
             // 

@@ -157,6 +157,7 @@
             this.TextNombre.Name = "TextNombre";
             this.TextNombre.Size = new System.Drawing.Size(174, 31);
             this.TextNombre.TabIndex = 13;
+            this.TextNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextNombre_KeyPress);
             // 
             // nUDPorciento
             // 
@@ -165,6 +166,7 @@
             this.nUDPorciento.Name = "nUDPorciento";
             this.nUDPorciento.Size = new System.Drawing.Size(175, 31);
             this.nUDPorciento.TabIndex = 14;
+            this.nUDPorciento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nUDPorciento_KeyPress);
             // 
             // FrmVendedor
             // 
