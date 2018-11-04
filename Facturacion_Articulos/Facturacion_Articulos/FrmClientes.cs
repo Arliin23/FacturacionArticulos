@@ -71,34 +71,42 @@ namespace Facturacion_Articulos
         {
             try
             {
-                if (!validarCedula(TextCedula.Text))
+                if (string.IsNullOrEmpty(TextNombreComercial.Text))
                 {
-                    MessageBox.Show("Cedula no valida");
+                    MessageBox.Show("Campos Vacios");
                 }
                 else
                 {
 
-                    string sql = "";
-                    if (Modo.Equals("C"))
+                    if (!validarCedula(TextCedula.Text))
                     {
-                        sql = $"insert into Cliente values ('{TextNombreComercial.Text}', '{TextCedula.Text}', '{cbxCuentaContable.Text}', '{Estadocbx.Text}')";
+                        MessageBox.Show("Cedula no valida");
                     }
                     else
                     {
-                        sql = $"update Cliente set Nombre_Comercial='{TextNombreComercial.Text}', " +
-                            $"Cedula = '{TextCedula.Text}', Cuenta_Contable = '{cbxCuentaContable.Text}', Estado = '{Estadocbx.Text}' " +
-                            $"where ID_Cliente = '{TextID.Text}'";
+
+                        string sql = "";
+                        if (Modo.Equals("C"))
+                        {
+                            sql = $"insert into Cliente values ('{TextNombreComercial.Text}', '{TextCedula.Text}', '{cbxCuentaContable.Text}', '{Estadocbx.Text}')";
+                        }
+                        else
+                        {
+                            sql = $"update Cliente set Nombre_Comercial='{TextNombreComercial.Text}', " +
+                                $"Cedula = '{TextCedula.Text}', Cuenta_Contable = '{cbxCuentaContable.Text}', Estado = '{Estadocbx.Text}' " +
+                                $"where ID_Cliente = '{TextID.Text}'";
+
+                        }
+                        SqlCommand cmd = new SqlCommand(sql, con);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Registro guardado con exito");
+                        this.Close();
 
                     }
-                    SqlCommand cmd = new SqlCommand(sql, con);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro guardado con exito");
-                    this.Close();
+
+
 
                 }
-
-
-
             }
             catch (Exception ex)
             {

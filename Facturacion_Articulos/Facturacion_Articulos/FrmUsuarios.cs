@@ -64,23 +64,32 @@ namespace Facturacion_Articulos
         {
             try
             {
-
-                string sql = "";
-                if (Modo.Equals("C"))
+                if (string.IsNullOrEmpty(TextNombreUsuario.Text) || string.IsNullOrEmpty(TextClave.Text))
                 {
-                    sql = $"insert into Usuario values ('{TextNombreUsuario.Text}', '{TextClave.Text}', '{Estadocbx.Text}')";
+                    MessageBox.Show("Campos Vacios");
                 }
-                else
-                {
-                    sql = $"update Usuario set Nombre_Usuario='{TextNombreUsuario.Text}', " +
-                        $"Clave = '{TextClave.Text}', Estado = '{Estadocbx.Text}' " +
-                        $"where Id_Usuario = '{TextID.Text}'";
+                else {
+
+                    string sql = "";
+                    if (Modo.Equals("C"))
+                    {
+                        sql = $"insert into Usuario values ('{TextNombreUsuario.Text}', '{TextClave.Text}', '{Estadocbx.Text}')";
+                    }
+                    else
+                    {
+                        sql = $"update Usuario set Nombre_Usuario='{TextNombreUsuario.Text}', " +
+                            $"Clave = '{TextClave.Text}', Estado = '{Estadocbx.Text}' " +
+                            $"where Id_Usuario = '{TextID.Text}'";
+
+                    }
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro guardado con exito");
+                    this.Close();
 
                 }
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado con exito");
-                this.Close();
+
+              
 
 
             }

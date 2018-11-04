@@ -71,23 +71,31 @@ namespace Facturacion_Articulos
         {
             try
             {
-                string sql = "";
-                if (Modo.Equals("C"))
+
+                if (string.IsNullOrEmpty(TextNombre.Text) || string.IsNullOrEmpty(nUDPorciento.Text))
                 {
-                    sql = $"insert into vendedor values ('{TextNombre.Text}', '{ nUDPorciento.Text}', '{cbxEstado.Text}')";
+                    MessageBox.Show("Campos Vacios");
                 }
                 else
                 {
-                    sql = $"update vendedor set Nombre ='{TextNombre.Text}', " +
-                        $"Porciento_Comision = '{nUDPorciento.Text}', estado = '{cbxEstado.Text}' " +
-                        $"where id_vendedor = '{TextID.Text}'";
+
+                    string sql = "";
+                    if (Modo.Equals("C"))
+                    {
+                        sql = $"insert into vendedor values ('{TextNombre.Text}', '{ nUDPorciento.Text}', '{cbxEstado.Text}')";
+                    }
+                    else
+                    {
+                        sql = $"update vendedor set Nombre ='{TextNombre.Text}', " +
+                            $"Porciento_Comision = '{nUDPorciento.Text}', estado = '{cbxEstado.Text}' " +
+                            $"where id_vendedor = '{TextID.Text}'";
+                    }
+
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro guardado con exito");
+                    this.Close();
                 }
-
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado con exito");
-                this.Close();
-
 
             }
             catch (Exception ex)

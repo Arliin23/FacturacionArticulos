@@ -66,25 +66,32 @@ namespace Facturacion_Articulos
         {
             try
             {
-               
-                string sql = "";
-                if (Modo.Equals("C"))
+                if (string.IsNullOrEmpty(rtxtDescripcion.Text) || string.IsNullOrEmpty(nUDCantidadDias.Text))
                 {
-                    sql = $"insert into condicion_pago values ('{rtxtDescripcion.Text}', '{nUDCantidadDias.Text}', '{cbxEstado.Text}')";
+                    MessageBox.Show("Campos Vacios");
                 }
                 else
                 {
-                    sql = $"update Condicion_Pago set Descripcion='{rtxtDescripcion.Text}', " +
-                        $"Cantidad_dias = '{nUDCantidadDias.Text}', estado = '{cbxEstado.Text}' " +
-                        $"where id_condicion = '{TextID.Text}'";
+
+                    string sql = "";
+                    if (Modo.Equals("C"))
+                    {
+                        sql = $"insert into condicion_pago values ('{rtxtDescripcion.Text}', '{nUDCantidadDias.Text}', '{cbxEstado.Text}')";
+                    }
+                    else
+                    {
+                        sql = $"update Condicion_Pago set Descripcion='{rtxtDescripcion.Text}', " +
+                            $"Cantidad_dias = '{nUDCantidadDias.Text}', estado = '{cbxEstado.Text}' " +
+                            $"where id_condicion = '{TextID.Text}'";
+                    }
+
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro guardado con exito");
+                    this.Close();
+
+
                 }
-
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado con exito");
-                this.Close();
-
-
             }
             catch (Exception ex)
             {

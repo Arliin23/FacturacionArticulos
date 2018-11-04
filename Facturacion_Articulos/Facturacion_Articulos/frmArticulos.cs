@@ -49,25 +49,33 @@ namespace Facturacion_Articulos
         {
 
             try
-            { 
-                string sql = "";
-                if (Modo.Equals("C"))
+            {
+                if (string.IsNullOrEmpty(rtxtDescripcion.Text) || string.IsNullOrEmpty(nUDCostoUnitario.Text) || string.IsNullOrEmpty(nUDPrecioUnitario.Text))
                 {
-                    sql = $"insert into Articulo_Facturable values ('{rtxtDescripcion.Text}', '{nUDCostoUnitario.Text}', '{nUDPrecioUnitario.Text}' ,'{cbxEstado.Text}')";
+                    MessageBox.Show("Campos Vacios");
                 }
                 else
                 {
-                    sql = $"update Articulo_Facturable set Descripcion ='{rtxtDescripcion.Text}', " +
-                        $"Costo_Unitario = '{nUDCostoUnitario.Text}', Precio_Unitario = '{nUDPrecioUnitario.Text}', estado = '{cbxEstado.Text}' " +
-                        $"where id_articulo = '{TextID.Text}'";
+
+                    string sql = "";
+                    if (Modo.Equals("C"))
+                    {
+                        sql = $"insert into Articulo_Facturable values ('{rtxtDescripcion.Text}', '{nUDCostoUnitario.Text}', '{nUDPrecioUnitario.Text}' ,'{cbxEstado.Text}')";
+                    }
+                    else
+                    {
+                        sql = $"update Articulo_Facturable set Descripcion ='{rtxtDescripcion.Text}', " +
+                            $"Costo_Unitario = '{nUDCostoUnitario.Text}', Precio_Unitario = '{nUDPrecioUnitario.Text}', estado = '{cbxEstado.Text}' " +
+                            $"where id_articulo = '{TextID.Text}'";
+                    }
+
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro guardado con exito");
+                    this.Close();
+
+
                 }
-
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado con exito");
-                this.Close();
-
-
             }
             catch (Exception ex)
             {
