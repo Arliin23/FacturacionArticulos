@@ -118,6 +118,7 @@
             this.Controls.Add(this.cmdPedidos);
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";

@@ -103,6 +103,7 @@
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDataUsuario";
             this.Text = "FrmDataUsuario";
             this.Activated += new System.EventHandler(this.FrmDataUsuario_Activated);
