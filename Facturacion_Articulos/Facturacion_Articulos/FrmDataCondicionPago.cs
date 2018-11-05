@@ -13,6 +13,9 @@ namespace Facturacion_Articulos
 {
     public partial class FrmDataCondicionPago : Form
     {
+        public Condicion_Pago  Condicion { get; set; }
+        private EntitiesFacturacionBD entities = new EntitiesFacturacionBD();
+
         private SqlConnection con;
         public string ID { get; set; }
         public string Descripcion { get; set; }
@@ -92,6 +95,27 @@ namespace Facturacion_Articulos
         private void FrmDataCondicionPago_Activated(object sender, EventArgs e)
         {
             ejecutarConsultaCondicionPago();
+        }
+
+        //Consultas Flexibles
+
+        private void consultarPorCriterio()
+        {
+            var articulo = from em in entities.Condicion_Pago
+                           where (em.ID_Condicion.ToString().StartsWith(textBusqueda.Text) ||
+                           em.Descripcion.StartsWith(textBusqueda.Text) ||
+                           em.Cantidad_dias.ToString().StartsWith(textBusqueda.Text) ||
+                           em.Estado.StartsWith(textBusqueda.Text)
+                           )
+                           select em;
+            dgvCondicionP.DataSource = articulo.ToList();
+        }
+
+
+
+        private void cmdBuscar_Click(object sender, EventArgs e)
+        {
+            consultarPorCriterio();
         }
     }
 }

@@ -13,6 +13,8 @@ namespace Facturacion_Articulos
 {
     public partial class FrmDataArticulos : Form
     {
+        public Articulo_Facturable Articulo { get; set; }
+        private EntitiesFacturacionBD entities = new EntitiesFacturacionBD();
 
         public SqlConnection con;
         public string ID { get; set; }
@@ -31,9 +33,11 @@ namespace Facturacion_Articulos
 
         private void ejecutarConsultaArticulos()
         {
+       
 
             try
             {
+
                 con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
                 con.Open();
                 string sql = "select * from Articulo_Facturable";
@@ -107,6 +111,27 @@ namespace Facturacion_Articulos
         private void FrmDataArticulos_Activated(object sender, EventArgs e)
         {
             ejecutarConsultaArticulos();
+        }
+
+        //Consultas Flexibles
+
+        private void consultarPorCriterio()
+        {
+            var articulo = from em in entities.Articulo_Facturable
+                            where (em.ID_Articulo.ToString().StartsWith(textBusqueda.Text) ||
+                            em.Descripcion.StartsWith(textBusqueda.Text) ||
+                            em.Costo_Unitario.ToString().StartsWith(textBusqueda.Text) ||
+                            em.Precio_Unitario.ToString().StartsWith(textBusqueda.Text) ||
+                            em.Estado.StartsWith(textBusqueda.Text)
+                            )
+                            select em;
+            dgvArticulos.DataSource = articulo.ToList();
+        }
+
+
+        private void cmdBuscar_Click(object sender, EventArgs e)
+        {
+            consultarPorCriterio();
         }
     }
 }

@@ -28,21 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDataClientescs));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.cmdEditar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cmdBuscar = new System.Windows.Forms.Button();
+            this.textBusqueda = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbxCriterio = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 17F);
-            this.label1.Location = new System.Drawing.Point(286, 42);
+            this.label1.Location = new System.Drawing.Point(287, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 27);
             this.label1.TabIndex = 0;
@@ -50,20 +57,20 @@
             // 
             // dgvCliente
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
+            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCliente.Location = new System.Drawing.Point(68, 97);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvCliente.Location = new System.Drawing.Point(27, 125);
             this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.Size = new System.Drawing.Size(559, 272);
+            this.dgvCliente.Size = new System.Drawing.Size(655, 301);
             this.dgvCliente.TabIndex = 1;
             this.dgvCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellDoubleClick);
             // 
@@ -72,7 +79,7 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(584, 397);
+            this.btnCerrar.Location = new System.Drawing.Point(640, 442);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(43, 39);
             this.btnCerrar.TabIndex = 13;
@@ -84,19 +91,86 @@
             this.cmdEditar.FlatAppearance.BorderSize = 0;
             this.cmdEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdEditar.Image = ((System.Drawing.Image)(resources.GetObject("cmdEditar.Image")));
-            this.cmdEditar.Location = new System.Drawing.Point(527, 383);
+            this.cmdEditar.Location = new System.Drawing.Point(583, 429);
             this.cmdEditar.Name = "cmdEditar";
             this.cmdEditar.Size = new System.Drawing.Size(51, 66);
             this.cmdEditar.TabIndex = 14;
             this.cmdEditar.UseVisualStyleBackColor = true;
             this.cmdEditar.Click += new System.EventHandler(this.cmdEditar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cmdBuscar);
+            this.panel1.Controls.Add(this.textBusqueda);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.cbxCriterio);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(28, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(655, 60);
+            this.panel1.TabIndex = 17;
+            // 
+            // cmdBuscar
+            // 
+            this.cmdBuscar.FlatAppearance.BorderSize = 0;
+            this.cmdBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBuscar.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscar.Image")));
+            this.cmdBuscar.Location = new System.Drawing.Point(590, 3);
+            this.cmdBuscar.Name = "cmdBuscar";
+            this.cmdBuscar.Size = new System.Drawing.Size(52, 52);
+            this.cmdBuscar.TabIndex = 15;
+            this.cmdBuscar.UseVisualStyleBackColor = true;
+            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
+            // 
+            // textBusqueda
+            // 
+            this.textBusqueda.Location = new System.Drawing.Point(323, 17);
+            this.textBusqueda.Name = "textBusqueda";
+            this.textBusqueda.Size = new System.Drawing.Size(259, 31);
+            this.textBusqueda.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(208, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Texto a Buscar";
+            // 
+            // cbxCriterio
+            // 
+            this.cbxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCriterio.FormattingEnabled = true;
+            this.cbxCriterio.Items.AddRange(new object[] {
+            "Nombre Comercial",
+            "Cedula",
+            "Cuenta Contable",
+            "Estado "});
+            this.cbxCriterio.Location = new System.Drawing.Point(64, 17);
+            this.cbxCriterio.Name = "cbxCriterio";
+            this.cbxCriterio.Size = new System.Drawing.Size(140, 30);
+            this.cbxCriterio.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Criterio";
+            // 
             // FrmDataClientescs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(700, 461);
+            this.ClientSize = new System.Drawing.Size(715, 491);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dgvCliente);
@@ -111,6 +185,8 @@
             this.Activated += new System.EventHandler(this.FrmDataClientescs_Activated);
             this.Load += new System.EventHandler(this.FrmDataClientescs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,5 +198,11 @@
         private System.Windows.Forms.DataGridView dgvCliente;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button cmdEditar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button cmdBuscar;
+        private System.Windows.Forms.TextBox textBusqueda;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbxCriterio;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -28,20 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDataCondicionPago));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCondicionP = new System.Windows.Forms.DataGridView();
             this.cmdEditar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cmdBuscar = new System.Windows.Forms.Button();
+            this.textBusqueda = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbxCriterio = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondicionP)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 17F);
-            this.label1.Location = new System.Drawing.Point(185, 39);
+            this.label1.Location = new System.Drawing.Point(226, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 27);
             this.label1.TabIndex = 0;
@@ -50,17 +57,17 @@
             // dgvCondicionP
             // 
             this.dgvCondicionP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCondicionP.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCondicionP.Location = new System.Drawing.Point(79, 93);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCondicionP.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvCondicionP.Location = new System.Drawing.Point(27, 125);
             this.dgvCondicionP.Name = "dgvCondicionP";
-            this.dgvCondicionP.Size = new System.Drawing.Size(477, 264);
+            this.dgvCondicionP.Size = new System.Drawing.Size(655, 301);
             this.dgvCondicionP.TabIndex = 1;
             this.dgvCondicionP.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCondicionP_CellDoubleClick);
             // 
@@ -69,7 +76,7 @@
             this.cmdEditar.FlatAppearance.BorderSize = 0;
             this.cmdEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdEditar.Image = ((System.Drawing.Image)(resources.GetObject("cmdEditar.Image")));
-            this.cmdEditar.Location = new System.Drawing.Point(460, 363);
+            this.cmdEditar.Location = new System.Drawing.Point(583, 429);
             this.cmdEditar.Name = "cmdEditar";
             this.cmdEditar.Size = new System.Drawing.Size(51, 66);
             this.cmdEditar.TabIndex = 16;
@@ -81,19 +88,89 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(517, 377);
+            this.btnCerrar.Location = new System.Drawing.Point(640, 442);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(43, 39);
             this.btnCerrar.TabIndex = 15;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cmdBuscar);
+            this.panel1.Controls.Add(this.textBusqueda);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.cbxCriterio);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(28, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(655, 60);
+            this.panel1.TabIndex = 18;
+            // 
+            // cmdBuscar
+            // 
+            this.cmdBuscar.FlatAppearance.BorderSize = 0;
+            this.cmdBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBuscar.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscar.Image")));
+            this.cmdBuscar.Location = new System.Drawing.Point(590, 3);
+            this.cmdBuscar.Name = "cmdBuscar";
+            this.cmdBuscar.Size = new System.Drawing.Size(52, 52);
+            this.cmdBuscar.TabIndex = 15;
+            this.cmdBuscar.UseVisualStyleBackColor = true;
+            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
+            // 
+            // textBusqueda
+            // 
+            this.textBusqueda.Location = new System.Drawing.Point(323, 17);
+            this.textBusqueda.Name = "textBusqueda";
+            this.textBusqueda.Size = new System.Drawing.Size(259, 31);
+            this.textBusqueda.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(208, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Texto a Buscar";
+            // 
+            // cbxCriterio
+            // 
+            this.cbxCriterio.AutoCompleteCustomSource.AddRange(new string[] {
+            "Descripcion",
+            "Cantidad Dias",
+            "Estado"});
+            this.cbxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCriterio.FormattingEnabled = true;
+            this.cbxCriterio.Items.AddRange(new object[] {
+            "Descripcion",
+            "Cantidad dias",
+            "Estado "});
+            this.cbxCriterio.Location = new System.Drawing.Point(64, 17);
+            this.cbxCriterio.Name = "cbxCriterio";
+            this.cbxCriterio.Size = new System.Drawing.Size(140, 30);
+            this.cbxCriterio.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Criterio";
+            // 
             // FrmDataCondicionPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(647, 452);
+            this.ClientSize = new System.Drawing.Size(715, 491);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dgvCondicionP);
@@ -108,6 +185,8 @@
             this.Activated += new System.EventHandler(this.FrmDataCondicionPago_Activated);
             this.Load += new System.EventHandler(this.FrmDataCondicionPago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondicionP)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,5 +198,11 @@
         private System.Windows.Forms.DataGridView dgvCondicionP;
         private System.Windows.Forms.Button cmdEditar;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button cmdBuscar;
+        private System.Windows.Forms.TextBox textBusqueda;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbxCriterio;
+        private System.Windows.Forms.Label label2;
     }
 }

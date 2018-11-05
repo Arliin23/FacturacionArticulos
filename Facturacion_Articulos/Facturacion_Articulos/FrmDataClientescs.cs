@@ -13,6 +13,9 @@ namespace Facturacion_Articulos
 {
     public partial class FrmDataClientescs : Form
     {
+        public Cliente Clientes { get; set; }
+        private EntitiesFacturacionBD entities = new EntitiesFacturacionBD();
+
         public SqlConnection con;
         public string ID { get; set; }
         public string Nombre_Usuario { get; set; }
@@ -96,6 +99,27 @@ namespace Facturacion_Articulos
         private void FrmDataClientescs_Activated(object sender, EventArgs e)
         {
             ejecutarConsultaCliente();
+        }
+
+
+        //Consultas Flexibles
+
+        private void consultarPorCriterio()
+        {
+            var articulo = from em in entities.Cliente
+                           where (em.ID_Cliente.ToString().StartsWith(textBusqueda.Text) ||
+                           em.Nombre_Comercial.StartsWith(textBusqueda.Text) ||
+                           em.Cedula.ToString().StartsWith(textBusqueda.Text) ||
+                           em.Cuenta_Contable.StartsWith(textBusqueda.Text) ||
+                           em.Estado.StartsWith(textBusqueda.Text)
+                           )
+                           select em;
+            dgvCliente.DataSource = articulo.ToList();
+        }
+
+        private void cmdBuscar_Click(object sender, EventArgs e)
+        {
+            consultarPorCriterio();
         }
     }
 }
