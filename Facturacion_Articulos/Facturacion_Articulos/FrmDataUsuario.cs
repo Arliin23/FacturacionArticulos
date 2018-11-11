@@ -11,8 +11,11 @@ using System.Data.SqlClient;
 
 namespace Facturacion_Articulos
 {
+  
     public partial class FrmDataUsuario : Form
     {
+        public Usuario Usuario { get; set; }
+        private EntitiesFacturacionBD entities = new EntitiesFacturacionBD();
 
         public SqlConnection con;
         public string ID { get; set; }
@@ -93,6 +96,27 @@ namespace Facturacion_Articulos
 
                 MessageBox.Show("Error al editar registro" + exec.Message);
             }
+        }
+
+
+        //Consulta Flexible 
+
+        private void consultarPorCriterio()
+        {
+            var Usuario = from em in entities.Usuario
+                           where (em.Id_Usuario.ToString().StartsWith(textBusqueda.Text) ||
+                           em.Nombre_Usuario.StartsWith(textBusqueda.Text) ||
+                           em.Clave.ToString().StartsWith(textBusqueda.Text) ||
+                           em.Estado.StartsWith(textBusqueda.Text)
+                           )
+                           select em;
+            dgvUsuarios.DataSource = Usuario.ToList();
+        }
+
+
+        private void cmdBuscar_Click(object sender, EventArgs e)
+        {
+            consultarPorCriterio();
         }
     }
 }

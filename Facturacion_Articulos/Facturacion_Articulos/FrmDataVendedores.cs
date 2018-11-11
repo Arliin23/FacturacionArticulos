@@ -13,6 +13,9 @@ namespace Facturacion_Articulos
 {
     public partial class FrmDataVendedores : Form
     {
+        public Vendedor Vendedor { get; set; }
+        private EntitiesFacturacionBD entities = new EntitiesFacturacionBD();
+
         public SqlConnection con;
         public string ID { get; set; }
         public string Nombre { get; set; }
@@ -91,6 +94,26 @@ namespace Facturacion_Articulos
         private void FrmDataVendedores_Activated(object sender, EventArgs e)
         {
             ejecutarConsultaVendedores();
+        }
+
+        //Busqueda Flexible
+
+        private void consultarPorCriterio()
+        {
+            var Vendedor = from em in entities.Vendedor
+                          where (em.ID_Vendedor.ToString().StartsWith(textBusqueda.Text) ||
+                          em.Nombre.StartsWith(textBusqueda.Text) ||
+                          em.Porciento_Comision.ToString().StartsWith(textBusqueda.Text) ||
+                          em.Estado.StartsWith(textBusqueda.Text)
+                          )
+                          select em;
+            dgvVendedores.DataSource = Vendedor.ToList();
+        }
+
+
+        private void cmdBuscar_Click(object sender, EventArgs e)
+        {
+            consultarPorCriterio();
         }
     }
 }
