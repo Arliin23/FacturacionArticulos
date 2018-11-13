@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDataCondicionPago));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCondicionP = new System.Windows.Forms.DataGridView();
@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbxCriterio = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmdExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondicionP)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,14 +58,14 @@
             // dgvCondicionP
             // 
             this.dgvCondicionP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCondicionP.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCondicionP.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCondicionP.Location = new System.Drawing.Point(27, 125);
             this.dgvCondicionP.Name = "dgvCondicionP";
             this.dgvCondicionP.Size = new System.Drawing.Size(655, 301);
@@ -165,12 +166,24 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Criterio";
             // 
+            // cmdExcel
+            // 
+            this.cmdExcel.FlatAppearance.BorderSize = 0;
+            this.cmdExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdExcel.Image = ((System.Drawing.Image)(resources.GetObject("cmdExcel.Image")));
+            this.cmdExcel.Location = new System.Drawing.Point(526, 428);
+            this.cmdExcel.Name = "cmdExcel";
+            this.cmdExcel.Size = new System.Drawing.Size(51, 66);
+            this.cmdExcel.TabIndex = 23;
+            this.cmdExcel.UseVisualStyleBackColor = true;
+            // 
             // FrmDataCondicionPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(715, 491);
+            this.Controls.Add(this.cmdExcel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.btnCerrar);
@@ -205,5 +218,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxCriterio;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button cmdExcel;
     }
 }
