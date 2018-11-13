@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDataClientescs));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbxCriterio = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmdExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,17 +58,17 @@
             // 
             // dgvCliente
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
-            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCliente.Location = new System.Drawing.Point(27, 125);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.Size = new System.Drawing.Size(655, 301);
@@ -79,9 +80,9 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(640, 442);
+            this.btnCerrar.Location = new System.Drawing.Point(632, 428);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(43, 39);
+            this.btnCerrar.Size = new System.Drawing.Size(51, 67);
             this.btnCerrar.TabIndex = 13;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -164,12 +165,24 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Criterio";
             // 
+            // cmdExcel
+            // 
+            this.cmdExcel.FlatAppearance.BorderSize = 0;
+            this.cmdExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdExcel.Image = ((System.Drawing.Image)(resources.GetObject("cmdExcel.Image")));
+            this.cmdExcel.Location = new System.Drawing.Point(526, 428);
+            this.cmdExcel.Name = "cmdExcel";
+            this.cmdExcel.Size = new System.Drawing.Size(51, 66);
+            this.cmdExcel.TabIndex = 24;
+            this.cmdExcel.UseVisualStyleBackColor = true;
+            // 
             // FrmDataClientescs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(715, 491);
+            this.Controls.Add(this.cmdExcel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.btnCerrar);
@@ -204,5 +217,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxCriterio;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button cmdExcel;
     }
 }

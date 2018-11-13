@@ -76,7 +76,7 @@
             this.cmdCerrar.FlatAppearance.BorderSize = 0;
             this.cmdCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCerrar.Image = ((System.Drawing.Image)(resources.GetObject("cmdCerrar.Image")));
-            this.cmdCerrar.Location = new System.Drawing.Point(640, 431);
+            this.cmdCerrar.Location = new System.Drawing.Point(631, 428);
             this.cmdCerrar.Name = "cmdCerrar";
             this.cmdCerrar.Size = new System.Drawing.Size(51, 66);
             this.cmdCerrar.TabIndex = 10;
