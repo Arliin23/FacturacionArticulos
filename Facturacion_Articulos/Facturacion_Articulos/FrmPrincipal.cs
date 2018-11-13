@@ -19,8 +19,10 @@ namespace Facturacion_Articulos
 
         private void cmdFactura_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FrmFacturacion frm = new FrmFacturacion();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
          
         }
 

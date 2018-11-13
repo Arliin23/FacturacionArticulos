@@ -26,30 +26,34 @@ namespace Facturacion_Articulos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
             FrmDataClientescs frm = new FrmDataClientescs();    
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
             FrmDataCondicionPago frm = new FrmDataCondicionPago();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
             FrmDataArticulos frm = new FrmDataArticulos();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
             FrmDataVendedores frm = new FrmDataVendedores();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void FrmMantenimiento_Load(object sender, EventArgs e)
@@ -58,9 +62,11 @@ namespace Facturacion_Articulos
         }
 
         private void button5_Click(object sender, EventArgs e)
-        {    
+        {
+            this.Hide();
             FrmDataUsuario frm = new FrmDataUsuario();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }

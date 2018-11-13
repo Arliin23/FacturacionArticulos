@@ -25,8 +25,10 @@ namespace Facturacion_Articulos
 
         private void cmdEditar_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FrmClientes frm = new FrmClientes();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void cmdCerrar_Click(object sender, EventArgs e)
@@ -42,16 +44,18 @@ namespace Facturacion_Articulos
 
         private void btnFacturacion_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
             FrmPrincipal frm = new FrmPrincipal();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void btnMantenimiento_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
             FrmMantenimiento frm = new FrmMantenimiento();
-            frm.Show();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }
