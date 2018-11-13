@@ -164,6 +164,29 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="cmdExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGeYUxB9wAAACBjSFJNAACH
+        EAAAjBIAAP1NAACBPgAAWesAARIPAAA85gAAGc66ySIyAAABJmlDQ1BBZG9iZSBSR0IgKDE5OTgpAAAo
+        z2NgYDJwdHFyZRJgYMjNKykKcndSiIiMUmA/z8DGwMwABonJxQWOAQE+IHZefl4qAwb4do2BEURf1gWZ
+        xUAa4EouKCoB0n+A2CgltTiZgYHRAMjOLi8pAIozzgGyRZKywewNIHZRSJAzkH0EyOZLh7CvgNhJEPYT
+        ELsI6Akg+wtIfTqYzcQBNgfClgGxS1IrQPYyOOcXVBZlpmeUKBhaWloqOKbkJ6UqBFcWl6TmFit45iXn
+        FxXkFyWWpKYA1ULcBwaCEIWgENMAarTQZKAyAMUDhPU5EBy+jGJnEGIIkFxaVAZlMjIZE+YjzJgjwcDg
+        v5SBgeUPQsykl4FhgQ4DA/9UhJiaIQODgD4Dw745AMDGT/0ZOjZcAAAACXBIWXMAAAsTAAALEwEAmpwY
+        AAACpUlEQVRIS53WWYhNcRzA8cFYQrbJkq2IvCCFkgdvXmRJ2bJmLxIlyb4XCnlAWR/sa1miZCmiUZJk
+        Ky/yYBbDGPt+fL/Xnfz970333l99pvP/n3Pu77+fKUqSJFYH9VAfjdAG/TAe63Adm9EK2d7/h38aoAma
+        oxsGYy524w4q8QthHIWJffd/ik2wEmfxBB+RS5yGjViFNVgBf2d1uqzlmG6Cb8g3zuE8yvESn2Dj7K11
+        ZfhpnQl8IN9wiFojNc6Yj6lohrrpumN47YXZ8o3D6IwSONkLYYL2QV1eCeJhPIPaOViMS3DINsB5cPwf
+        oTxO4A/dw+1UiRZgFy6nSn/jBEZiAsbiAHbAXljnkr6FijjBZyxDC7zARfjMPoRxCO4T72kKhgZl7UW1
+        F/EQlaIpZmMWBuALwjiFUZiM0XBO7IXPW2cv3EMZPTBccq4KV0MX7EccJpgGJ3cB3EcnsSSou4+MOaiN
+        m/BeX3ywIgqHyPu1bPGQqM6TIOsQ/YBd9l53PEQcTvJwjIND5Bxtx0Q46WNgIyuzJXAnDkQf9MAcxOFR
+        MQ8eCUvhKnNBbMJaeGw8RsYQfYUt8aC6CsfT3emaDsMedoSrzfs+55y0Q0tYfxwZG+0dbNHMVClJrsGH
+        3UBheFR48vqD7lyXtj3qCndzW7gZMxI4/q7/ilTpzwHmsn2K8Mj2ZXewvfXbcAN+J3am67biGcqyzUEu
+        YQ+co97oifUwYX/0StddQFWhCZwDv3y+r0kYFpS1B2+8KOS4dohstSfmQbip7sLlewTuExteY4JCPjie
+        nJ6g7/EWVfBg9FrVeIVSE2zEFTzHd+QSttxN6CrqAFeOvA6VmKAhPNz8SDg5I7AIjvMD1CAOE+T8X0XM
+        ySuGm60xOmEQZmAbXLZbkEOCpOg3npkfwsjxiMEAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIACCBwAAZgAAAICAAAABACAAKAgBAOgHAABAQAAAAQAgAChCAAAQEAEAMDAAAAEA

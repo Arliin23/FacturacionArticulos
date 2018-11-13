@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbxCriterio = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmdExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -162,12 +163,24 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Criterio";
             // 
+            // cmdExcel
+            // 
+            this.cmdExcel.FlatAppearance.BorderSize = 0;
+            this.cmdExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdExcel.Image = ((System.Drawing.Image)(resources.GetObject("cmdExcel.Image")));
+            this.cmdExcel.Location = new System.Drawing.Point(526, 428);
+            this.cmdExcel.Name = "cmdExcel";
+            this.cmdExcel.Size = new System.Drawing.Size(51, 66);
+            this.cmdExcel.TabIndex = 25;
+            this.cmdExcel.UseVisualStyleBackColor = true;
+            // 
             // FrmDataVendedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(715, 491);
+            this.Controls.Add(this.cmdExcel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.cmdCerrar);
@@ -202,5 +215,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxCriterio;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button cmdExcel;
     }
 }
