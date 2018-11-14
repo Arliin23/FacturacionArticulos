@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using System.Diagnostics;
 
 namespace Facturacion_Articulos
 {
-  
+
     public partial class FrmDataUsuario : Form
     {
         public Usuario Usuario { get; set; }
@@ -19,11 +21,11 @@ namespace Facturacion_Articulos
 
         public SqlConnection con;
         public string ID { get; set; }
-        public string Nombre_Usuario{ get; set; }
+        public string Nombre_Usuario { get; set; }
         public string Clave { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
-
+        DataTable dt = new DataTable();
 
         public FrmDataUsuario()
         {
@@ -39,7 +41,7 @@ namespace Facturacion_Articulos
                 con.Open();
                 string sql = "select * from Usuario";
                 SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
+                dt = new DataTable();
                 da.Fill(dt);
                 dgvUsuarios.DataSource = dt;
                 dgvUsuarios.Refresh();
@@ -63,7 +65,7 @@ namespace Facturacion_Articulos
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-            
+
         }
 
         private void cmdEditar_Click(object sender, EventArgs e)
@@ -90,12 +92,16 @@ namespace Facturacion_Articulos
                 frm.Clave = row.Cells[2].Value.ToString();
                 frm.Estado = row.Cells[3].Value.ToString();
                 frm.ShowDialog();
+
             }
             catch (Exception exec)
             {
 
                 MessageBox.Show("Error al editar registro" + exec.Message);
             }
+
+
+
         }
 
 
@@ -104,12 +110,12 @@ namespace Facturacion_Articulos
         private void consultarPorCriterio()
         {
             var Usuario = from em in entities.Usuario
-                           where (em.Id_Usuario.ToString().StartsWith(textBusqueda.Text) ||
-                           em.Nombre_Usuario.StartsWith(textBusqueda.Text) ||
-                           em.Clave.ToString().StartsWith(textBusqueda.Text) ||
-                           em.Estado.StartsWith(textBusqueda.Text)
-                           )
-                           select em;
+                          where (em.Id_Usuario.ToString().StartsWith(textBusqueda.Text) ||
+                          em.Nombre_Usuario.StartsWith(textBusqueda.Text) ||
+                          em.Clave.ToString().StartsWith(textBusqueda.Text) ||
+                          em.Estado.StartsWith(textBusqueda.Text)
+                          )
+                          select em;
             dgvUsuarios.DataSource = Usuario.ToList();
         }
 
@@ -117,6 +123,39 @@ namespace Facturacion_Articulos
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
             consultarPorCriterio();
+        }
+
+        private void cmdExcel_Click(object sender, EventArgs e)
+        {
+            writeFileHeader("ID, Usuario, Clave, Estado");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string linea = "";
+                foreach (DataColumn dc in dt.Columns)
+                {
+                    linea += row[dc].ToString() + ",";
+                }
+                writeFileLine(linea);
+            }
+
+            Process.Start(@"C:\Users\Arianna Linette Díaz\Documents\GitHub\Facturacion_Articulos\Usuarios.csv");
+        }
+
+        private void writeFileLine(string pLine)
+        {
+            using (System.IO.StreamWriter w = File.AppendText(@"C:\Users\Arianna Linette Díaz\Documents\GitHub\Facturacion_Articulos\Usuarios.csv"))
+            {
+                w.WriteLine(pLine);
+            }
+        }
+        private void writeFileHeader(string pLine)
+        {
+            using (System.IO.StreamWriter w = File.CreateText(@"C:\Users\Arianna Linette Díaz\Documents\GitHub\Facturacion_Articulos\Usuarios.csv"))
+            {
+                w.WriteLine(pLine);
+            }
+
         }
     }
 }
