@@ -70,94 +70,94 @@
     <Compile Include="Factura.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Menu Admin\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Menu Admin\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmArticulos.cs">
+    <Compile Include="Mantenimiento\Editar, Agregar Datos\FrmArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmArticulos.Designer.cs">
+    <Compile Include="Mantenimiento\Editar, Agregar Datos\FrmArticulos.Designer.cs">
       <DependentUpon>FrmArticulos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmClientes.cs">
+    <Compile Include="Mantenimiento\Editar, Agregar Datos\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmClientes.Designer.cs">
+    <Compile Include="Mantenimiento\Editar, Agregar Datos\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCondicionPago.cs">
+    <Compile Include="Mantenimiento\Editar, Agregar Datos\FrmCondicionPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCondicionPago.Designer.cs">
+    <Compile Include="Mantenimiento\Editar, Agregar Datos\FrmCondicionPago.Designer.cs">
       <DependentUpon>FrmCondicionPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDataArticulos.cs">
+    <Compile Include="Mantenimiento\Frm Mostrar Datos\FrmDataArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDataArticulos.Designer.cs">
+    <Compile Include="Mantenimiento\Frm Mostrar Datos\FrmDataArticulos.Designer.cs">
       <DependentUpon>FrmDataArticulos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDataClientescs.cs">
+    <Compile Include="Mantenimiento\Frm Mostrar Datos\FrmDataClientescs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDataClientescs.Designer.cs">
+    <Compile Include="Mantenimiento\Frm Mostrar Datos\FrmDataClientescs.Designer.cs">
       <DependentUpon>FrmDataClientescs.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDataCondicionPago.cs">
+    <Compile Include="Mantenimiento\Frm Mostrar Datos\FrmDataCondicionPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDataCondicionPago.Designer.cs">
+    <Compile Include="Mantenimiento\Frm Mostrar Datos\FrmDataCondicionPago.Designer.cs">
       <DependentUpon>FrmDataCondicionPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDataUsuario.cs">
+    <Compile Include="Mantenimiento\Frm Mostrar Datos\FrmDataUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDataUsuario.Designer.cs">
+    <Compile Include="Mantenimiento\Frm Mostrar Datos\FrmDataUsuario.Designer.cs">
       <DependentUpon>FrmDataUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDataVendedores.cs">
+    <Compile Include="Mantenimiento\Frm Mostrar Datos\FrmDataVendedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDataVendedores.Designer.cs">
+    <Compile Include="Mantenimiento\Frm Mostrar Datos\FrmDataVendedores.Designer.cs">
       <DependentUpon>FrmDataVendedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmFacturacion.cs">
+    <Compile Include="Facturacion\FrmFacturacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmFacturacion.Designer.cs">
+    <Compile Include="Facturacion\FrmFacturacion.Designer.cs">
       <DependentUpon>FrmFacturacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin.cs">
+    <Compile Include="Login\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
+    <Compile Include="Login\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMantenimiento.cs">
+    <Compile Include="Mantenimiento\FrmMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMantenimiento.Designer.cs">
+    <Compile Include="Mantenimiento\FrmMantenimiento.Designer.cs">
       <DependentUpon>FrmMantenimiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPrincipal.cs">
+    <Compile Include="Menu Usuario\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPrincipal.Designer.cs">
+    <Compile Include="Menu Usuario\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuarios.cs">
+    <Compile Include="Mantenimiento\Editar, Agregar Datos\FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuarios.Designer.cs">
+    <Compile Include="Mantenimiento\Editar, Agregar Datos\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVendedor.cs">
+    <Compile Include="Mantenimiento\Editar, Agregar Datos\FrmVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVendedor.Designer.cs">
+    <Compile Include="Mantenimiento\Editar, Agregar Datos\FrmVendedor.Designer.cs">
       <DependentUpon>FrmVendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
@@ -183,49 +183,49 @@
     <Compile Include="Vendedor.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Menu Admin\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmArticulos.resx">
+    <EmbeddedResource Include="Mantenimiento\Editar, Agregar Datos\FrmArticulos.resx">
       <DependentUpon>FrmArticulos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmClientes.resx">
+    <EmbeddedResource Include="Mantenimiento\Editar, Agregar Datos\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCondicionPago.resx">
+    <EmbeddedResource Include="Mantenimiento\Editar, Agregar Datos\FrmCondicionPago.resx">
       <DependentUpon>FrmCondicionPago.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDataArticulos.resx">
+    <EmbeddedResource Include="Mantenimiento\Frm Mostrar Datos\FrmDataArticulos.resx">
       <DependentUpon>FrmDataArticulos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDataClientescs.resx">
+    <EmbeddedResource Include="Mantenimiento\Frm Mostrar Datos\FrmDataClientescs.resx">
       <DependentUpon>FrmDataClientescs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDataCondicionPago.resx">
+    <EmbeddedResource Include="Mantenimiento\Frm Mostrar Datos\FrmDataCondicionPago.resx">
       <DependentUpon>FrmDataCondicionPago.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDataUsuario.resx">
+    <EmbeddedResource Include="Mantenimiento\Frm Mostrar Datos\FrmDataUsuario.resx">
       <DependentUpon>FrmDataUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDataVendedores.resx">
+    <EmbeddedResource Include="Mantenimiento\Frm Mostrar Datos\FrmDataVendedores.resx">
       <DependentUpon>FrmDataVendedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmFacturacion.resx">
+    <EmbeddedResource Include="Facturacion\FrmFacturacion.resx">
       <DependentUpon>FrmFacturacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="Login\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMantenimiento.resx">
+    <EmbeddedResource Include="Mantenimiento\FrmMantenimiento.resx">
       <DependentUpon>FrmMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrincipal.resx">
+    <EmbeddedResource Include="Menu Usuario\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuarios.resx">
+    <EmbeddedResource Include="Mantenimiento\Editar, Agregar Datos\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVendedor.resx">
+    <EmbeddedResource Include="Mantenimiento\Editar, Agregar Datos\FrmVendedor.resx">
       <DependentUpon>FrmVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
