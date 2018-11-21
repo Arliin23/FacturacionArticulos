@@ -18,6 +18,7 @@ namespace Facturacion_Articulos
         public string Descripcion { get; set; }
         public string CostoUnitario { get; set; }
         public string PrecioUnitario { get; set; }
+        public string Cantidad { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
@@ -27,7 +28,7 @@ namespace Facturacion_Articulos
             InitializeComponent();
             try
             {
-                con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-98MOSJM;Initial Catalog=FacturacionBD;Integrated Security=True");
                 con.Open();
             }
             catch (Exception e)
@@ -60,12 +61,12 @@ namespace Facturacion_Articulos
                     string sql = "";
                     if (Modo.Equals("C"))
                     {
-                        sql = $"insert into Articulo_Facturable values ('{rtxtDescripcion.Text}', '{nUDCostoUnitario.Text}', '{nUDPrecioUnitario.Text}' ,'{cbxEstado.Text}')";
+                        sql = $"insert into Articulo_Facturable values ('{rtxtDescripcion.Text}', '{nUDCostoUnitario.Text}', '{nUDPrecioUnitario.Text}', '{nUDCantidad.Text}' ,'{cbxEstado.Text}')";
                     }
                     else
                     {
                         sql = $"update Articulo_Facturable set Descripcion ='{rtxtDescripcion.Text}', " +
-                            $"Costo_Unitario = '{nUDCostoUnitario.Text}', Precio_Unitario = '{nUDPrecioUnitario.Text}', estado = '{cbxEstado.Text}' " +
+                            $"Costo_Unitario = '{nUDCostoUnitario.Text}', Precio_Unitario = '{nUDPrecioUnitario.Text}', Cantidad = '{nUDCantidad.Text}', estado = '{cbxEstado.Text}' " +
                             $"where id_articulo = '{TextID.Text}'";
                     }
 
@@ -121,6 +122,7 @@ namespace Facturacion_Articulos
                 rtxtDescripcion.Text = Descripcion;
                 nUDCostoUnitario.Text = CostoUnitario;
                 nUDPrecioUnitario.Text = PrecioUnitario;
+                nUDCantidad.Text = Cantidad;
                 if (Estado == null)
                 {
                     cbxEstado.SelectedIndex = 0;

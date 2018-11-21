@@ -21,6 +21,7 @@
           <Property Name="Descripcion" Type="varchar" MaxLength="400" Nullable="false" />
           <Property Name="Costo_Unitario" Type="float" Nullable="false" />
           <Property Name="Precio_Unitario" Type="float" Nullable="false" />
+          <Property Name="Cantidad" Type="int" Nullable="false" />
           <Property Name="Estado" Type="varchar" MaxLength="60" Nullable="false" />
         </EntityType>
         <EntityType Name="Cliente">
@@ -160,6 +161,7 @@
           <Property Name="Descripcion" Type="String" MaxLength="400" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Costo_Unitario" Type="Double" Nullable="false" />
           <Property Name="Precio_Unitario" Type="Double" Nullable="false" />
+          <Property Name="Cantidad" Type="Int32" Nullable="false" />
           <Property Name="Estado" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Factura" Relationship="Self.Articulo_Factura" FromRole="Articulo_Facturable" ToRole="Factura" />
         </EntityType>
@@ -247,7 +249,7 @@
           <End Role="Articulo_Facturable" Type="Self.Articulo_Facturable" Multiplicity="*" />
           <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="EntitiesFacturacionBD" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="FacturacionBDEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Articulo_Facturable" EntityType="Self.Articulo_Facturable" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" />
           <EntitySet Name="Condicion_Pago" EntityType="Self.Condicion_Pago" />
@@ -272,7 +274,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="FacturacionBDModelStoreContainer" CdmEntityContainer="EntitiesFacturacionBD">
+        <EntityContainerMapping StorageEntityContainer="FacturacionBDModelStoreContainer" CdmEntityContainer="FacturacionBDEntities1">
           <EntitySetMapping Name="Articulo_Facturable">
             <EntityTypeMapping TypeName="FacturacionBDModel.Articulo_Facturable">
               <MappingFragment StoreEntitySet="Articulo_Facturable">
@@ -280,6 +282,7 @@
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
                 <ScalarProperty Name="Costo_Unitario" ColumnName="Costo_Unitario" />
                 <ScalarProperty Name="Precio_Unitario" ColumnName="Precio_Unitario" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -365,7 +368,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

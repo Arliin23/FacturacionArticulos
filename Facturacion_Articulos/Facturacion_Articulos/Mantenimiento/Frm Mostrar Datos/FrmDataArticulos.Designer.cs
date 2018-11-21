@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDataArticulos));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
@@ -62,25 +62,25 @@
             this.dgvArticulos.AllowUserToAddRows = false;
             this.dgvArticulos.AllowUserToDeleteRows = false;
             this.dgvArticulos.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            this.dgvArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.dgvArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvArticulos.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvArticulos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvArticulos.Location = new System.Drawing.Point(27, 125);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.Size = new System.Drawing.Size(655, 301);
@@ -137,6 +137,7 @@
             "Descripcion",
             "Costo ",
             "Precio",
+            "Cantidad",
             "Estado "});
             this.cbxCriterio.Location = new System.Drawing.Point(64, 17);
             this.cbxCriterio.Name = "cbxCriterio";

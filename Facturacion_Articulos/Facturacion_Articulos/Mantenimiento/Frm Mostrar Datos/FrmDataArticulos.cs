@@ -14,13 +14,14 @@ namespace Facturacion_Articulos
     public partial class FrmDataArticulos : Form
     {
         public Articulo_Facturable Articulo { get; set; }
-        private EntitiesFacturacionBD entities = new EntitiesFacturacionBD();
+        private FacturacionBDEntities1 entities = new FacturacionBDEntities1();
 
         public SqlConnection con;
         public string ID { get; set; }
         public string Descripcion { get; set; }
         public int CostoUnitario { get; set; }
         public int PrecioUnitario { get; set; }
+        public int Cantidad { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
 
@@ -38,7 +39,7 @@ namespace Facturacion_Articulos
             try
             {
 
-                con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-98MOSJM;Initial Catalog=FacturacionBD;Integrated Security=True");
                 con.Open();
                 string sql = "select * from Articulo_Facturable";
                 SqlDataAdapter da = new SqlDataAdapter(sql,con);
@@ -97,7 +98,8 @@ namespace Facturacion_Articulos
                 frm.Descripcion = row.Cells[1].Value.ToString();
                 frm.CostoUnitario = row.Cells[2].Value.ToString();
                 frm.PrecioUnitario = row.Cells[3].Value.ToString();
-                frm.Estado = row.Cells[4].Value.ToString();
+                frm.Cantidad = row.Cells[4].Value.ToString();
+                frm.Estado = row.Cells[5].Value.ToString();
                 frm.Modo = "U";
                 frm.ShowDialog();
             }
@@ -122,6 +124,7 @@ namespace Facturacion_Articulos
                             em.Descripcion.StartsWith(textBusqueda.Text) ||
                             em.Costo_Unitario.ToString().StartsWith(textBusqueda.Text) ||
                             em.Precio_Unitario.ToString().StartsWith(textBusqueda.Text) ||
+                            em.Cantidad.ToString().StartsWith(textBusqueda.Text) ||
                             em.Estado.StartsWith(textBusqueda.Text)
                             )
                             select em;

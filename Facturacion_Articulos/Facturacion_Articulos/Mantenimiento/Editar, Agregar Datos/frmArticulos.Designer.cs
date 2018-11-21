@@ -43,6 +43,8 @@
             this.rtxtDescripcion = new System.Windows.Forms.RichTextBox();
             this.nUDCostoUnitario = new System.Windows.Forms.TextBox();
             this.nUDPrecioUnitario = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nUDCantidad = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 186);
+            this.label2.Location = new System.Drawing.Point(53, 187);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 1;
@@ -68,7 +70,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 262);
+            this.label3.Location = new System.Drawing.Point(53, 256);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 2;
@@ -78,7 +80,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(53, 317);
+            this.label4.Location = new System.Drawing.Point(53, 295);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 3;
@@ -88,7 +90,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(53, 364);
+            this.label5.Location = new System.Drawing.Point(53, 374);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 20);
             this.label5.TabIndex = 4;
@@ -146,7 +148,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(53, 104);
+            this.label6.Location = new System.Drawing.Point(53, 112);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(25, 20);
             this.label6.TabIndex = 12;
@@ -154,7 +156,7 @@
             // 
             // TextID
             // 
-            this.TextID.Location = new System.Drawing.Point(217, 101);
+            this.TextID.Location = new System.Drawing.Point(217, 112);
             this.TextID.Name = "TextID";
             this.TextID.ReadOnly = true;
             this.TextID.Size = new System.Drawing.Size(179, 31);
@@ -172,7 +174,7 @@
             // 
             // nUDCostoUnitario
             // 
-            this.nUDCostoUnitario.Location = new System.Drawing.Point(217, 263);
+            this.nUDCostoUnitario.Location = new System.Drawing.Point(217, 251);
             this.nUDCostoUnitario.MaxLength = 4;
             this.nUDCostoUnitario.Name = "nUDCostoUnitario";
             this.nUDCostoUnitario.Size = new System.Drawing.Size(179, 31);
@@ -181,12 +183,30 @@
             // 
             // nUDPrecioUnitario
             // 
-            this.nUDPrecioUnitario.Location = new System.Drawing.Point(217, 314);
+            this.nUDPrecioUnitario.Location = new System.Drawing.Point(217, 290);
             this.nUDPrecioUnitario.MaxLength = 4;
             this.nUDPrecioUnitario.Name = "nUDPrecioUnitario";
             this.nUDPrecioUnitario.Size = new System.Drawing.Size(179, 31);
             this.nUDPrecioUnitario.TabIndex = 18;
             this.nUDPrecioUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nUDPrecioUnitario_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(53, 332);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 20);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Cantidad";
+            // 
+            // nUDCantidad
+            // 
+            this.nUDCantidad.Location = new System.Drawing.Point(217, 327);
+            this.nUDCantidad.MaxLength = 4;
+            this.nUDCantidad.Name = "nUDCantidad";
+            this.nUDCantidad.Size = new System.Drawing.Size(179, 31);
+            this.nUDCantidad.TabIndex = 20;
             // 
             // FrmArticulos
             // 
@@ -194,6 +214,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(503, 493);
+            this.Controls.Add(this.nUDCantidad);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.nUDPrecioUnitario);
             this.Controls.Add(this.nUDCostoUnitario);
             this.Controls.Add(this.rtxtDescripcion);
@@ -238,5 +260,7 @@
         private System.Windows.Forms.RichTextBox rtxtDescripcion;
         private System.Windows.Forms.TextBox nUDCostoUnitario;
         private System.Windows.Forms.TextBox nUDPrecioUnitario;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox nUDCantidad;
     }
 }

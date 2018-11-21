@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ce45cf864a5046d190acf14e4b0ada09" Name="Diagram1">
-        <EntityTypeShape EntityType="FacturacionBDModel.Articulo_Facturable" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+      <Diagram DiagramId="66df5ae7587a4db68a35ef0bb59d6b0b" Name="Diagram1">
+        <EntityTypeShape EntityType="FacturacionBDModel.Articulo_Facturable" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="FacturacionBDModel.Cliente" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FacturacionBDModel.Condicion_Pago" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FacturacionBDModel.Factura" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
