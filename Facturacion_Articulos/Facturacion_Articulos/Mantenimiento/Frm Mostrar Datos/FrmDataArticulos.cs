@@ -18,7 +18,7 @@ namespace Facturacion_Articulos
 
         public SqlConnection con;
         public string ID { get; set; }
-        public string Descripcion { get; set; }
+        public string Nombre { get; set; }
         public int CostoUnitario { get; set; }
         public int PrecioUnitario { get; set; }
         public int Cantidad { get; set; }
@@ -95,7 +95,7 @@ namespace Facturacion_Articulos
                 DataGridViewRow row = this.dgvArticulos.SelectedRows[0];
                 FrmArticulos frm = new FrmArticulos();
                 frm.ID = row.Cells[0].Value.ToString();
-                frm.Descripcion = row.Cells[1].Value.ToString();
+                frm.Nombre = row.Cells[1].Value.ToString();
                 frm.CostoUnitario = row.Cells[2].Value.ToString();
                 frm.PrecioUnitario = row.Cells[3].Value.ToString();
                 frm.Cantidad = row.Cells[4].Value.ToString();
@@ -121,7 +121,7 @@ namespace Facturacion_Articulos
         {
             var articulo = from em in entities.Articulo_Facturable
                             where (em.ID_Articulo.ToString().StartsWith(textBusqueda.Text) ||
-                            em.Descripcion.StartsWith(textBusqueda.Text) ||
+                            em.Nombre_Articulo.StartsWith(textBusqueda.Text) ||
                             em.Costo_Unitario.ToString().StartsWith(textBusqueda.Text) ||
                             em.Precio_Unitario.ToString().StartsWith(textBusqueda.Text) ||
                             em.Cantidad.ToString().StartsWith(textBusqueda.Text) ||

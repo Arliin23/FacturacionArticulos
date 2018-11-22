@@ -18,7 +18,7 @@
             <PropertyRef Name="ID_Articulo" />
           </Key>
           <Property Name="ID_Articulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Descripcion" Type="varchar" MaxLength="400" Nullable="false" />
+          <Property Name="Nombre_Articulo" Type="varchar" MaxLength="40" Nullable="false" />
           <Property Name="Costo_Unitario" Type="float" Nullable="false" />
           <Property Name="Precio_Unitario" Type="float" Nullable="false" />
           <Property Name="Cantidad" Type="int" Nullable="false" />
@@ -75,7 +75,7 @@
           <Property Name="Porciento_Comision" Type="int" Nullable="false" />
           <Property Name="Estado" Type="varchar" MaxLength="60" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Articulo___ID_Ar__49C3F6B7">
+        <Association Name="FK__Articulo___ID_Ar__4D94879B">
           <End Role="Articulo_Facturable" Type="Self.Articulo_Facturable" Multiplicity="1" />
           <End Role="Articulo_Factura" Type="Self.Articulo_Factura" Multiplicity="*" />
           <ReferentialConstraint>
@@ -87,7 +87,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Articulo___ID_Fa__4AB81AF0">
+        <Association Name="FK__Articulo___ID_Fa__4E88ABD4">
           <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
           <End Role="Articulo_Factura" Type="Self.Articulo_Factura" Multiplicity="*" />
           <ReferentialConstraint>
@@ -131,11 +131,11 @@
           <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vendedor" EntityType="Self.Vendedor" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Articulo___ID_Ar__49C3F6B7" Association="Self.FK__Articulo___ID_Ar__49C3F6B7">
+          <AssociationSet Name="FK__Articulo___ID_Ar__4D94879B" Association="Self.FK__Articulo___ID_Ar__4D94879B">
             <End Role="Articulo_Facturable" EntitySet="Articulo_Facturable" />
             <End Role="Articulo_Factura" EntitySet="Articulo_Factura" />
           </AssociationSet>
-          <AssociationSet Name="FK__Articulo___ID_Fa__4AB81AF0" Association="Self.FK__Articulo___ID_Fa__4AB81AF0">
+          <AssociationSet Name="FK__Articulo___ID_Fa__4E88ABD4" Association="Self.FK__Articulo___ID_Fa__4E88ABD4">
             <End Role="Factura" EntitySet="Factura" />
             <End Role="Articulo_Factura" EntitySet="Articulo_Factura" />
           </AssociationSet>
@@ -158,7 +158,7 @@
             <PropertyRef Name="ID_Articulo" />
           </Key>
           <Property Name="ID_Articulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Descripcion" Type="String" MaxLength="400" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_Articulo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Costo_Unitario" Type="Double" Nullable="false" />
           <Property Name="Precio_Unitario" Type="Double" Nullable="false" />
           <Property Name="Cantidad" Type="Int32" Nullable="false" />
@@ -279,7 +279,7 @@
             <EntityTypeMapping TypeName="FacturacionBDModel.Articulo_Facturable">
               <MappingFragment StoreEntitySet="Articulo_Facturable">
                 <ScalarProperty Name="ID_Articulo" ColumnName="ID_Articulo" />
-                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre_Articulo" ColumnName="Nombre_Articulo" />
                 <ScalarProperty Name="Costo_Unitario" ColumnName="Costo_Unitario" />
                 <ScalarProperty Name="Precio_Unitario" ColumnName="Precio_Unitario" />
                 <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />

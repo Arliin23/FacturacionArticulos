@@ -40,11 +40,11 @@
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TextID = new System.Windows.Forms.TextBox();
-            this.rtxtDescripcion = new System.Windows.Forms.RichTextBox();
             this.nUDCostoUnitario = new System.Windows.Forms.TextBox();
             this.nUDPrecioUnitario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.nUDCantidad = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -60,17 +60,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 187);
+            this.label2.Location = new System.Drawing.Point(53, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 20);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Descripción";
+            this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 256);
+            this.label3.Location = new System.Drawing.Point(53, 211);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 2;
@@ -80,7 +80,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(53, 295);
+            this.label4.Location = new System.Drawing.Point(53, 256);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 3;
@@ -90,7 +90,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(53, 374);
+            this.label5.Location = new System.Drawing.Point(53, 347);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 20);
             this.label5.TabIndex = 4;
@@ -139,7 +139,7 @@
             this.cbxEstado.Items.AddRange(new object[] {
             "Disponible",
             "No Disponible"});
-            this.cbxEstado.Location = new System.Drawing.Point(217, 364);
+            this.cbxEstado.Location = new System.Drawing.Point(217, 342);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(179, 30);
             this.cbxEstado.TabIndex = 11;
@@ -162,19 +162,9 @@
             this.TextID.Size = new System.Drawing.Size(179, 31);
             this.TextID.TabIndex = 13;
             // 
-            // rtxtDescripcion
-            // 
-            this.rtxtDescripcion.Location = new System.Drawing.Point(217, 149);
-            this.rtxtDescripcion.MaxLength = 400;
-            this.rtxtDescripcion.Name = "rtxtDescripcion";
-            this.rtxtDescripcion.Size = new System.Drawing.Size(179, 96);
-            this.rtxtDescripcion.TabIndex = 16;
-            this.rtxtDescripcion.Text = "";
-            this.rtxtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtxtDescripcion_KeyPress);
-            // 
             // nUDCostoUnitario
             // 
-            this.nUDCostoUnitario.Location = new System.Drawing.Point(217, 251);
+            this.nUDCostoUnitario.Location = new System.Drawing.Point(217, 206);
             this.nUDCostoUnitario.MaxLength = 4;
             this.nUDCostoUnitario.Name = "nUDCostoUnitario";
             this.nUDCostoUnitario.Size = new System.Drawing.Size(179, 31);
@@ -183,7 +173,7 @@
             // 
             // nUDPrecioUnitario
             // 
-            this.nUDPrecioUnitario.Location = new System.Drawing.Point(217, 290);
+            this.nUDPrecioUnitario.Location = new System.Drawing.Point(217, 251);
             this.nUDPrecioUnitario.MaxLength = 4;
             this.nUDPrecioUnitario.Name = "nUDPrecioUnitario";
             this.nUDPrecioUnitario.Size = new System.Drawing.Size(179, 31);
@@ -194,7 +184,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(53, 332);
+            this.label7.Location = new System.Drawing.Point(53, 300);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 20);
             this.label7.TabIndex = 19;
@@ -202,11 +192,20 @@
             // 
             // nUDCantidad
             // 
-            this.nUDCantidad.Location = new System.Drawing.Point(217, 327);
+            this.nUDCantidad.Location = new System.Drawing.Point(217, 295);
             this.nUDCantidad.MaxLength = 4;
             this.nUDCantidad.Name = "nUDCantidad";
             this.nUDCantidad.Size = new System.Drawing.Size(179, 31);
             this.nUDCantidad.TabIndex = 20;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(217, 159);
+            this.txtNombre.MaxLength = 40;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(179, 31);
+            this.txtNombre.TabIndex = 21;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // FrmArticulos
             // 
@@ -214,11 +213,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(503, 493);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.nUDCantidad);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.nUDPrecioUnitario);
             this.Controls.Add(this.nUDCostoUnitario);
-            this.Controls.Add(this.rtxtDescripcion);
             this.Controls.Add(this.TextID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbxEstado);
@@ -257,10 +256,10 @@
         private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TextID;
-        private System.Windows.Forms.RichTextBox rtxtDescripcion;
         private System.Windows.Forms.TextBox nUDCostoUnitario;
         private System.Windows.Forms.TextBox nUDPrecioUnitario;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox nUDCantidad;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }

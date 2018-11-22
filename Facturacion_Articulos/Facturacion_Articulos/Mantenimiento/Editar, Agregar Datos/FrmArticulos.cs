@@ -15,7 +15,7 @@ namespace Facturacion_Articulos
     {
         public SqlConnection con;
         public string ID { get; set; }
-        public string Descripcion { get; set; }
+        public string Nombre { get; set; }
         public string CostoUnitario { get; set; }
         public string PrecioUnitario { get; set; }
         public string Cantidad { get; set; }
@@ -51,7 +51,7 @@ namespace Facturacion_Articulos
 
             try
             {
-                if (string.IsNullOrEmpty(rtxtDescripcion.Text) || string.IsNullOrEmpty(nUDCostoUnitario.Text) || string.IsNullOrEmpty(nUDPrecioUnitario.Text))
+                if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(nUDCostoUnitario.Text) || string.IsNullOrEmpty(nUDPrecioUnitario.Text))
                 {
                     MessageBox.Show("Campos Vacios");
                 }
@@ -61,11 +61,11 @@ namespace Facturacion_Articulos
                     string sql = "";
                     if (Modo.Equals("C"))
                     {
-                        sql = $"insert into Articulo_Facturable values ('{rtxtDescripcion.Text}', '{nUDCostoUnitario.Text}', '{nUDPrecioUnitario.Text}', '{nUDCantidad.Text}' ,'{cbxEstado.Text}')";
+                        sql = $"insert into Articulo_Facturable values ('{txtNombre.Text}', '{nUDCostoUnitario.Text}', '{nUDPrecioUnitario.Text}', '{nUDCantidad.Text}' ,'{cbxEstado.Text}')";
                     }
                     else
                     {
-                        sql = $"update Articulo_Facturable set Descripcion ='{rtxtDescripcion.Text}', " +
+                        sql = $"update Articulo_Facturable set Descripcion ='{txtNombre.Text}', " +
                             $"Costo_Unitario = '{nUDCostoUnitario.Text}', Precio_Unitario = '{nUDPrecioUnitario.Text}', Cantidad = '{nUDCantidad.Text}', estado = '{cbxEstado.Text}' " +
                             $"where id_articulo = '{TextID.Text}'";
                     }
@@ -119,7 +119,7 @@ namespace Facturacion_Articulos
             try
             {
                 TextID.Text = ID;
-                rtxtDescripcion.Text = Descripcion;
+                txtNombre.Text = Nombre;
                 nUDCostoUnitario.Text = CostoUnitario;
                 nUDPrecioUnitario.Text = PrecioUnitario;
                 nUDCantidad.Text = Cantidad;
@@ -150,30 +150,6 @@ namespace Facturacion_Articulos
         }
 
         //Validaciones
-
-        private void rtxtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsPunctuation(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsSymbol(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else
-            {
-                e.Handled = false;
-            }
-        }
 
         private void nUDCostoUnitario_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -212,6 +188,30 @@ namespace Facturacion_Articulos
             else
             {
                 e.Handled = true;
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = false;
             }
         }
     }

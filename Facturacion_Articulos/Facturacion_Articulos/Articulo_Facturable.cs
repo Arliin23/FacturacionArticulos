@@ -21,7 +21,7 @@ namespace Facturacion_Articulos
         }
     
         public int ID_Articulo { get; set; }
-        public string Descripcion { get; set; }
+        public string Nombre_Articulo { get; set; }
         public double Costo_Unitario { get; set; }
         public double Precio_Unitario { get; set; }
         public int Cantidad { get; set; }

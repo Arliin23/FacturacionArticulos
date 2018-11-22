@@ -134,7 +134,7 @@
             this.cbxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCriterio.FormattingEnabled = true;
             this.cbxCriterio.Items.AddRange(new object[] {
-            "Descripcion",
+            "Nombre",
             "Costo ",
             "Precio",
             "Cantidad",
