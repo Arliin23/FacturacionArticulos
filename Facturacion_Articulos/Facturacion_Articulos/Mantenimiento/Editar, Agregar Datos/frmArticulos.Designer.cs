@@ -34,9 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmdGuardar = new System.Windows.Forms.Button();
-            this.cmdCerrar = new System.Windows.Forms.Button();
-            this.cmdEliminar = new System.Windows.Forms.Button();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TextID = new System.Windows.Forms.TextBox();
@@ -45,6 +42,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.nUDCantidad = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.cmdGuardar = new System.Windows.Forms.Button();
+            this.cmdCerrar = new System.Windows.Forms.Button();
+            this.cmdEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,42 +96,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Estado";
             // 
-            // cmdGuardar
-            // 
-            this.cmdGuardar.FlatAppearance.BorderSize = 0;
-            this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdGuardar.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.Image")));
-            this.cmdGuardar.Location = new System.Drawing.Point(171, 415);
-            this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(51, 66);
-            this.cmdGuardar.TabIndex = 9;
-            this.cmdGuardar.UseVisualStyleBackColor = true;
-            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
-            // 
-            // cmdCerrar
-            // 
-            this.cmdCerrar.FlatAppearance.BorderSize = 0;
-            this.cmdCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdCerrar.Image = ((System.Drawing.Image)(resources.GetObject("cmdCerrar.Image")));
-            this.cmdCerrar.Location = new System.Drawing.Point(289, 415);
-            this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(51, 66);
-            this.cmdCerrar.TabIndex = 8;
-            this.cmdCerrar.UseVisualStyleBackColor = true;
-            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
-            // 
-            // cmdEliminar
-            // 
-            this.cmdEliminar.FlatAppearance.BorderSize = 0;
-            this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdEliminar.Image = ((System.Drawing.Image)(resources.GetObject("cmdEliminar.Image")));
-            this.cmdEliminar.Location = new System.Drawing.Point(228, 415);
-            this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(55, 66);
-            this.cmdEliminar.TabIndex = 7;
-            this.cmdEliminar.UseVisualStyleBackColor = true;
-            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
-            // 
             // cbxEstado
             // 
             this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -178,6 +142,7 @@
             this.nUDPrecioUnitario.Name = "nUDPrecioUnitario";
             this.nUDPrecioUnitario.Size = new System.Drawing.Size(179, 31);
             this.nUDPrecioUnitario.TabIndex = 18;
+            this.nUDPrecioUnitario.TextChanged += new System.EventHandler(this.nUDPrecioUnitario_TextChanged);
             this.nUDPrecioUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nUDPrecioUnitario_KeyPress);
             // 
             // label7
@@ -206,6 +171,42 @@
             this.txtNombre.Size = new System.Drawing.Size(179, 31);
             this.txtNombre.TabIndex = 21;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            // 
+            // cmdGuardar
+            // 
+            this.cmdGuardar.FlatAppearance.BorderSize = 0;
+            this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdGuardar.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.Image")));
+            this.cmdGuardar.Location = new System.Drawing.Point(171, 415);
+            this.cmdGuardar.Name = "cmdGuardar";
+            this.cmdGuardar.Size = new System.Drawing.Size(51, 66);
+            this.cmdGuardar.TabIndex = 9;
+            this.cmdGuardar.UseVisualStyleBackColor = true;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
+            // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.FlatAppearance.BorderSize = 0;
+            this.cmdCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCerrar.Image = ((System.Drawing.Image)(resources.GetObject("cmdCerrar.Image")));
+            this.cmdCerrar.Location = new System.Drawing.Point(289, 415);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(51, 66);
+            this.cmdCerrar.TabIndex = 8;
+            this.cmdCerrar.UseVisualStyleBackColor = true;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
+            // 
+            // cmdEliminar
+            // 
+            this.cmdEliminar.FlatAppearance.BorderSize = 0;
+            this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdEliminar.Image = ((System.Drawing.Image)(resources.GetObject("cmdEliminar.Image")));
+            this.cmdEliminar.Location = new System.Drawing.Point(228, 415);
+            this.cmdEliminar.Name = "cmdEliminar";
+            this.cmdEliminar.Size = new System.Drawing.Size(55, 66);
+            this.cmdEliminar.TabIndex = 7;
+            this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // FrmArticulos
             // 

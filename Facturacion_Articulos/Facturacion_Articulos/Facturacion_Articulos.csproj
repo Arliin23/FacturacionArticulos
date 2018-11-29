@@ -70,6 +70,12 @@
     <Compile Include="Factura.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\FrmArticuloFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FrmArticuloFactura.Designer.cs">
+      <DependentUpon>FrmArticuloFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu Admin\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     <Compile Include="Vendedor.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Facturacion\FrmArticuloFactura.resx">
+      <DependentUpon>FrmArticuloFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu Admin\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +283,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\transparente.png" />
+    <None Include="Resources\plus.png" />
     <None Include="Resources\magnifier.png" />
     <None Include="Resources\Busqueda.png" />
   </ItemGroup>

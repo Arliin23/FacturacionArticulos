@@ -22,5 +22,10 @@ namespace Facturacion_Articulos
             FrmFacturacion frm = new FrmFacturacion();
             this.Close();
         }
+
+        private void cmdAgregarArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

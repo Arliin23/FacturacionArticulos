@@ -214,5 +214,10 @@ namespace Facturacion_Articulos
                 e.Handled = false;
             }
         }
+
+        private void nUDPrecioUnitario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
