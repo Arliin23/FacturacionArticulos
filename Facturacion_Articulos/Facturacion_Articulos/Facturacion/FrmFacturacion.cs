@@ -30,5 +30,22 @@ namespace Facturacion_Articulos
            FrmArticuloFactura frm = new FrmArticuloFactura();
             frm.Show();
         }
+
+        private void FrmFacturacion_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'facturacionBDDataSet1.Articulo_Facturable' table. You can move, or remove it, as needed.
+            this.articulo_FacturableTableAdapter.Fill(this.facturacionBDDataSet1.Articulo_Facturable);
+
+        }
+
+        private void cbxCantidadDisponible_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cbxPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true; 
+        }
     }
 }

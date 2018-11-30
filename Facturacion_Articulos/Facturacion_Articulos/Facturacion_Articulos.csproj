@@ -75,6 +75,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FacturacionBDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FacturacionBDDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacturacionBDDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\FrmArticuloFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +271,17 @@
     </None>
     <None Include="FacturacionBDDataSet.xss">
       <DependentUpon>FacturacionBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FacturacionBDDataSet1.xsc">
+      <DependentUpon>FacturacionBDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FacturacionBDDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacturacionBDDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FacturacionBDDataSet1.xss">
+      <DependentUpon>FacturacionBDDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
