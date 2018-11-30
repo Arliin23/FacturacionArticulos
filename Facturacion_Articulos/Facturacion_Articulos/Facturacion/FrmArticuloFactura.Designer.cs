@@ -135,7 +135,7 @@
             this.cmdGuardar.FlatAppearance.BorderSize = 0;
             this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdGuardar.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.Image")));
-            this.cmdGuardar.Location = new System.Drawing.Point(83, 366);
+            this.cmdGuardar.Location = new System.Drawing.Point(98, 366);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(51, 66);
             this.cmdGuardar.TabIndex = 11;
@@ -146,11 +146,12 @@
             this.cmdCerrar.FlatAppearance.BorderSize = 0;
             this.cmdCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCerrar.Image = ((System.Drawing.Image)(resources.GetObject("cmdCerrar.Image")));
-            this.cmdCerrar.Location = new System.Drawing.Point(234, 366);
+            this.cmdCerrar.Location = new System.Drawing.Point(249, 366);
             this.cmdCerrar.Name = "cmdCerrar";
             this.cmdCerrar.Size = new System.Drawing.Size(51, 66);
             this.cmdCerrar.TabIndex = 12;
             this.cmdCerrar.UseVisualStyleBackColor = true;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // facturacionBDDataSet
             // 
@@ -180,9 +181,9 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 248);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 21);
+            this.label5.Size = new System.Drawing.Size(170, 21);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Cantida Disponible";
+            this.label5.Text = "Cantidad Disponible";
             // 
             // FrmArticuloFactura
             // 

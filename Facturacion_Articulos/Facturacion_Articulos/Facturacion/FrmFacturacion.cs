@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Facturacion_Articulos.Facturacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,8 @@ namespace Facturacion_Articulos
 
         private void cmdAgregarArticulo_Click(object sender, EventArgs e)
         {
-
+            FrmArticuloFactura frm = new FrmArticuloFactura();
+            frm.Show();
         }
     }
 }

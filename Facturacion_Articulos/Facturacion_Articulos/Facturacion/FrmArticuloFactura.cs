@@ -48,5 +48,10 @@ namespace Facturacion_Articulos.Facturacion
             this.articulo_FacturableTableAdapter.Fill(this.facturacionBDDataSet.Articulo_Facturable);
 
         }
+
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
