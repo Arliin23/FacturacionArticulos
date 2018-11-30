@@ -41,5 +41,12 @@ namespace Facturacion_Articulos.Facturacion
                 e.Handled = true;
             }
         }
+
+        private void FrmArticuloFactura_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'facturacionBDDataSet.Articulo_Facturable' table. You can move, or remove it, as needed.
+            this.articulo_FacturableTableAdapter.Fill(this.facturacionBDDataSet.Articulo_Facturable);
+
+        }
     }
 }
