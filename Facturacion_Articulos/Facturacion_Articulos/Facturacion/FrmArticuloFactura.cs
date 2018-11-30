@@ -53,5 +53,53 @@ namespace Facturacion_Articulos.Facturacion
         {
             this.Close();
         }
+
+        private void cbxPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
