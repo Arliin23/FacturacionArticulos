@@ -36,8 +36,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cmdFinVenta = new System.Windows.Forms.Button();
+            this.cmdLimpiar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvArticulosFactura = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,25 +118,25 @@
             this.textBox3.Size = new System.Drawing.Size(100, 23);
             this.textBox3.TabIndex = 7;
             // 
-            // button1
+            // cmdFinVenta
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(434, 489);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 58);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Finalizar Venta";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cmdFinVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdFinVenta.Location = new System.Drawing.Point(434, 489);
+            this.cmdFinVenta.Name = "cmdFinVenta";
+            this.cmdFinVenta.Size = new System.Drawing.Size(123, 58);
+            this.cmdFinVenta.TabIndex = 8;
+            this.cmdFinVenta.Text = "Finalizar Venta";
+            this.cmdFinVenta.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // cmdLimpiar
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(563, 489);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 58);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Limpiar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cmdLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLimpiar.Location = new System.Drawing.Point(563, 489);
+            this.cmdLimpiar.Name = "cmdLimpiar";
+            this.cmdLimpiar.Size = new System.Drawing.Size(75, 58);
+            this.cmdLimpiar.TabIndex = 9;
+            this.cmdLimpiar.Text = "Limpiar";
+            this.cmdLimpiar.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -361,8 +361,8 @@
             this.Controls.Add(this.dgvArticulosFactura);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cmdLimpiar);
+            this.Controls.Add(this.cmdFinVenta);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.AliceBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -390,8 +390,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button cmdFinVenta;
+        private System.Windows.Forms.Button cmdLimpiar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridView dgvArticulosFactura;
