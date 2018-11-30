@@ -64,6 +64,7 @@
             this.dgvArticulos.AllowUserToResizeColumns = false;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             this.dgvArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -83,6 +84,7 @@
             this.dgvArticulos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvArticulos.Location = new System.Drawing.Point(27, 125);
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.ReadOnly = true;
             this.dgvArticulos.Size = new System.Drawing.Size(655, 301);
             this.dgvArticulos.TabIndex = 1;
             this.dgvArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellDoubleClick);

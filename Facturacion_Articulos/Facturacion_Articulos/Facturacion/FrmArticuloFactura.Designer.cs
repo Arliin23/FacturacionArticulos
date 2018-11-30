@@ -130,6 +130,7 @@
             this.cmdGuardar.Size = new System.Drawing.Size(51, 66);
             this.cmdGuardar.TabIndex = 11;
             this.cmdGuardar.UseVisualStyleBackColor = true;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // cmdCerrar
             // 

@@ -57,6 +57,9 @@
             // 
             // dgvCondicionP
             // 
+            this.dgvCondicionP.AllowUserToAddRows = false;
+            this.dgvCondicionP.AllowUserToDeleteRows = false;
+            this.dgvCondicionP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCondicionP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuText;
@@ -68,6 +71,7 @@
             this.dgvCondicionP.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCondicionP.Location = new System.Drawing.Point(27, 125);
             this.dgvCondicionP.Name = "dgvCondicionP";
+            this.dgvCondicionP.ReadOnly = true;
             this.dgvCondicionP.Size = new System.Drawing.Size(655, 301);
             this.dgvCondicionP.TabIndex = 1;
             this.dgvCondicionP.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCondicionP_CellDoubleClick);

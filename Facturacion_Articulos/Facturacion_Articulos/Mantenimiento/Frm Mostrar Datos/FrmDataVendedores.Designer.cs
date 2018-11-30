@@ -56,6 +56,9 @@
             // 
             // dgvVendedores
             // 
+            this.dgvVendedores.AllowUserToAddRows = false;
+            this.dgvVendedores.AllowUserToDeleteRows = false;
+            this.dgvVendedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVendedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuText;
@@ -67,6 +70,7 @@
             this.dgvVendedores.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVendedores.Location = new System.Drawing.Point(27, 125);
             this.dgvVendedores.Name = "dgvVendedores";
+            this.dgvVendedores.ReadOnly = true;
             this.dgvVendedores.Size = new System.Drawing.Size(655, 301);
             this.dgvVendedores.TabIndex = 1;
             this.dgvVendedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVendedores_CellDoubleClick);

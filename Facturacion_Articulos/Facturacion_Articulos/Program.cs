@@ -16,7 +16,7 @@ namespace Facturacion_Articulos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmFacturacion());
+            Application.Run(new FrmMantenimiento());
         }
     }
 }

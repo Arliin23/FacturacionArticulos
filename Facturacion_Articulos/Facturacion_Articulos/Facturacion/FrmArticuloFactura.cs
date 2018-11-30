@@ -101,5 +101,10 @@ namespace Facturacion_Articulos.Facturacion
                 e.Handled = true;
             }
         }
+
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
