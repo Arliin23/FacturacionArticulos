@@ -135,7 +135,7 @@
             this.cmdGuardar.FlatAppearance.BorderSize = 0;
             this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdGuardar.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.Image")));
-            this.cmdGuardar.Location = new System.Drawing.Point(69, 366);
+            this.cmdGuardar.Location = new System.Drawing.Point(83, 366);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(51, 66);
             this.cmdGuardar.TabIndex = 11;
@@ -146,7 +146,7 @@
             this.cmdCerrar.FlatAppearance.BorderSize = 0;
             this.cmdCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCerrar.Image = ((System.Drawing.Image)(resources.GetObject("cmdCerrar.Image")));
-            this.cmdCerrar.Location = new System.Drawing.Point(220, 366);
+            this.cmdCerrar.Location = new System.Drawing.Point(234, 366);
             this.cmdCerrar.Name = "cmdCerrar";
             this.cmdCerrar.Size = new System.Drawing.Size(51, 66);
             this.cmdCerrar.TabIndex = 12;
