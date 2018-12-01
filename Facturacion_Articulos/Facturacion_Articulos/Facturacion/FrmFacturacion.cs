@@ -34,20 +34,20 @@ namespace Facturacion_Articulos
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            FrmFacturacion frm = new FrmFacturacion();
+            //FrmFacturacion frm = new FrmFacturacion();
             this.Close();
         }
 
         private void cmdAgregarArticulo_Click(object sender, EventArgs e)
-        {          
+        {
 
             dgvArticulosFactura.Rows.Add(cbxID.Text, cbxArticulo.Text, cbxPrecio.Text, NuDCantidad.Value);
 
             preTotal = Int32.Parse(cbxPrecio.Text) * Convert.ToInt32(Math.Round(NuDCantidad.Value, 0));
-            total = preTotal + total;       
+            total = preTotal + total;
 
             txtTotal.Text = Convert.ToString(total);
-            
+
 
         }
 
@@ -55,8 +55,7 @@ namespace Facturacion_Articulos
         {
             // TODO: This line of code loads data into the 'facturacionBDDataSet2.Articulo_Facturable' table. You can move, or remove it, as needed.
             this.articulo_FacturableTableAdapter1.Fill(this.facturacionBDDataSet2.Articulo_Facturable);
-
-
+           
         }
 
         private void cbxCantidadDisponible_KeyPress(object sender, KeyPressEventArgs e)
@@ -66,7 +65,7 @@ namespace Facturacion_Articulos
 
         private void cbxPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true; 
+            e.Handled = true;
         }
 
         private void dgvArticulosFactura_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -106,39 +105,86 @@ namespace Facturacion_Articulos
                 dt.Rows.Add(dRow);
             }
 
-            
 
-            writeFileHeader("ID, Articulo, Precio, Cantidad");
 
-            foreach (DataRow row in dt.Rows)
+
+
+
+            foreach (DataGridViewRow row in dgvArticulosFactura.Rows)
             {
-                string linea = "";
-                foreach (DataColumn dc in dt.Columns)
+                if (row.Cells[0].Value != null)
                 {
-                    linea += row[dc].ToString() + ",";
+                    try
+                    {
+                        string idProducto = row.Cells[0].Value.ToString();
+                        //Cantidad del DGV
+                        string cantidadProducto = row.Cells[3].Value.ToString();
+                        //Cantidad atendiendo a el id en la BD
+                        String queryCantidad = "SELECT Cantidad from dbo.Articulo_Facturable WHERE ID_Articulo = " + idProducto;
+                        SqlCommand command = new SqlCommand(queryCantidad, con);
+
+                        int cantidad = Int32.Parse(command.ExecuteScalar().ToString());
+
+                        //MessageBox.Show("La cantidad es: " + cantidad);
+
+                        int CantidadFinal = cantidad - Int32.Parse(cantidadProducto);
+
+                        MessageBox.Show("Cantidad Final: " + CantidadFinal);
+
+                        String queryCantidadFinal = "UPDATE Articulo_Facturable set Cantidad = " + CantidadFinal + " WHERE ID_Articulo = " + idProducto;
+                        SqlCommand command1 = new SqlCommand(queryCantidadFinal, con);
+                        command1.ExecuteNonQuery();
+                        MessageBox.Show("Facturación realizada con exito");
+
+
+                    }
+                    catch (Exception EF)
+                    {
+
+                        MessageBox.Show("Error:  " + EF);
+
+                    }
+                    
+
+
+
+
                 }
-                writeFileLine(linea);                
-            }
-            String totalS = Convert.ToString(total);
-            writeFileLine("Total, "+totalS);
 
-            Process.Start(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv");
-        }
-
-        private void writeFileLine(string pLine)
-        {
-            using (System.IO.StreamWriter w = File.AppendText(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv"))
-            {
-                w.WriteLine(pLine);
-            }
-        }
-        private void writeFileHeader(string pLine)
-        {
-            using (System.IO.StreamWriter w = File.CreateText(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv"))
-            {
-                w.WriteLine(pLine);
             }
 
+            //    writeFileHeader("ID, Articulo, Precio, Cantidad");
+
+            //    foreach (DataRow row in dt.Rows)
+            //    {
+            //        string linea = "";
+            //        foreach (DataColumn dc in dt.Columns)
+            //        {
+            //            linea += row[dc].ToString() + ",";
+            //        }
+            //        writeFileLine(linea);
+            //    }
+            //    String totalS = Convert.ToString(total);
+            //    writeFileLine("Total, " + totalS);
+
+            //    Process.Start(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv");
+            //}
+
+            //private void writeFileLine(string pLine)
+            //{
+            //    using (System.IO.StreamWriter w = File.AppendText(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv"))
+            //    {
+            //        w.WriteLine(pLine);
+            //    }
+            //}
+            //private void writeFileHeader(string pLine)
+            //{
+            //    using (System.IO.StreamWriter w = File.CreateText(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv"))
+            //    {
+            //        w.WriteLine(pLine);
+            //    }
+
+            //}
         }
     }
 }

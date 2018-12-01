@@ -65,7 +65,7 @@ namespace Facturacion_Articulos
                     }
                     else
                     {
-                        sql = $"update Articulo_Facturable set Descripcion ='{txtNombre.Text}', " +
+                        sql = $"update Articulo_Facturable set Nombre_Articulo ='{txtNombre.Text}', " +
                             $"Costo_Unitario = '{nUDCostoUnitario.Text}', Precio_Unitario = '{nUDPrecioUnitario.Text}', Cantidad = '{nUDCantidad.Text}', estado = '{cbxEstado.Text}' " +
                             $"where id_articulo = '{TextID.Text}'";
                     }
