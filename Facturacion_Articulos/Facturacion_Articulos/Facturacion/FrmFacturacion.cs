@@ -171,38 +171,38 @@ namespace Facturacion_Articulos
 
             }
 
-            //    writeFileHeader("ID, Articulo, Precio, Cantidad");
+            writeFileHeader("ID, Articulo, Precio, Cantidad");
 
-            //    foreach (DataRow row in dt.Rows)
-            //    {
-            //        string linea = "";
-            //        foreach (DataColumn dc in dt.Columns)
-            //        {
-            //            linea += row[dc].ToString() + ",";
-            //        }
-            //        writeFileLine(linea);
-            //    }
-            //    String totalS = Convert.ToString(total);
-            //    writeFileLine("Total, " + totalS);
+            foreach (DataRow row in dt.Rows)
+            {
+                string linea = "";
+                foreach (DataColumn dc in dt.Columns)
+                {
+                    linea += row[dc].ToString() + ",";
+                }
+                writeFileLine(linea);
+            }
+            String totalS = Convert.ToString(total);
+            writeFileLine("Total, " + totalS);
 
-            //    Process.Start(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv");
-            //}
+            Process.Start(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv");
+        }
 
-            //private void writeFileLine(string pLine)
-            //{
-            //    using (System.IO.StreamWriter w = File.AppendText(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv"))
-            //    {
-            //        w.WriteLine(pLine);
-            //    }
-            //}
-            //private void writeFileHeader(string pLine)
-            //{
-            //    using (System.IO.StreamWriter w = File.CreateText(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv"))
-            //    {
-            //        w.WriteLine(pLine);
-            //    }
+        private void writeFileLine(string pLine)
+        {
+            using (System.IO.StreamWriter w = File.AppendText(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv"))
+            {
+                w.WriteLine(pLine);
+            }
+        }
+        private void writeFileHeader(string pLine)
+        {
+            using (System.IO.StreamWriter w = File.CreateText(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv"))
+            {
+                w.WriteLine(pLine);
+            }
 
-            //}
         }
     }
-}
+    }
+
