@@ -34,14 +34,27 @@ namespace Facturacion_Articulos
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            //FrmFacturacion frm = new FrmFacturacion();
             this.Close();
         }
 
         private void cmdAgregarArticulo_Click(object sender, EventArgs e)
         {
 
-            dgvArticulosFactura.Rows.Add(cbxID.Text, cbxArticulo.Text, cbxPrecio.Text, NuDCantidad.Value);
+            //string value = cbxCantidadDisponible.Text.ToString();
+            //MessageBox.Show("Valor : " + value);
+
+            if (Int32.Parse(cbxCantidadDisponible.Text.ToString()) < NuDCantidad.Value)
+            {
+
+                MessageBox.Show("Cantidad no disponible");
+
+            } else if (NuDCantidad.Value == 0) {
+
+                MessageBox.Show("La cantidad a comprar no puede ser menor o igual a cero");
+
+            } else
+
+                dgvArticulosFactura.Rows.Add(cbxID.Text, cbxArticulo.Text, cbxPrecio.Text, NuDCantidad.Value);
 
             preTotal = Int32.Parse(cbxPrecio.Text) * Convert.ToInt32(Math.Round(NuDCantidad.Value, 0));
             total = preTotal + total;
@@ -82,6 +95,7 @@ namespace Facturacion_Articulos
 
         private void cmdFinVenta_Click(object sender, EventArgs e)
         {
+
             con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
             con.Open();
             string sql = "select * from Articulo_Facturable";
@@ -144,7 +158,11 @@ namespace Facturacion_Articulos
                         MessageBox.Show("Error:  " + EF);
 
                     }
-                    
+
+                    this.Hide();
+                    FrmFacturacion frm = new FrmFacturacion();
+                    frm.ShowDialog();
+
 
 
 

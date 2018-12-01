@@ -43,6 +43,8 @@
             this.cmdAgregarArticulo = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.cbxCantidadDisponible = new System.Windows.Forms.ComboBox();
+            this.articuloFacturableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.facturacionBDDataSet2 = new Facturacion_Articulos.FacturacionBDDataSet2();
             this.articuloFacturableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.facturacionBDDataSet1 = new Facturacion_Articulos.FacturacionBDDataSet1();
             this.cbxPrecio = new System.Windows.Forms.ComboBox();
@@ -56,17 +58,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.articulo_FacturableTableAdapter = new Facturacion_Articulos.FacturacionBDDataSet1TableAdapters.Articulo_FacturableTableAdapter();
-            this.facturacionBDDataSet2 = new Facturacion_Articulos.FacturacionBDDataSet2();
-            this.articuloFacturableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.articulo_FacturableTableAdapter1 = new Facturacion_Articulos.FacturacionBDDataSet2TableAdapters.Articulo_FacturableTableAdapter();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulosFactura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturacionBDDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturacionBDDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuDCantidad)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facturacionBDDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -197,6 +197,16 @@
             this.cbxCantidadDisponible.TabIndex = 26;
             this.cbxCantidadDisponible.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxCantidadDisponible_KeyPress);
             // 
+            // articuloFacturableBindingSource1
+            // 
+            this.articuloFacturableBindingSource1.DataMember = "Articulo_Facturable";
+            this.articuloFacturableBindingSource1.DataSource = this.facturacionBDDataSet2;
+            // 
+            // facturacionBDDataSet2
+            // 
+            this.facturacionBDDataSet2.DataSetName = "FacturacionBDDataSet2";
+            this.facturacionBDDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // articuloFacturableBindingSource
             // 
             this.articuloFacturableBindingSource.DataMember = "Articulo_Facturable";
@@ -232,6 +242,11 @@
             // NuDCantidad
             // 
             this.NuDCantidad.Location = new System.Drawing.Point(510, 109);
+            this.NuDCantidad.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.NuDCantidad.Name = "NuDCantidad";
             this.NuDCantidad.Size = new System.Drawing.Size(100, 23);
             this.NuDCantidad.TabIndex = 23;
@@ -326,16 +341,6 @@
             // 
             this.articulo_FacturableTableAdapter.ClearBeforeFill = true;
             // 
-            // facturacionBDDataSet2
-            // 
-            this.facturacionBDDataSet2.DataSetName = "FacturacionBDDataSet2";
-            this.facturacionBDDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // articuloFacturableBindingSource1
-            // 
-            this.articuloFacturableBindingSource1.DataMember = "Articulo_Facturable";
-            this.articuloFacturableBindingSource1.DataSource = this.facturacionBDDataSet2;
-            // 
             // articulo_FacturableTableAdapter1
             // 
             this.articulo_FacturableTableAdapter1.ClearBeforeFill = true;
@@ -364,13 +369,13 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulosFactura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturacionBDDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturacionBDDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuDCantidad)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facturacionBDDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
