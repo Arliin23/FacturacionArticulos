@@ -18,7 +18,7 @@ namespace Facturacion_Articulos
     public partial class FrmFacturacion : Form
     {
 
-        private FacturacionBDEntities1 entities = new FacturacionBDEntities1();
+        private FacturacionBDEntities2 entities = new FacturacionBDEntities2();
 
         public Articulo_Facturable Articulos { get; set; }
         public SqlConnection con;
@@ -53,8 +53,9 @@ namespace Facturacion_Articulos
 
         private void FrmFacturacion_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'facturacionBDDataSet1.Articulo_Facturable' table. You can move, or remove it, as needed.
-            this.articulo_FacturableTableAdapter.Fill(this.facturacionBDDataSet1.Articulo_Facturable);
+            // TODO: This line of code loads data into the 'facturacionBDDataSet2.Articulo_Facturable' table. You can move, or remove it, as needed.
+            this.articulo_FacturableTableAdapter1.Fill(this.facturacionBDDataSet2.Articulo_Facturable);
+
 
         }
 
@@ -82,7 +83,7 @@ namespace Facturacion_Articulos
 
         private void cmdFinVenta_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=DESKTOP-98MOSJM;Initial Catalog=FacturacionBD;Integrated Security=True");
+            con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
             con.Open();
             string sql = "select * from Articulo_Facturable";
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
@@ -121,19 +122,19 @@ namespace Facturacion_Articulos
             String totalS = Convert.ToString(total);
             writeFileLine("Total, "+totalS);
 
-            Process.Start(@"C:\Factura.csv");
+            Process.Start(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv");
         }
 
         private void writeFileLine(string pLine)
         {
-            using (System.IO.StreamWriter w = File.AppendText(@"C:\Factura.csv"))
+            using (System.IO.StreamWriter w = File.AppendText(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv"))
             {
                 w.WriteLine(pLine);
             }
         }
         private void writeFileHeader(string pLine)
         {
-            using (System.IO.StreamWriter w = File.CreateText(@"C:Factura.csv"))
+            using (System.IO.StreamWriter w = File.CreateText(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv"))
             {
                 w.WriteLine(pLine);
             }

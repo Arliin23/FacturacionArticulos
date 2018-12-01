@@ -14,7 +14,7 @@ namespace Facturacion_Articulos
     public partial class FrmDataArticulos : Form
     {
         public Articulo_Facturable Articulo { get; set; }
-        private FacturacionBDEntities1 entities = new FacturacionBDEntities1();
+        private FacturacionBDEntities2 entities = new FacturacionBDEntities2();
 
         public SqlConnection con;
         public string ID { get; set; }
@@ -39,7 +39,7 @@ namespace Facturacion_Articulos
             try
             {
 
-                con = new SqlConnection("Data Source=DESKTOP-98MOSJM;Initial Catalog=FacturacionBD;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
                 con.Open();
                 string sql = "select * from Articulo_Facturable";
                 SqlDataAdapter da = new SqlDataAdapter(sql,con);

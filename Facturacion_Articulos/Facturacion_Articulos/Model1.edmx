@@ -249,7 +249,7 @@
           <End Role="Articulo_Facturable" Type="Self.Articulo_Facturable" Multiplicity="*" />
           <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="FacturacionBDEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="FacturacionBDEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Articulo_Facturable" EntityType="Self.Articulo_Facturable" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" />
           <EntitySet Name="Condicion_Pago" EntityType="Self.Condicion_Pago" />
@@ -274,7 +274,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="FacturacionBDModelStoreContainer" CdmEntityContainer="FacturacionBDEntities1">
+        <EntityContainerMapping StorageEntityContainer="FacturacionBDModelStoreContainer" CdmEntityContainer="FacturacionBDEntities2">
           <EntitySetMapping Name="Articulo_Facturable">
             <EntityTypeMapping TypeName="FacturacionBDModel.Articulo_Facturable">
               <MappingFragment StoreEntitySet="Articulo_Facturable">
@@ -368,7 +368,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
