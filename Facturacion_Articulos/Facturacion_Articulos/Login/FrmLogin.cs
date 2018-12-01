@@ -14,7 +14,7 @@ namespace Facturacion_Articulos
     public partial class FrmLogin : Form
     {
 
-        FacturacionBDEntities2 db = new FacturacionBDEntities2();
+        FacturacionBDEntities1 db = new FacturacionBDEntities1();
 
 
         public FrmLogin()

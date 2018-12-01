@@ -31,11 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFacturacion));
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.cmdFinVenta = new System.Windows.Forms.Button();
             this.cmdLimpiar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,6 +43,8 @@
             this.cmdAgregarArticulo = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.cbxCantidadDisponible = new System.Windows.Forms.ComboBox();
+            this.articuloFacturableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.facturacionBDDataSet1 = new Facturacion_Articulos.FacturacionBDDataSet1();
             this.cbxPrecio = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NuDCantidad = new System.Windows.Forms.NumericUpDown();
@@ -57,66 +55,32 @@
             this.cbxID = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.facturacionBDDataSet1 = new Facturacion_Articulos.FacturacionBDDataSet1();
-            this.articuloFacturableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.articulo_FacturableTableAdapter = new Facturacion_Articulos.FacturacionBDDataSet1TableAdapters.Articulo_FacturableTableAdapter();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulosFactura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturacionBDDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuDCantidad)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facturacionBDDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 23);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 17);
+            this.label3.Size = new System.Drawing.Size(78, 33);
             this.label3.TabIndex = 2;
             this.label3.Text = "Total";
             // 
-            // label4
+            // txtTotal
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 55);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Descuento";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(234, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Total Final";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(94, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(94, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(220, 49);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 7;
+            this.txtTotal.Location = new System.Drawing.Point(135, 29);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(111, 23);
+            this.txtTotal.TabIndex = 5;
             // 
             // cmdFinVenta
             // 
@@ -127,6 +91,7 @@
             this.cmdFinVenta.TabIndex = 8;
             this.cmdFinVenta.Text = "Finalizar Venta";
             this.cmdFinVenta.UseVisualStyleBackColor = true;
+            this.cmdFinVenta.Click += new System.EventHandler(this.cmdFinVenta_Click);
             // 
             // cmdLimpiar
             // 
@@ -137,16 +102,13 @@
             this.cmdLimpiar.TabIndex = 9;
             this.cmdLimpiar.Text = "Limpiar";
             this.cmdLimpiar.UseVisualStyleBackColor = true;
+            this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtTotal);
             this.panel2.Location = new System.Drawing.Point(12, 469);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(339, 90);
@@ -162,11 +124,13 @@
             this.Articulo,
             this.Precio,
             this.Cantidad});
+            this.dgvArticulosFactura.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvArticulosFactura.Location = new System.Drawing.Point(12, 58);
             this.dgvArticulosFactura.Name = "dgvArticulosFactura";
             this.dgvArticulosFactura.ReadOnly = true;
             this.dgvArticulosFactura.Size = new System.Drawing.Size(626, 225);
             this.dgvArticulosFactura.TabIndex = 13;
+            this.dgvArticulosFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulosFactura_CellContentClick);
             // 
             // ID
             // 
@@ -228,6 +192,16 @@
             this.cbxCantidadDisponible.TabIndex = 26;
             this.cbxCantidadDisponible.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxCantidadDisponible_KeyPress);
             // 
+            // articuloFacturableBindingSource
+            // 
+            this.articuloFacturableBindingSource.DataMember = "Articulo_Facturable";
+            this.articuloFacturableBindingSource.DataSource = this.facturacionBDDataSet1;
+            // 
+            // facturacionBDDataSet1
+            // 
+            this.facturacionBDDataSet1.DataSetName = "FacturacionBDDataSet1";
+            this.facturacionBDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cbxPrecio
             // 
             this.cbxPrecio.DataSource = this.articuloFacturableBindingSource;
@@ -257,6 +231,11 @@
             this.NuDCantidad.Size = new System.Drawing.Size(100, 23);
             this.NuDCantidad.TabIndex = 23;
             this.NuDCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.NuDCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label2
             // 
@@ -338,16 +317,6 @@
             this.panel1.Size = new System.Drawing.Size(626, 174);
             this.panel1.TabIndex = 27;
             // 
-            // facturacionBDDataSet1
-            // 
-            this.facturacionBDDataSet1.DataSetName = "FacturacionBDDataSet1";
-            this.facturacionBDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // articuloFacturableBindingSource
-            // 
-            this.articuloFacturableBindingSource.DataMember = "Articulo_Facturable";
-            this.articuloFacturableBindingSource.DataSource = this.facturacionBDDataSet1;
-            // 
             // articulo_FacturableTableAdapter
             // 
             this.articulo_FacturableTableAdapter.ClearBeforeFill = true;
@@ -376,22 +345,18 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulosFactura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturacionBDDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NuDCantidad)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facturacionBDDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button cmdFinVenta;
         private System.Windows.Forms.Button cmdLimpiar;
         private System.Windows.Forms.Panel panel2;

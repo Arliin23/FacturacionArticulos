@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Facturacion_Articulos.Facturacion
 {
-    public partial class FrmArticuloFactura : Form
+    public partial class Deprecated : Form
     {
-        public FrmArticuloFactura()
+        public Deprecated()
         {
             InitializeComponent();
         }

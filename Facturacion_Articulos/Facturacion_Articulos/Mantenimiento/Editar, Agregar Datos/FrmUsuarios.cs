@@ -27,7 +27,7 @@ namespace Facturacion_Articulos
 
             try
             {
-                con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
+                con = new SqlConnection("Data Source=DESKTOP-98MOSJM;Initial Catalog=FacturacionBD;Integrated Security=True");
                 con.Open();
             }
             catch (Exception e)
