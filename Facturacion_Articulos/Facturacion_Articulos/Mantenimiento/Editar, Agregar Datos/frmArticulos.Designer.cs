@@ -236,6 +236,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FrmArticulos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmArticulos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmArticulos_FormClosing);
             this.Load += new System.EventHandler(this.FrmArticulos_Load_1);

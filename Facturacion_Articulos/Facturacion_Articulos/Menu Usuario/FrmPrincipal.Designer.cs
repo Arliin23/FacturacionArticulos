@@ -42,7 +42,7 @@
             this.cmdPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdPedidos.ForeColor = System.Drawing.Color.AliceBlue;
             this.cmdPedidos.Image = ((System.Drawing.Image)(resources.GetObject("cmdPedidos.Image")));
-            this.cmdPedidos.Location = new System.Drawing.Point(96, 12);
+            this.cmdPedidos.Location = new System.Drawing.Point(128, 36);
             this.cmdPedidos.Name = "cmdPedidos";
             this.cmdPedidos.Size = new System.Drawing.Size(122, 153);
             this.cmdPedidos.TabIndex = 0;
@@ -56,7 +56,7 @@
             this.cmdAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAyuda.ForeColor = System.Drawing.Color.AliceBlue;
             this.cmdAyuda.Image = ((System.Drawing.Image)(resources.GetObject("cmdAyuda.Image")));
-            this.cmdAyuda.Location = new System.Drawing.Point(331, 200);
+            this.cmdAyuda.Location = new System.Drawing.Point(363, 224);
             this.cmdAyuda.Name = "cmdAyuda";
             this.cmdAyuda.Size = new System.Drawing.Size(139, 145);
             this.cmdAyuda.TabIndex = 1;
@@ -70,7 +70,7 @@
             this.cmdFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdFactura.ForeColor = System.Drawing.Color.AliceBlue;
             this.cmdFactura.Image = ((System.Drawing.Image)(resources.GetObject("cmdFactura.Image")));
-            this.cmdFactura.Location = new System.Drawing.Point(96, 200);
+            this.cmdFactura.Location = new System.Drawing.Point(128, 224);
             this.cmdFactura.Name = "cmdFactura";
             this.cmdFactura.Size = new System.Drawing.Size(122, 145);
             this.cmdFactura.TabIndex = 2;
@@ -85,7 +85,7 @@
             this.cmdAlbaran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAlbaran.ForeColor = System.Drawing.Color.AliceBlue;
             this.cmdAlbaran.Image = ((System.Drawing.Image)(resources.GetObject("cmdAlbaran.Image")));
-            this.cmdAlbaran.Location = new System.Drawing.Point(331, 20);
+            this.cmdAlbaran.Location = new System.Drawing.Point(363, 44);
             this.cmdAlbaran.Name = "cmdAlbaran";
             this.cmdAlbaran.Size = new System.Drawing.Size(139, 145);
             this.cmdAlbaran.TabIndex = 3;
@@ -121,6 +121,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
             this.ResumeLayout(false);
 

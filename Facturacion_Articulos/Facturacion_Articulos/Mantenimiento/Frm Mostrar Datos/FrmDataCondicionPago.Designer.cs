@@ -200,6 +200,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FrmDataCondicionPago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDataCondicionPago";
             this.Activated += new System.EventHandler(this.FrmDataCondicionPago_Activated);
             this.Load += new System.EventHandler(this.FrmDataCondicionPago_Load);

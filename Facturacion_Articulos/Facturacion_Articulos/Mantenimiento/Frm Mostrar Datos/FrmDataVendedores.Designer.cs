@@ -197,6 +197,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "FrmDataVendedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDataVendedores";
             this.Activated += new System.EventHandler(this.FrmDataVendedores_Activated);
             this.Load += new System.EventHandler(this.FrmDataVendedores_Load);

@@ -52,7 +52,7 @@
             this.btnMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMantenimiento.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnMantenimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnMantenimiento.Image")));
-            this.btnMantenimiento.Location = new System.Drawing.Point(108, 90);
+            this.btnMantenimiento.Location = new System.Drawing.Point(101, 94);
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.Size = new System.Drawing.Size(152, 150);
             this.btnMantenimiento.TabIndex = 11;
@@ -67,7 +67,7 @@
             this.btnFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFacturacion.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnFacturacion.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturacion.Image")));
-            this.btnFacturacion.Location = new System.Drawing.Point(297, 90);
+            this.btnFacturacion.Location = new System.Drawing.Point(290, 94);
             this.btnFacturacion.Name = "btnFacturacion";
             this.btnFacturacion.Size = new System.Drawing.Size(142, 150);
             this.btnFacturacion.TabIndex = 12;
@@ -90,6 +90,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmMenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Facturación de articulos";
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.ResumeLayout(false);

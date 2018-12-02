@@ -200,6 +200,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCondicionPago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmCondicionPago";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCondicionPago_FormClosing);
             this.Load += new System.EventHandler(this.FrmCondicionPago_Load_1);

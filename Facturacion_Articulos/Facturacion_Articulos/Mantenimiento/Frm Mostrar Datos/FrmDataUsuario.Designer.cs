@@ -199,6 +199,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDataUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDataUsuario";
             this.Activated += new System.EventHandler(this.FrmDataUsuario_Activated);
             this.Load += new System.EventHandler(this.FrmDataUsuario_Load);
