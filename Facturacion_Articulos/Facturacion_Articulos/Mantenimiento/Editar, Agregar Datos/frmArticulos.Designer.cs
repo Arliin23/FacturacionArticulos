@@ -162,6 +162,7 @@
             this.nUDCantidad.Name = "nUDCantidad";
             this.nUDCantidad.Size = new System.Drawing.Size(179, 31);
             this.nUDCantidad.TabIndex = 20;
+            this.nUDCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nUDCantidad_KeyPress);
             // 
             // txtNombre
             // 
