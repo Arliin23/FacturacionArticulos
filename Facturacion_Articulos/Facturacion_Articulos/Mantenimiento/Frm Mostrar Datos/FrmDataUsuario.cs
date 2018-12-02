@@ -125,6 +125,8 @@ namespace Facturacion_Articulos
             consultarPorCriterio();
         }
 
+        //Exportacion csv
+
         private void cmdExcel_Click(object sender, EventArgs e)
         {
             writeFileHeader("ID, Usuario, Clave, Estado");
@@ -139,19 +141,19 @@ namespace Facturacion_Articulos
                 writeFileLine(linea);
             }
 
-            Process.Start(@"C:Usuarios.csv");
+            Process.Start(@"C:\Users\Arianna Linette Díaz\Desktop\Usuario.csv");
         }
 
         private void writeFileLine(string pLine)
         {
-            using (System.IO.StreamWriter w = File.AppendText(@"C:Usuarios.csv"))
+            using (System.IO.StreamWriter w = File.AppendText(@"C:\Users\Arianna Linette Díaz\Desktop\Usuario.csv"))
             {
                 w.WriteLine(pLine);
             }
         }
         private void writeFileHeader(string pLine)
         {
-            using (System.IO.StreamWriter w = File.CreateText(@"C:Usuarios.csv"))
+            using (System.IO.StreamWriter w = File.CreateText(@"C:\Users\Arianna Linette Díaz\Desktop\Usuario.csv"))
             {
                 w.WriteLine(pLine);
             }

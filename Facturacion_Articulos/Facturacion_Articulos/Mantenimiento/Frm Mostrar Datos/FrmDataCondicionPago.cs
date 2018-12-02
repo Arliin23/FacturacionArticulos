@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,7 @@ namespace Facturacion_Articulos
         public string CantidadDias { get; set; }
         public string Estado { get; set; }
         public string Modo { get; set; }
+        DataTable dt = new DataTable();
 
 
         public FrmDataCondicionPago()
@@ -38,7 +41,7 @@ namespace Facturacion_Articulos
                 con.Open();
                 string sql = "select * from Condicion_Pago";
                 SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
+                dt = new DataTable();
                 da.Fill(dt);
                 dgvCondicionP.DataSource = dt;
                 dgvCondicionP.Refresh();
@@ -117,5 +120,39 @@ namespace Facturacion_Articulos
         {
             consultarPorCriterio();
         }
+
+        private void cmdExcel_Click(object sender, EventArgs e)
+        {
+            writeFileHeader("ID, Descripción, Cédula, Cantidad días, Estado");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string linea = "";
+                foreach (DataColumn dc in dt.Columns)
+                {
+                    linea += row[dc].ToString() + ",";
+                }
+                writeFileLine(linea);
+            }
+
+            Process.Start(@"C:\Users\Arianna Linette Díaz\Desktop\CondicionPago.csv");
+        }
+
+        private void writeFileLine(string pLine)
+        {
+            using (System.IO.StreamWriter w = File.AppendText(@"C:\Users\Arianna Linette Díaz\Desktop\CondicionPago.csv"))
+            {
+                w.WriteLine(pLine);
+            }
+        }
+        private void writeFileHeader(string pLine)
+        {
+            using (System.IO.StreamWriter w = File.CreateText(@"C:\Users\Arianna Linette Díaz\Desktop\CondicionPago.csv"))
+            {
+                w.WriteLine(pLine);
+            }
+
+        }
+
     }
 }

@@ -180,6 +180,7 @@
             this.cmdExcel.Size = new System.Drawing.Size(51, 66);
             this.cmdExcel.TabIndex = 23;
             this.cmdExcel.UseVisualStyleBackColor = true;
+            this.cmdExcel.Click += new System.EventHandler(this.cmdExcel_Click);
             // 
             // FrmDataCondicionPago
             // 

@@ -95,7 +95,6 @@ namespace Facturacion_Articulos
 
         private void cmdFinVenta_Click(object sender, EventArgs e)
         {
-
             con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
             con.Open();
             string sql = "select * from Articulo_Facturable";
@@ -143,12 +142,12 @@ namespace Facturacion_Articulos
 
                         int CantidadFinal = cantidad - Int32.Parse(cantidadProducto);
 
-                        MessageBox.Show("Cantidad Final: " + CantidadFinal);
+                        //MessageBox.Show("Cantidad Final: " + CantidadFinal);
 
                         String queryCantidadFinal = "UPDATE Articulo_Facturable set Cantidad = " + CantidadFinal + " WHERE ID_Articulo = " + idProducto;
                         SqlCommand command1 = new SqlCommand(queryCantidadFinal, con);
                         command1.ExecuteNonQuery();
-                        MessageBox.Show("Facturación realizada con exito");
+
 
 
                     }
@@ -159,17 +158,12 @@ namespace Facturacion_Articulos
 
                     }
 
-                    this.Hide();
-                    FrmFacturacion frm = new FrmFacturacion();
-                    frm.ShowDialog();
-
-
-
-
-
                 }
 
             }
+
+            MessageBox.Show("Facturación realizada con exito");
+
 
             writeFileHeader("ID, Articulo, Precio, Cantidad");
 
@@ -186,6 +180,13 @@ namespace Facturacion_Articulos
             writeFileLine("Total, " + totalS);
 
             Process.Start(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv");
+
+
+            this.Hide();
+            FrmFacturacion frm = new FrmFacturacion();
+            frm.ShowDialog();
+
+
         }
 
         private void writeFileLine(string pLine)
