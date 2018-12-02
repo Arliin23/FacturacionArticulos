@@ -378,6 +378,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmFacturacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFacturacion";
             this.Load += new System.EventHandler(this.FrmFacturacion_Load);
             this.panel2.ResumeLayout(false);
