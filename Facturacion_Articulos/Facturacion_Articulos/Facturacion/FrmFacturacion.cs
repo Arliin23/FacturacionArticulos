@@ -93,98 +93,109 @@ namespace Facturacion_Articulos
 
         private void cmdFinVenta_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
-            con.Open();
-            string sql = "select * from Articulo_Facturable";
-            SqlDataAdapter da = new SqlDataAdapter(sql, con);
-            DataTable dataT = new DataTable();
-            da.Fill(dataT);
 
-            DataTable dt = new DataTable();
-            foreach (DataGridViewColumn col in dgvArticulosFactura.Columns)
+            if (dgvArticulosFactura.RowCount == 0)
             {
-                dt.Columns.Add(col.Name);
+
+                MessageBox.Show("Debe de escoger un producto para facturar");
+
             }
 
-            foreach (DataGridViewRow row in dgvArticulosFactura.Rows)
+            else
             {
-                DataRow dRow = dt.NewRow();
-                foreach (DataGridViewCell cell in row.Cells)
+
+                con = new SqlConnection("Data Source=DESKTOP-9GEI88L;Initial Catalog=FacturacionBD;Integrated Security=True");
+                con.Open();
+                string sql = "select * from Articulo_Facturable";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                DataTable dataT = new DataTable();
+                da.Fill(dataT);
+
+                DataTable dt = new DataTable();
+                foreach (DataGridViewColumn col in dgvArticulosFactura.Columns)
                 {
-                    dRow[cell.ColumnIndex] = cell.Value;
+                    dt.Columns.Add(col.Name);
                 }
-                dt.Rows.Add(dRow);
-            }
 
-
-
-
-
-
-            foreach (DataGridViewRow row in dgvArticulosFactura.Rows)
-            {
-                if (row.Cells[0].Value != null)
+                foreach (DataGridViewRow row in dgvArticulosFactura.Rows)
                 {
-                    try
+                    DataRow dRow = dt.NewRow();
+                    foreach (DataGridViewCell cell in row.Cells)
                     {
-                        string idProducto = row.Cells[0].Value.ToString();
-                        //Cantidad del DGV
-                        string cantidadProducto = row.Cells[3].Value.ToString();
-                        //Cantidad atendiendo a el id en la BD
-                        String queryCantidad = "SELECT Cantidad from dbo.Articulo_Facturable WHERE ID_Articulo = " + idProducto;
-                        SqlCommand command = new SqlCommand(queryCantidad, con);
-
-                        int cantidad = Int32.Parse(command.ExecuteScalar().ToString());
-
-                        //MessageBox.Show("La cantidad es: " + cantidad);
-
-                        int CantidadFinal = cantidad - Int32.Parse(cantidadProducto);
-
-                        //MessageBox.Show("Cantidad Final: " + CantidadFinal);
-
-                        String queryCantidadFinal = "UPDATE Articulo_Facturable set Cantidad = " + CantidadFinal + " WHERE ID_Articulo = " + idProducto;
-                        SqlCommand command1 = new SqlCommand(queryCantidadFinal, con);
-                        command1.ExecuteNonQuery();
+                        dRow[cell.ColumnIndex] = cell.Value;
+                    }
+                    dt.Rows.Add(dRow);
+                }
 
 
+
+
+
+
+                foreach (DataGridViewRow row in dgvArticulosFactura.Rows)
+                {
+                    if (row.Cells[0].Value != null)
+                    {
+                        try
+                        {
+                            string idProducto = row.Cells[0].Value.ToString();
+                            //Cantidad del DGV
+                            string cantidadProducto = row.Cells[3].Value.ToString();
+                            //Cantidad atendiendo a el id en la BD
+                            String queryCantidad = "SELECT Cantidad from dbo.Articulo_Facturable WHERE ID_Articulo = " + idProducto;
+                            SqlCommand command = new SqlCommand(queryCantidad, con);
+
+                            int cantidad = Int32.Parse(command.ExecuteScalar().ToString());
+
+                            //MessageBox.Show("La cantidad es: " + cantidad);
+
+                            int CantidadFinal = cantidad - Int32.Parse(cantidadProducto);
+
+                            //MessageBox.Show("Cantidad Final: " + CantidadFinal);
+
+                            String queryCantidadFinal = "UPDATE Articulo_Facturable set Cantidad = " + CantidadFinal + " WHERE ID_Articulo = " + idProducto;
+                            SqlCommand command1 = new SqlCommand(queryCantidadFinal, con);
+                            command1.ExecuteNonQuery();
+
+
+
+                        }
+                        catch (Exception EF)
+                        {
+
+                            MessageBox.Show("Error:  " + EF);
+
+                        }
 
                     }
-                    catch (Exception EF)
-                    {
-
-                        MessageBox.Show("Error:  " + EF);
-
-                    }
 
                 }
 
-            }
-
-            MessageBox.Show("Facturación realizada con exito");
+                MessageBox.Show("Facturación realizada con exito");
 
 
-            writeFileHeader("ID, Articulo, Precio, Cantidad");
+                writeFileHeader("ID, Articulo, Precio, Cantidad");
 
-            foreach (DataRow row in dt.Rows)
-            {
-                string linea = "";
-                foreach (DataColumn dc in dt.Columns)
+                foreach (DataRow row in dt.Rows)
                 {
-                    linea += row[dc].ToString() + ",";
+                    string linea = "";
+                    foreach (DataColumn dc in dt.Columns)
+                    {
+                        linea += row[dc].ToString() + ",";
+                    }
+                    writeFileLine(linea);
                 }
-                writeFileLine(linea);
+                String totalS = Convert.ToString(total);
+                writeFileLine("Total, " + totalS);
+
+                Process.Start(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv");
+
+
+                this.Hide();
+                FrmFacturacion frm = new FrmFacturacion();
+                frm.ShowDialog();
+
             }
-            String totalS = Convert.ToString(total);
-            writeFileLine("Total, " + totalS);
-
-            Process.Start(@"C:\Users\Arianna Linette Díaz\Desktop\Factura.csv");
-
-
-            this.Hide();
-            FrmFacturacion frm = new FrmFacturacion();
-            frm.ShowDialog();
-
-
         }
 
         private void writeFileLine(string pLine)

@@ -122,6 +122,7 @@
             // 
             // dgvArticulosFactura
             // 
+            this.dgvArticulosFactura.AllowUserToAddRows = false;
             this.dgvArticulosFactura.AllowUserToDeleteRows = false;
             this.dgvArticulosFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulosFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
