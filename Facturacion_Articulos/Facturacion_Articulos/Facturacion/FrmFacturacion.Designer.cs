@@ -59,6 +59,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.articulo_FacturableTableAdapter = new Facturacion_Articulos.FacturacionBDDataSet1TableAdapters.Articulo_FacturableTableAdapter();
             this.articulo_FacturableTableAdapter1 = new Facturacion_Articulos.FacturacionBDDataSet2TableAdapters.Articulo_FacturableTableAdapter();
+            this.cmdEliminar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulosFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloFacturableBindingSource1)).BeginInit();
@@ -90,7 +91,7 @@
             // cmdFinVenta
             // 
             this.cmdFinVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdFinVenta.Location = new System.Drawing.Point(434, 489);
+            this.cmdFinVenta.Location = new System.Drawing.Point(431, 489);
             this.cmdFinVenta.Name = "cmdFinVenta";
             this.cmdFinVenta.Size = new System.Drawing.Size(123, 58);
             this.cmdFinVenta.TabIndex = 8;
@@ -101,7 +102,7 @@
             // cmdLimpiar
             // 
             this.cmdLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdLimpiar.Location = new System.Drawing.Point(563, 489);
+            this.cmdLimpiar.Location = new System.Drawing.Point(560, 489);
             this.cmdLimpiar.Name = "cmdLimpiar";
             this.cmdLimpiar.Size = new System.Drawing.Size(75, 58);
             this.cmdLimpiar.TabIndex = 9;
@@ -116,7 +117,7 @@
             this.panel2.Controls.Add(this.txtTotal);
             this.panel2.Location = new System.Drawing.Point(12, 469);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(339, 90);
+            this.panel2.Size = new System.Drawing.Size(269, 90);
             this.panel2.TabIndex = 11;
             // 
             // dgvArticulosFactura
@@ -166,7 +167,7 @@
             this.cmdAgregarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAgregarArticulo.ForeColor = System.Drawing.Color.AliceBlue;
             this.cmdAgregarArticulo.Image = global::Facturacion_Articulos.Properties.Resources.plus;
-            this.cmdAgregarArticulo.Location = new System.Drawing.Point(367, 489);
+            this.cmdAgregarArticulo.Location = new System.Drawing.Point(297, 489);
             this.cmdAgregarArticulo.Name = "cmdAgregarArticulo";
             this.cmdAgregarArticulo.Size = new System.Drawing.Size(61, 58);
             this.cmdAgregarArticulo.TabIndex = 14;
@@ -345,12 +346,25 @@
             // 
             this.articulo_FacturableTableAdapter1.ClearBeforeFill = true;
             // 
+            // cmdEliminar
+            // 
+            this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdEliminar.ForeColor = System.Drawing.Color.AliceBlue;
+            this.cmdEliminar.Image = global::Facturacion_Articulos.Properties.Resources.delete;
+            this.cmdEliminar.Location = new System.Drawing.Point(364, 489);
+            this.cmdEliminar.Name = "cmdEliminar";
+            this.cmdEliminar.Size = new System.Drawing.Size(61, 58);
+            this.cmdEliminar.TabIndex = 28;
+            this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(649, 571);
+            this.ClientSize = new System.Drawing.Size(663, 571);
+            this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmdAgregarArticulo);
             this.Controls.Add(this.dgvArticulosFactura);
@@ -410,5 +424,6 @@
         private FacturacionBDDataSet2 facturacionBDDataSet2;
         private System.Windows.Forms.BindingSource articuloFacturableBindingSource1;
         private FacturacionBDDataSet2TableAdapters.Articulo_FacturableTableAdapter articulo_FacturableTableAdapter1;
+        private System.Windows.Forms.Button cmdEliminar;
     }
 }

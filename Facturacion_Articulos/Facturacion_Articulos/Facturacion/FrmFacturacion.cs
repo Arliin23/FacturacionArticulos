@@ -202,6 +202,24 @@ namespace Facturacion_Articulos
             }
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvArticulosFactura.SelectedRows)
+            {
+
+                try
+                {
+                    dgvArticulosFactura.Rows.RemoveAt(row.Index);
+                }
+                catch (Exception EP)
+                {
+
+                    MessageBox.Show("Error: " + EP);
+                }
+                
+            }
+        }
     }
     }
 
