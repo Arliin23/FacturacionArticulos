@@ -28,7 +28,6 @@ namespace Facturacion_Articulos
         public virtual DbSet<Articulo_Facturable> Articulo_Facturable { get; set; }
         public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<Condicion_Pago> Condicion_Pago { get; set; }
-        public virtual DbSet<Factura> Factura { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Vendedor> Vendedor { get; set; }
     }

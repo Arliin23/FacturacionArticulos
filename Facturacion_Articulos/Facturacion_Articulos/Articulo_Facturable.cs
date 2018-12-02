@@ -14,20 +14,11 @@ namespace Facturacion_Articulos
     
     public partial class Articulo_Facturable
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Articulo_Facturable()
-        {
-            this.Factura = new HashSet<Factura>();
-        }
-    
         public int ID_Articulo { get; set; }
         public string Nombre_Articulo { get; set; }
         public double Costo_Unitario { get; set; }
         public double Precio_Unitario { get; set; }
         public int Cantidad { get; set; }
         public string Estado { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Factura> Factura { get; set; }
     }
 }

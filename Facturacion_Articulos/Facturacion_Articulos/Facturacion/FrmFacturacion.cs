@@ -18,9 +18,7 @@ namespace Facturacion_Articulos
     public partial class FrmFacturacion : Form
     {
 
-        private FacturacionBDEntities2 entities = new FacturacionBDEntities2();
-
-        public Articulo_Facturable Articulos { get; set; }
+ 
         public SqlConnection con;
         private int preTotal = 0;
         private int total = 0;

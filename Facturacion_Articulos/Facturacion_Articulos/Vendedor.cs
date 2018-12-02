@@ -14,18 +14,9 @@ namespace Facturacion_Articulos
     
     public partial class Vendedor
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Vendedor()
-        {
-            this.Factura = new HashSet<Factura>();
-        }
-    
         public int ID_Vendedor { get; set; }
         public string Nombre { get; set; }
         public int Porciento_Comision { get; set; }
         public string Estado { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Factura> Factura { get; set; }
     }
 }

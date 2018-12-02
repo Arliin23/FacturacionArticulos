@@ -5,14 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="FacturacionBDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Articulo_Factura">
-          <Key>
-            <PropertyRef Name="ID_Articulo" />
-            <PropertyRef Name="ID_Factura" />
-          </Key>
-          <Property Name="ID_Articulo" Type="int" Nullable="false" />
-          <Property Name="ID_Factura" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="Articulo_Facturable">
           <Key>
             <PropertyRef Name="ID_Articulo" />
@@ -43,20 +35,6 @@
           <Property Name="Cantidad_dias" Type="int" Nullable="false" />
           <Property Name="Estado" Type="varchar" MaxLength="60" Nullable="false" />
         </EntityType>
-        <EntityType Name="Factura">
-          <Key>
-            <PropertyRef Name="ID_Factura" />
-          </Key>
-          <Property Name="ID_Factura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Forma_Pago" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ID_Vendedor" Type="int" Nullable="false" />
-          <Property Name="ID_Cliente" Type="int" Nullable="false" />
-          <Property Name="Fecha" Type="date" Nullable="false" />
-          <Property Name="Comentario" Type="varchar" MaxLength="60" Nullable="false" />
-          <Property Name="ID_Articulo" Type="int" Nullable="false" />
-          <Property Name="Cantidad" Type="int" Nullable="false" />
-          <Property Name="Precio_Unitario" Type="float" Nullable="false" />
-        </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="Id_Usuario" />
@@ -75,78 +53,12 @@
           <Property Name="Porciento_Comision" Type="int" Nullable="false" />
           <Property Name="Estado" Type="varchar" MaxLength="60" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Articulo___ID_Ar__49C3F6B7">
-          <End Role="Articulo_Facturable" Type="Self.Articulo_Facturable" Multiplicity="1" />
-          <End Role="Articulo_Factura" Type="Self.Articulo_Factura" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Articulo_Facturable">
-              <PropertyRef Name="ID_Articulo" />
-            </Principal>
-            <Dependent Role="Articulo_Factura">
-              <PropertyRef Name="ID_Articulo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Articulo___ID_Fa__4AB81AF0">
-          <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
-          <End Role="Articulo_Factura" Type="Self.Articulo_Factura" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Factura">
-              <PropertyRef Name="ID_Factura" />
-            </Principal>
-            <Dependent Role="Articulo_Factura">
-              <PropertyRef Name="ID_Factura" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ClienteFactura">
-          <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
-          <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Cliente">
-              <PropertyRef Name="ID_Cliente" />
-            </Principal>
-            <Dependent Role="Factura">
-              <PropertyRef Name="ID_Cliente" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_VendedorFactura">
-          <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="1" />
-          <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Vendedor">
-              <PropertyRef Name="ID_Vendedor" />
-            </Principal>
-            <Dependent Role="Factura">
-              <PropertyRef Name="ID_Vendedor" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="FacturacionBDModelStoreContainer">
-          <EntitySet Name="Articulo_Factura" EntityType="Self.Articulo_Factura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Articulo_Facturable" EntityType="Self.Articulo_Facturable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Condicion_Pago" EntityType="Self.Condicion_Pago" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vendedor" EntityType="Self.Vendedor" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Articulo___ID_Ar__49C3F6B7" Association="Self.FK__Articulo___ID_Ar__49C3F6B7">
-            <End Role="Articulo_Facturable" EntitySet="Articulo_Facturable" />
-            <End Role="Articulo_Factura" EntitySet="Articulo_Factura" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Articulo___ID_Fa__4AB81AF0" Association="Self.FK__Articulo___ID_Fa__4AB81AF0">
-            <End Role="Factura" EntitySet="Factura" />
-            <End Role="Articulo_Factura" EntitySet="Articulo_Factura" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ClienteFactura" Association="Self.FK_ClienteFactura">
-            <End Role="Cliente" EntitySet="Cliente" />
-            <End Role="Factura" EntitySet="Factura" />
-          </AssociationSet>
-          <AssociationSet Name="FK_VendedorFactura" Association="Self.FK_VendedorFactura">
-            <End Role="Vendedor" EntitySet="Vendedor" />
-            <End Role="Factura" EntitySet="Factura" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -163,7 +75,6 @@
           <Property Name="Precio_Unitario" Type="Double" Nullable="false" />
           <Property Name="Cantidad" Type="Int32" Nullable="false" />
           <Property Name="Estado" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Factura" Relationship="Self.Articulo_Factura" FromRole="Articulo_Facturable" ToRole="Factura" />
         </EntityType>
         <EntityType Name="Cliente">
           <Key>
@@ -174,7 +85,6 @@
           <Property Name="Cedula" Type="Int64" Nullable="false" />
           <Property Name="Cuenta_Contable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Estado" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Factura" Relationship="Self.FK_ClienteFactura" FromRole="Cliente" ToRole="Factura" />
         </EntityType>
         <EntityType Name="Condicion_Pago">
           <Key>
@@ -184,23 +94,6 @@
           <Property Name="Descripcion" Type="String" MaxLength="400" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Cantidad_dias" Type="Int32" Nullable="false" />
           <Property Name="Estado" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Factura">
-          <Key>
-            <PropertyRef Name="ID_Factura" />
-          </Key>
-          <Property Name="ID_Factura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Forma_Pago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ID_Vendedor" Type="Int32" Nullable="false" />
-          <Property Name="ID_Cliente" Type="Int32" Nullable="false" />
-          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Comentario" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ID_Articulo" Type="Int32" Nullable="false" />
-          <Property Name="Cantidad" Type="Int32" Nullable="false" />
-          <Property Name="Precio_Unitario" Type="Double" Nullable="false" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK_ClienteFactura" FromRole="Factura" ToRole="Cliente" />
-          <NavigationProperty Name="Vendedor" Relationship="Self.FK_VendedorFactura" FromRole="Factura" ToRole="Vendedor" />
-          <NavigationProperty Name="Articulo_Facturable" Relationship="Self.Articulo_Factura" FromRole="Factura" ToRole="Articulo_Facturable" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -219,55 +112,13 @@
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Porciento_Comision" Type="Int32" Nullable="false" />
           <Property Name="Estado" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Factura" Relationship="Self.FK_VendedorFactura" FromRole="Vendedor" ToRole="Factura" />
         </EntityType>
-        <Association Name="FK_ClienteFactura">
-          <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
-          <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Cliente">
-              <PropertyRef Name="ID_Cliente" />
-            </Principal>
-            <Dependent Role="Factura">
-              <PropertyRef Name="ID_Cliente" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_VendedorFactura">
-          <End Role="Vendedor" Type="Self.Vendedor" Multiplicity="1" />
-          <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Vendedor">
-              <PropertyRef Name="ID_Vendedor" />
-            </Principal>
-            <Dependent Role="Factura">
-              <PropertyRef Name="ID_Vendedor" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="Articulo_Factura">
-          <End Role="Articulo_Facturable" Type="Self.Articulo_Facturable" Multiplicity="*" />
-          <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
-        </Association>
         <EntityContainer Name="FacturacionBDEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Articulo_Facturable" EntityType="Self.Articulo_Facturable" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" />
           <EntitySet Name="Condicion_Pago" EntityType="Self.Condicion_Pago" />
-          <EntitySet Name="Factura" EntityType="Self.Factura" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="Vendedor" EntityType="Self.Vendedor" />
-          <AssociationSet Name="FK_ClienteFactura" Association="Self.FK_ClienteFactura">
-            <End Role="Cliente" EntitySet="Cliente" />
-            <End Role="Factura" EntitySet="Factura" />
-          </AssociationSet>
-          <AssociationSet Name="FK_VendedorFactura" Association="Self.FK_VendedorFactura">
-            <End Role="Vendedor" EntitySet="Vendedor" />
-            <End Role="Factura" EntitySet="Factura" />
-          </AssociationSet>
-          <AssociationSet Name="Articulo_Factura" Association="Self.Articulo_Factura">
-            <End Role="Articulo_Facturable" EntitySet="Articulo_Facturable" />
-            <End Role="Factura" EntitySet="Factura" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -308,21 +159,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Factura">
-            <EntityTypeMapping TypeName="FacturacionBDModel.Factura">
-              <MappingFragment StoreEntitySet="Factura">
-                <ScalarProperty Name="ID_Factura" ColumnName="ID_Factura" />
-                <ScalarProperty Name="Forma_Pago" ColumnName="Forma_Pago" />
-                <ScalarProperty Name="ID_Vendedor" ColumnName="ID_Vendedor" />
-                <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-                <ScalarProperty Name="Comentario" ColumnName="Comentario" />
-                <ScalarProperty Name="ID_Articulo" ColumnName="ID_Articulo" />
-                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
-                <ScalarProperty Name="Precio_Unitario" ColumnName="Precio_Unitario" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
             <EntityTypeMapping TypeName="FacturacionBDModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
@@ -343,14 +179,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="Articulo_Factura" TypeName="FacturacionBDModel.Articulo_Factura" StoreEntitySet="Articulo_Factura">
-            <EndProperty Name="Articulo_Facturable">
-              <ScalarProperty Name="ID_Articulo" ColumnName="ID_Articulo" />
-            </EndProperty>
-            <EndProperty Name="Factura">
-              <ScalarProperty Name="ID_Factura" ColumnName="ID_Factura" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

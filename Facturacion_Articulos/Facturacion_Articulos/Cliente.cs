@@ -14,19 +14,10 @@ namespace Facturacion_Articulos
     
     public partial class Cliente
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cliente()
-        {
-            this.Factura = new HashSet<Factura>();
-        }
-    
         public int ID_Cliente { get; set; }
         public string Nombre_Comercial { get; set; }
         public long Cedula { get; set; }
         public string Cuenta_Contable { get; set; }
         public string Estado { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Factura> Factura { get; set; }
     }
 }

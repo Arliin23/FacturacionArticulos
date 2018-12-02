@@ -4,16 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c57bd8b7a5c645d69e2ac2a83417ddc8" Name="Diagram1">
-        <EntityTypeShape EntityType="FacturacionBDModel.Articulo_Facturable" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="FacturacionBDModel.Cliente" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="FacturacionBDModel.Condicion_Pago" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FacturacionBDModel.Factura" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="FacturacionBDModel.Usuario" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FacturacionBDModel.Vendedor" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
-        <AssociationConnector Association="FacturacionBDModel.FK_ClienteFactura" ManuallyRouted="false" />
-        <AssociationConnector Association="FacturacionBDModel.FK_VendedorFactura" ManuallyRouted="false" />
-        <AssociationConnector Association="FacturacionBDModel.Articulo_Factura" ManuallyRouted="false" />
+      <Diagram DiagramId="fb15960fd11541b5919cf6856b9230a3" Name="Diagram1">
+        <EntityTypeShape EntityType="FacturacionBDModel.Articulo_Facturable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FacturacionBDModel.Cliente" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FacturacionBDModel.Condicion_Pago" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FacturacionBDModel.Usuario" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FacturacionBDModel.Vendedor" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -72,9 +72,6 @@
     <Compile Include="Condicion_Pago.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Factura.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="FacturacionBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -289,10 +286,6 @@
     <None Include="FacturacionBDDataSet1.xss">
       <DependentUpon>FacturacionBDDataSet1.xsd</DependentUpon>
     </None>
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="FacturacionBDDataSet2.xsc">
       <DependentUpon>FacturacionBDDataSet2.xsd</DependentUpon>
     </None>
@@ -304,6 +297,10 @@
     <None Include="FacturacionBDDataSet2.xss">
       <DependentUpon>FacturacionBDDataSet2.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
