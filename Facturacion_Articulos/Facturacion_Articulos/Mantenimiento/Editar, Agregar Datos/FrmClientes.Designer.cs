@@ -149,7 +149,7 @@
             // TextNombreComercial
             // 
             this.TextNombreComercial.Location = new System.Drawing.Point(248, 168);
-            this.TextNombreComercial.MaxLength = 12;
+            this.TextNombreComercial.MaxLength = 20;
             this.TextNombreComercial.Name = "TextNombreComercial";
             this.TextNombreComercial.Size = new System.Drawing.Size(174, 26);
             this.TextNombreComercial.TabIndex = 13;

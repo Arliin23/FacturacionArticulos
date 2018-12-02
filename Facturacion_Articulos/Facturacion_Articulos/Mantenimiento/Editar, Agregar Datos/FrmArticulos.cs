@@ -193,25 +193,21 @@ namespace Facturacion_Articulos
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsPunctuation(e.KeyChar))
+            if (Char.IsLetter(e.KeyChar))
             {
-                e.Handled = true;
-            }
-            else if (Char.IsSymbol(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
+                e.Handled = false;
             }
             else if (Char.IsControl(e.KeyChar))
             {
-                e.Handled = true;
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
             }
             else
             {
-                e.Handled = false;
+                e.Handled = true;
             }
         }
 
